@@ -1,0 +1,25 @@
+:root {
+  --dark: #000000;
+  --light: #ffffff;
+  --primary: #2fcdff;
+}
+
+body {
+  background: var(--dark);
+}
+
+button {
+  background: var(--primary);
+  font-size: 1rem;
+  color: var(--dark);
+  min-width: 8rem;
+  border: none;
+  min-height: 2rem;
+  border-radius: 0.4rem;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
