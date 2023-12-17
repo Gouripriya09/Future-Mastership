@@ -2,10 +2,22 @@
   --dark: #000000;
   --light: #ffffff;
   --primary: #2fcdff;
+  --gray: #c8c8c8;
 }
 
 body {
   background: var(--dark);
+  font-family: "Poppins", sans-serif;
+}
+
+.img-p {
+  height: 24rem;
+  width: 18rem;
+  background: var(--gray);
+}
+
+.col-class {
+  color: var(--primary);
 }
 
 button {
@@ -22,4 +34,12 @@ button {
 
 button:hover {
   transform: scale(1.1);
+}
+
+.container {
+  max-width: 85vw;
+  display: flex;
+  align-self: center;
+  background: none;
+  justify-content: space-between;
 }
