@@ -2,6 +2,8 @@
   color: var(--light);
   display: flex;
   flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
 }
 .ls {
   min-width: 60%;
@@ -29,6 +31,72 @@
   width: 16rem;
   color: var(--dark);
 }
-.ls-btn:hover{
+.ls-btn:hover {
   transform: scale(1.05);
+}
+
+.ls2 {
+  min-width: 40%;
+  display: flex;
+}
+.rs2 {
+  min-width: 60%;
+  font-family: "Source Serif 4", serif;
+}
+.rs2 h1 {
+  font-size: 3rem;
+}
+
+.why-h {
+  font-size: 1.4rem;
+}
+
+.img-p2 {
+  height: 24rem;
+  width: 18rem;
+  background: var(--gray);
+  z-index: 1;
+  border-radius: 2rem 0rem 0 2rem;
+}
+
+.head {
+  font-size: 2rem;
+  font-family: "Source Serif 4", serif;
+}
+
+.what-about {
+  flex-direction: column;
+  text-align: center;
+}
+.what-about p {
+  font-size: 1.2rem;
+  margin: 1rem;
+  font-weight: 300;
+}
+
+.line {
+  border: 2px solid var(--primary);
+  height: 0;
+  width: 12rem;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.what-others{
+  font-weight: 100;
+  font-size: 2.4rem;
+}
+.what-para{
+  font-weight: 100;
+  text-align: left;
+  width: 64vw;
+}
+.main-others{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
