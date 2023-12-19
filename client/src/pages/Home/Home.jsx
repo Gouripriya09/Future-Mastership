@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import Navbar from "../../components/Navbar/Navbar";
 import { motion } from "framer-motion";
-import Line from "../../assets/line.png";
+import Card from "../../components/Card/Card";
 
 const fadeAnimationVariants = {
   initial: {
@@ -13,8 +13,8 @@ const fadeAnimationVariants = {
     opacity: 100,
     y: 0,
     transition: {
-      delay: 0.5,
-      duration: 0.8,
+      delay: 0.2,
+      duration: 0.7,
     },
   },
 };
@@ -96,6 +96,83 @@ const Home = () => {
             self-motivation and others, whereas domain-specific skills would be
             used only for a certain job.
           </p>
+        </div>
+      </motion.div>
+      <motion.div
+        className="container"
+        id="cards"
+        variants={fadeAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
+        <Card
+          name="Poorna Hari"
+          desg="Seo, Content Developer"
+          body=" teamwork and leadership, self-motivation and others, whereas domain-specific skills would be used only for a certain job. teamwork and leadership, self-motivation and others, whereas "
+        />
+        <Card
+          name="B. Karthik"
+          desg="Seo, Content Developer"
+          body=" teamwork and leadership, self-motivation and others, whereas domain-specific skills would be used only for a certain job. teamwork and leadership, self-motivation and others, whereas "
+        />
+        <Card
+          name="B. K. Bhargav"
+          desg="Upcoming ,Film Director"
+          body=" teamwork and leadership, self-motivation and others, whereas domain-specific skills would be used only for a certain job. teamwork and leadership, self-motivation and others, whereas "
+        />
+      </motion.div>
+      <motion.button
+        className="view-all"
+        variants={fadeAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
+        View all reviews
+      </motion.button>
+      <motion.div
+        className="container weekly-chal"
+        variants={fadeAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
+        <div className="ls3">
+          <h1>
+            Weekly <span className="col-class">Challenges</span> !
+          </h1>
+          <ul className="why-h">
+            <li>
+              Chrome notes topics of interest based on your recent browsing
+              history.
+            </li>
+            <li>
+              Chrome notes topics of interest based on your recent browsing
+              history.
+            </li>
+            <li>
+              Chrome notes topics of interest based on your recent browsing
+              history.
+            </li>
+            <li>
+              Chrome notes topics of interest based on your recent browsing
+              history.
+            </li>
+            <li>
+              Chrome notes topics of interest based on your recent browsing
+              history.
+            </li>
+          </ul>
+        </div>
+        <div className="rs3">
+          <div className="img-p3"></div>
         </div>
       </motion.div>
     </div>
