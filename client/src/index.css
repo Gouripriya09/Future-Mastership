@@ -23,6 +23,10 @@ body {
   color: var(--primary);
 }
 
+.f-ss {
+  font-family: "Source Serif 4", serif;
+}
+
 .light {
   color: var(--light);
 }

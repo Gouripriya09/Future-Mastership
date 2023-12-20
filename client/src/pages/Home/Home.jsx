@@ -1,25 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Home.css";
+import { fadeAnimationVariants } from "../../utils/helpers.js";
 import Navbar from "../../components/Navbar/Navbar";
 import { motion } from "framer-motion";
 import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
-
-const fadeAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 70,
-  },
-  animate: {
-    opacity: 100,
-    y: 0,
-    transition: {
-      delay: 0.4,
-      duration: 0.8,
-    },
-  },
-};
 
 const Home = () => {
   return (
