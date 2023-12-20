@@ -1,0 +1,35 @@
+.footer {
+  margin: 0;
+  height: 40vh;
+  background: var(--secondary-dark);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.fc {
+  height: 88%;
+  width: 21.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ul {
+  font-size: 1rem;
+  font-weight: 400;
+  border-bottom: 1px solid var(--light);
+  transition: all 0.3s ease-in;
+  width: fit-content;
+}
+.fc li {
+  cursor: pointer;
+}
+.fc li:hover {
+  color: var(--primary);
+}
+
+.ul:hover {
+  border-bottom: solid 1px var(--primary);
+}

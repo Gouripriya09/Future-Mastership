@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import Navbar from "../../components/Navbar/Navbar";
 import { motion } from "framer-motion";
+import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
 
 const fadeAnimationVariants = {
@@ -13,8 +14,8 @@ const fadeAnimationVariants = {
     opacity: 100,
     y: 0,
     transition: {
-      delay: 0.2,
-      duration: 0.7,
+      delay: 0.4,
+      duration: 0.8,
     },
   },
 };
@@ -175,6 +176,7 @@ const Home = () => {
           <div className="img-p3"></div>
         </div>
       </motion.div>
+      <Footer />
     </div>
   );
 };

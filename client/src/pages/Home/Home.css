@@ -2,8 +2,7 @@
   color: var(--light);
   display: flex;
   flex-direction: column;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0;
 }
 .ls {
   min-width: 60%;
