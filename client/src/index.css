@@ -10,6 +10,25 @@ body {
   background: var(--dark);
   font-family: "Poppins", sans-serif;
 }
+.unformat-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hover-anim {
+  transition: all 0.3s ease-out;
+  color: inherit;
+}
+.hover-anim:hover {
+  color: var(--primary);
+}
+
+.light {
+  color: var(--light);
+}
+.dark {
+  color: var(--dark);
+}
 
 .img-p {
   height: 22rem;

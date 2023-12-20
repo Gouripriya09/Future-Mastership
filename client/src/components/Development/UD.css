@@ -1,0 +1,7 @@
+.UD {
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Serif 4", serif;
+  justify-content: center;
+  align-items: center;
+}

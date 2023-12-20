@@ -1,16 +1,16 @@
 import React from "react";
+import UD from "../../components/Development/UD";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import "./About.css";
 
-const About = () => {
+const Mentor = () => {
   return (
-    <div className="light about">
+    <div className="mentor light">
       <Navbar></Navbar>
-
+      <UD name="Mentors" />
       <Footer></Footer>
     </div>
   );
 };
 
-export default About;
+export default Mentor;

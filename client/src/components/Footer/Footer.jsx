@@ -29,7 +29,9 @@ const Footer = () => {
       </div>
       <div className="fc fc4">
         <p className="ul">Get In Touch</p>
-        <div className="icons"></div>
+        <div className="icons">
+          Icons to be added
+        </div>
         <p className="ul">Contact Us</p>
         <p>Ph.No 9391232598</p>
         <p>Email mastervance16@gmail.com</p>

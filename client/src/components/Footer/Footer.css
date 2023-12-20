@@ -5,6 +5,8 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
+  position: static;
+  bottom: 0;
   justify-content: space-evenly;
 }
 

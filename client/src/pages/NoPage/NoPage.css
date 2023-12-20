@@ -1,0 +1,22 @@
+.np-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-family: "Source Serif 4", serif;
+  align-items: center;
+  margin-bottom: 10rem;
+  text-align: center;
+}
+.NoPage {
+  color: var(--light);
+  height: 100vh;
+}
+
+.NoPage h3 {
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.NoPage h3:hover {
+  color: var(--primary);
+}
