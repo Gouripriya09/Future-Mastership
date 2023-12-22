@@ -1,27 +1,34 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import UD from "../../components/Development/UD";
+import { motion } from "framer-motion";
 import CourseCard from "../../components/Course/CourseCard";
 import "./Courses.css";
+import { Variant3 } from "../../utils/helpers";
 
 const Courses = () => {
   return (
-    <div className="light courses">
+    <motion.div className="light courses">
       <Navbar />
       <h1 className="col-class f-ss courses-heading">Free Courses</h1>
-      <div className="card-container">
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-      </div>
+      <motion.div className="card-container">
+        {[0, 1, 2, 3, 4, 5, 6, 7].map((index) => (
+          <motion.div
+            key={index}
+            variants={Variant3}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={index}
+          >
+            <CourseCard />
+          </motion.div>
+        ))}
+      </motion.div>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

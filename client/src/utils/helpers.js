@@ -42,3 +42,20 @@ export const Variant2 = {
     },
   }),
 };
+
+export const Variant3 = {
+  initial: {
+    opacity: 0,
+    scale: 0.95,
+    y: 50,
+  },
+  animate: (i) => ({
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      delay: 0.24 * i,
+      duration: 0.5,
+    },
+  }),
+};

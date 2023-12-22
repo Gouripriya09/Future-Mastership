@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import dark_logo from "../../assets/dark_logo.svg";
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <div className="Navbar">
-      <span className="set e1">LOGO</span>
+      <span className="set e1">
+        {/* <img src={dark_logo} alt="MASTERVANCE" /> */}
+        <h1>LOGO</h1>
+      </span>
       <span className="set e2">
         <ul>
           <li>

@@ -1,7 +1,7 @@
 .Navbar {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   padding-top: 0;
   max-width: 99vw;
   margin-bottom: 5rem;
@@ -21,6 +21,11 @@
 .Navbar .e1 {
   margin-right: auto;
   margin-left: 1.2rem;
+}
+
+.Navbar .e1 img {
+  width: 16rem;
+  margin: 0;
 }
 .Navbar .e3 {
   margin-right: 1rem;
