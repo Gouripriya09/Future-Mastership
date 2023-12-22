@@ -5,9 +5,4 @@
   border-radius: 10px;
   margin: 1rem;
   background: rgb(198, 198, 198);
-  background: linear-gradient(
-    180deg,
-    rgba(198, 198, 198, 1) 85%,
-    rgba(0, 0, 0, 0) 100%
-  );
 }

@@ -1,9 +1,19 @@
 import React from "react";
 import "./Footer.css";
+import { motion } from "framer-motion";
+import { footerVariant } from "../../utils/helpers";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <motion.div
+      className="footer"
+      variants={footerVariant}
+      whileInView="animate"
+      initial="initial"
+      viewport={{
+        once: true,
+      }}
+    >
       <div className="fc fc1">
         <h2>Mastervance</h2>
         <p>
@@ -29,14 +39,12 @@ const Footer = () => {
       </div>
       <div className="fc fc4">
         <p className="ul">Get In Touch</p>
-        <div className="icons">
-          Icons to be added
-        </div>
+        <div className="icons">Icons to be added</div>
         <p className="ul">Contact Us</p>
         <p>Ph.No 9391232598</p>
         <p>Email mastervance16@gmail.com</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
