@@ -40,6 +40,9 @@ const Navbar = () => {
         </ul>
       </span>
       <span className="set e3">
+        <Link to="/auth">
+          <button className="login-btn">LOGIN</button>
+        </Link>
         <button className="apply">Apply Now</button>
       </span>
     </div>

@@ -1,0 +1,11 @@
+.ls-auth {
+  min-width: 40vw;
+  background: var(--primary);
+}
+.rs-auth {
+  min-width: 60vw;
+}
+.Auth {
+  height: 100vh;
+  display: flex;
+}

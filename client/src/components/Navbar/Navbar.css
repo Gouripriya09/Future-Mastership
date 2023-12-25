@@ -39,3 +39,10 @@
 .Navbar .e2 ul li p:hover {
   border-bottom: 1px solid var(--primary);
 }
+
+.login-btn {
+  background: none;
+  color: var(--light);
+  border: 1px solid var(--gray);
+  margin-right: 1rem;
+}
