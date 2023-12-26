@@ -1,9 +1,17 @@
-:root {
-  --dark: #000000;
-  --secondary-dark: #303030;
-  --light: #ffffff;
+[data-theme="light"] {
+  --secondary-dark: #dfdfdf;
   --primary: #2fcdff;
   --gray: #bbbbbb;
+  --light: #000000;
+  --dark: #ffffff;
+}
+
+[data-theme="dark"] {
+  --light: #ffffff;
+  --secondary-dark: #303030;
+  --primary: #2fcdff;
+  --gray: #bbbbbb;
+  --dark: #000000;
 }
 
 body {

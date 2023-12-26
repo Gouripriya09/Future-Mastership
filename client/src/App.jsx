@@ -11,17 +11,19 @@ import Courses from "./pages/Courses/Courses";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/auth" element={<Auth />} />
-        <Route path="/community" element={<Community />} />
-        <Route path="/mentor" element={<Mentor />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="*" element={<NoPage />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="App" data-theme="light">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/mentor" element={<Mentor />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 };
 

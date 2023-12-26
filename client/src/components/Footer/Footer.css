@@ -5,6 +5,7 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
+  color: var(--light);
   position: static;
   bottom: 0;
   justify-content: space-evenly;
