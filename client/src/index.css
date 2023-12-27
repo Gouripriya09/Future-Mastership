@@ -13,7 +13,6 @@
   --gray: #bbbbbb;
   --dark: #000000;
 }
-
 body {
   background: var(--dark);
   font-family: "Poppins", sans-serif;

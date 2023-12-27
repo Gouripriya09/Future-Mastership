@@ -45,6 +45,7 @@ const Navbar = () => {
         </Link>
         <button className="apply">Apply Now</button>
       </span>
+      <button className="hbm">HBM</button>
     </div>
   );
 };

@@ -7,6 +7,9 @@
   margin-bottom: 5rem;
   font-family: "Poppins";
 }
+.Navbar .hbm {
+  display: none;
+}
 .Navbar .e2 ul {
   margin-top: 0;
   display: flex;
@@ -45,4 +48,25 @@
   color: var(--light);
   border: 1px solid var(--gray);
   margin-right: 1rem;
+}
+
+@media screen and (max-width: 918px) {
+  .Navbar .e1 img {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .Navbar .e1 img {
+    width: 24vw;
+  }
+  .Navbar .hbm {
+    display: block;
+  }
+  .e2,
+  .e3 {
+    display: none;
+  }
+  .Navbar {
+    margin-bottom: 2rem;
+  }
 }

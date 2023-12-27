@@ -31,7 +31,8 @@
   color: var(--dark);
 }
 .ls-btn:hover {
-  transform: scale(1.05);
+  transform: scale(0.95);
+  color: var(--light);
 }
 
 .ls2 {
@@ -132,4 +133,35 @@
 .weekly-chal ul li {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 1110px) {
+  .Home h1 {
+    font-size: 2.6rem;
+  }
+  .ls .hero-sub {
+    font-size: 1rem;
+  }
+  .ls .ls-btn {
+    width: fit-content;
+    font-size: 1.1rem;
+    height: fit-content;
+  }
+  .Home p,
+  .Home ul {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 918px) {
+  .Home #cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .Home .ls{
+    margin-bottom: 4rem;
+  }
+  .Home .container {
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
 }
