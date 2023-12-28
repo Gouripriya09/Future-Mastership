@@ -1,4 +1,11 @@
-[data-theme="light"] {
+.Dark {
+  --light: #ffffff;
+  --secondary-dark: #303030;
+  --primary: #2fcdff;
+  --gray: #bbbbbb;
+  --dark: #000000;
+}
+.Light {
   --secondary-dark: #dfdfdf;
   --primary: #2fcdff;
   --gray: #bbbbbb;
@@ -6,14 +13,7 @@
   --dark: #ffffff;
 }
 
-[data-theme="dark"] {
-  --light: #ffffff;
-  --secondary-dark: #303030;
-  --primary: #2fcdff;
-  --gray: #bbbbbb;
-  --dark: #000000;
-}
-body {
+html {
   background: var(--dark);
   font-family: "Poppins", sans-serif;
 }
