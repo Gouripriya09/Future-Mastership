@@ -1,0 +1,33 @@
+.q {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--primary);
+  padding: 10px;
+  margin-top: 2rem;
+}
+
+.qstn {
+  font-size: 1.4rem;
+}
+
+.arrow {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  font-size: 2rem;
+}
+.a {
+  font-weight: 200;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  height: 0;
+  border-top: 1px solid var(--primary);
+}
+
+.a-opened {
+  padding: 10px;
+  height: initial;
+}
+
+.foldCard-opened .a {
+  height: initial;
+}

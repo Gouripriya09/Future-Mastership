@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import { motion } from "framer-motion";
 import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
+import FoldCard from "../../components/foldCard/foldCard.jsx";
 
 const Home = () => {
   return (
@@ -161,6 +162,20 @@ const Home = () => {
         <div className="rs3">
           <div className="img-p3"></div>
         </div>
+      </motion.div>
+      <motion.div className="container faq-h">
+        <FoldCard
+          qstn="What is Master Vance?"
+          ans="Master Vance is a dynamic online learning platform that offers courses in trending areas such as AI, ML, Cyber Security, and Digital Forensics. Our platform also provides a vibrant community for like-minded learners."
+        />
+        <FoldCard
+          qstn="How do I get started on Master Vance?"
+          ans="To get started, simply visit our website at www.mastervance.com, create an account, and explore our courses. You can enroll in courses, engage with the community, and enhance your tech skills."
+        />
+        <FoldCard
+          qstn="What courses does Master Vance offer?"
+          ans="Master Vance offers courses in Artificial Intelligence, Machine Learning, Cyber Security, and Digital Forensics. Our courses are designed to be relevant, up-to-date, and taught by industry experts."
+        />
       </motion.div>
       <Footer />
     </div>

@@ -4,6 +4,13 @@
   flex-direction: column;
   margin: 0;
 }
+.faq-h {
+  flex-direction: column;
+  border: 1px solid var(--secondary-dark);
+  border-radius: 0.6rem;
+  padding: 2rem;
+  padding-top: 0;
+}
 .ls {
   min-width: 60%;
   display: flex;
