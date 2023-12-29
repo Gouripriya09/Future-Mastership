@@ -5,6 +5,7 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
+  width: 98vw;
   color: var(--light);
   position: static;
   bottom: 0;
@@ -42,11 +43,13 @@
     font-size: 0.8rem;
     height: fit-content;
     flex-direction: column;
-    padding: 1rem;
-    padding-left: 2rem;
-    width: 95vw;
+    width: 98vw;
+  }
+  .footer .fc1 {
+    width: 80vw;
   }
   .fc {
-    width: 100%;
+    width: 80%;
+    /* align-items: center; */
   }
 }

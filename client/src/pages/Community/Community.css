@@ -4,6 +4,10 @@
   justify-content: center;
   align-items: center;
 }
+.com {
+  flex-direction: column;
+  margin-top: -14rem;
+}
 .rs-c {
   text-align: right;
   min-width: 50%;
@@ -28,6 +32,10 @@
 @media (orientation: portrait) {
   .Community .container {
     flex-direction: column-reverse;
+  }
+  .Community .com {
+    flex-direction: column;
+    margin-top: -5rem;
   }
   .work-und {
     margin-bottom: -3.7rem;

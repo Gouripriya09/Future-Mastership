@@ -21,9 +21,7 @@ const Mentor = () => {
               once: true,
             }}
           >
-            Grow Your Startup
-            <br /> Faster With 1:1
-            <br /> Mentorship
+            <span className="f-ss">MENTORS</span>
           </motion.h1>
           <motion.p
             variants={Variant2}
@@ -34,9 +32,10 @@ const Mentor = () => {
             }}
             custom={1}
           >
-            Have 1-on-1 conversations about growth, marketing,
-            <br /> and everything in between with the world's top 3% of
-            <br /> startup and marketing mentors.
+            At Mastervance, we believe in the transformative power of
+            mentorship. If you're ready to contribute to the growth of future
+            professionals and be part of a dynamic learning community, apply to
+            become a mentor today.
           </motion.p>
           <br></br>
           <motion.button
@@ -63,7 +62,7 @@ const Mentor = () => {
             initial="initial"
             whileInView="animate"
           >
-            WITH 400+ GROWTH MENTORS JUST A CLICK AWAY, YOU CAN:
+            Why Become a Mentor with Mastervance?
           </motion.p>
           <motion.ul
             custom={5}
@@ -74,10 +73,10 @@ const Mentor = () => {
             initial="initial"
             whileInView="animate"
           >
-            <li>Gel personalized advice on your growth strategy</li>
-            <li>Gel personalized advice on your growth strategy</li>
-            <li>Gel personalized advice on your growth strategy</li>
-            <li>Gel personalized advice on your growth strategy</li>
+            <li>Empower the Next Generation:</li>
+            <li>Connect with Like-Minded Professionals</li>
+            <li>Flexible Engagement:</li>
+            <li>Enhance Your Leadership Skills:</li>
           </motion.ul>
         </div>
         <motion.div
