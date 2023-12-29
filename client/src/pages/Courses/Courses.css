@@ -9,7 +9,16 @@
   margin-bottom: 20vh;
 }
 
-.courses-heading{
-    margin-left: 9rem;
-    font-size: 2.2rem;
+.courses-heading {
+  margin-left: 9rem;
+  font-size: 2.2rem;
+}
+
+@media (orientation: portrait) {
+  .card-container {
+    width: 99vw;
+  }
+  .courses-heading {
+    margin-left: 4rem;
+  }
 }

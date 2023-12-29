@@ -1,0 +1,8 @@
+@media (orientation: portrait){
+    .about .container{
+        flex-direction: column;
+    }
+    .rs-a{
+        margin-top: 2rem;
+    }
+}

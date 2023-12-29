@@ -151,13 +151,16 @@
   .Home ul {
     font-size: 1rem;
   }
+  .Home .view-all {
+    margin-top: -1rem;
+  }
 }
 @media screen and (max-width: 918px) {
   .Home #cards {
     display: flex;
     flex-direction: column;
   }
-  .Home .ls{
+  .Home .ls {
     margin-bottom: 4rem;
   }
   .Home .container {

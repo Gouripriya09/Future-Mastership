@@ -57,3 +57,33 @@
   min-width: 4rem;
   min-height: 4rem;
 }
+
+@media (orientation: portrait) {
+  .ls-m {
+    min-width: 100%;
+  }
+  .rs-m {
+    min-width: 100vw;
+    width: 1rem;
+    margin-top: 2rem;
+  }
+  .col-m {
+    justify-content: center;
+  }
+  .card-m {
+    transform: scale(0.9);
+    font-size: 0.7rem;
+    font-weight: bold;
+    min-height: 9rem;
+    min-width: 8rem;
+    margin: 0rem;
+  }
+  .mid {
+    transform: scale(0.9) translateY(2rem);
+  }
+  .mentor-main {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+}

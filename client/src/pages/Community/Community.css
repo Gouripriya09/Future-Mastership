@@ -24,3 +24,23 @@
   z-index: 10;
   width: 22rem;
 }
+
+@media (orientation: portrait) {
+  .Community .container {
+    flex-direction: column-reverse;
+  }
+  .work-und {
+    margin-bottom: -3.7rem;
+  }
+  .rs-c {
+    font-size: 1rem;
+  }
+  .rs-c img {
+    width: 16rem;
+  }
+  .ls-c img {
+    width: 20rem;
+    margin-top: 2rem;
+    margin-bottom: -8rem;
+  }
+}

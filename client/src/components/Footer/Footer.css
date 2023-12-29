@@ -36,3 +36,17 @@
 .ul:hover {
   border-bottom: solid 1px var(--primary);
 }
+
+@media (orientation: portrait) {
+  .footer {
+    font-size: 0.8rem;
+    height: fit-content;
+    flex-direction: column;
+    padding: 1rem;
+    padding-left: 2rem;
+    width: 95vw;
+  }
+  .fc {
+    width: 100%;
+  }
+}

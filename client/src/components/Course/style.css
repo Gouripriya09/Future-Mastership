@@ -6,3 +6,11 @@
   margin: 1rem;
   background: rgb(198, 198, 198);
 }
+
+@media (orientation: portrait) {
+  .course-card {
+    width: 10em;
+    height: 12em;
+    margin: 0.5rem;
+  }
+}

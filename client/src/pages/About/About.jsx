@@ -15,7 +15,7 @@ const About = () => {
         initial="initial"
         whileInView="animate"
       >
-        <div className="ls">
+        <div className="ls ls-a">
           <h2 className="f-ss">
             About Our <span className="col-class">Company</span>
           </h2>
@@ -37,7 +37,7 @@ const About = () => {
             engages a massive audience who will love its products.
           </p>
         </div>
-        <div className="rs">
+        <div className="rs rs-a">
           <div className="img-p"></div>
         </div>
       </motion.div>
