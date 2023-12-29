@@ -41,6 +41,49 @@ const About = () => {
           <div className="img-p"></div>
         </div>
       </motion.div>
+      <motion.div
+        className="container contact"
+        variants={fadeAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
+        <h1 className="col-class f-ss">Contact Us</h1>
+        <div className="contact-form">
+          <form action="">
+            <label htmlFor="name">Your Name*</label>
+            <br></br>
+            <input type="text" placeholder="Enter your name" name="name" />
+            <br />
+            <label htmlFor="name">Email Address*</label>
+            <br></br>
+            <input type="text" placeholder="Enter your email" name="email" />
+            <br />
+            <label htmlFor="name">Mobile Number*</label>
+            <br></br>
+            <input type="text" placeholder="Enter Mobile No" name="mobile" />
+            <br />
+            <label htmlFor="name">College*</label>
+            <br></br>
+            <input type="text" placeholder="Enter Your College" name="clg" />
+            <br />
+            <label htmlFor="name">Interested Courses*</label>
+            <br></br>
+            <input
+              type="text"
+              placeholder="Your interested in which course?"
+              name="clg"
+            />
+            <br />
+            <br />
+            <button type="submit" className="contact-btn">
+              SUBMIT
+            </button>
+          </form>
+        </div>
+      </motion.div>
       <Footer></Footer>
     </div>
   );

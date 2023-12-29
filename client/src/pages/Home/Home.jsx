@@ -22,8 +22,8 @@ const Home = () => {
       >
         <div className="ls">
           <h1>
-            Unlocking The Future<br></br> Through{" "}
-            <span className="col-class">Mastervance</span>.
+            Unlock your Potential with
+            <span className="col-class"> Mastervance</span>.
           </h1>
           <p className="hero-sub">
             Welcome to Mastervance, where we empower students to become masters
@@ -97,19 +97,19 @@ const Home = () => {
         }}
       >
         <Card
-          name="Poorna Hari"
+          name="B. K. Bhargav"
           desg="Seo, Content Developer"
-          body=" teamwork and leadership, self-motivation and others, whereas domain-specific skills would be used only for a certain job. teamwork and leadership, self-motivation and others, whereas "
+          body=" Mastervance offers an excellent range of courses, and the community is a fantastic resource for networking. The instructors are knowledgeable and provide valuable insights. "
         />
         <Card
           name="B. Karthik"
           desg="Seo, Content Developer"
-          body=" teamwork and leadership, self-motivation and others, whereas domain-specific skills would be used only for a certain job. teamwork and leadership, self-motivation and others, whereas "
+          body=" I can't express how much Mastervance has impacted my learning journey positively. The courses are not only up-to-date but also presented in a way that makes complex topics easy to understand. "
         />
         <Card
-          name="B. K. Bhargav"
+          name="Poorna Hari"
           desg="Upcoming ,Film Director"
-          body=" teamwork and leadership, self-motivation and others, whereas domain-specific skills would be used only for a certain job. teamwork and leadership, self-motivation and others, whereas "
+          body=" Mastervance has exceeded my expectations in every way possible. The courses are not just informative but presented with a level of clarity and depth that makes learning truly enjoyable."
         />
       </motion.div>
       <motion.button
@@ -164,6 +164,7 @@ const Home = () => {
         </div>
       </motion.div>
       <motion.div className="container faq-h">
+        <h1 className="col-class f-ss">Frequently Asked Questions</h1>
         <FoldCard
           qstn="What is Master Vance?"
           ans="Master Vance is a dynamic online learning platform that offers courses in trending areas such as AI, ML, Cyber Security, and Digital Forensics. Our platform also provides a vibrant community for like-minded learners."

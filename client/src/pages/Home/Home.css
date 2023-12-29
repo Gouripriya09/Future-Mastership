@@ -174,4 +174,10 @@
     flex-direction: column;
     margin-bottom: 5rem;
   }
+  .faq-h .qstn {
+    font-size: 1rem;
+  }
+  .faq-h h1 {
+    font-size: 1.8rem;
+  }
 }
