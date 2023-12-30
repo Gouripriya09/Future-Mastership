@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import dark_logo from "../../assets/logo.png";
+import light_logo from "../../assets/logo-light.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -42,8 +43,11 @@ const Navbar = () => {
     <>
       <div className={`Navbar `}>
         <span className="set e1">
-          <img src={dark_logo} alt="MASTERVANCE" />
-          {/* <h1>LOGO</h1> */}
+          {mode === "Dark" ? (
+            <img src={dark_logo} alt="MASTERVANCE" />
+          ) : (
+            <img src={light_logo} alt="MASTERVANCE" />
+          )}
         </span>
         <span className="set e2">
           <ul>
