@@ -24,10 +24,18 @@ const Footer = () => {
       <div className="fc fc2">
         <p className="ul">Resources</p>
         <ul>
-          <li>Community</li>
-          <li>Blog</li>
-          <li>About Us</li>
-          <li>Courses</li>
+          <Link to="/community" className="unformat-link">
+            <li>Community</li>
+          </Link>
+          <Link to="/mentor" className="unformat-link">
+            <li>Mentors</li>
+          </Link>
+          <Link to="/about" className="unformat-link">
+            <li>About Us</li>
+          </Link>
+          <Link to="/courses" className="unformat-link">
+            <li>Courses</li>
+          </Link>
         </ul>
       </div>
       <div className="fc fc3">
