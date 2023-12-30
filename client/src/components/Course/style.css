@@ -1,10 +1,36 @@
 .course-card {
   display: flex;
-  height: 20em;
+  height: 14.2em;
+  align-items: center;
+  color: #000;
+  flex-direction: column;
   width: 16em;
   border-radius: 0.4rem;
   margin: 1rem;
-  background: rgb(198, 198, 198);
+  background: #e6e6e6;
+}
+.course-card .top img {
+  width: 15.8rem;
+  border-radius: 0.2rem;
+}
+.course-card .body {
+  margin-left: 1.2rem;
+}
+.course-card .bot {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.course-card .bot-2 {
+  background: var(--secondary-dark);
+  color: #e6e6e6;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding: 0.1rem 1rem;
+  transition: all 0.2s ease;
+}
+.course-card .bot-2:hover {
+  filter: opacity(0.9);
 }
 
 @media (orientation: portrait) {
