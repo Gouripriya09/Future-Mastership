@@ -8,7 +8,7 @@ const Register = () => {
   return (
     <>
       <div className="container">
-        <div className="ls reg-ls"></div>   
+        <div className="ls-auth reg-ls"></div>   
         <div className="rs">
           <div className="Login light register">
             <div className="login-form">

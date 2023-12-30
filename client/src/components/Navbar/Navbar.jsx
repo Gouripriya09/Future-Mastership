@@ -8,11 +8,16 @@ const Navbar = () => {
   document.documentElement.classList.add(initialMode);
 
   const [mode, setMode] = useState(initialMode);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleDarkMode = () => {
     const newMode = mode === "Dark" ? "Light" : "Dark";
     localStorage.setItem("themeMode", newMode);
     setMode(newMode);
+  };
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
   };
 
   useEffect(() => {
@@ -21,7 +26,7 @@ const Navbar = () => {
   }, [mode]);
 
   return (
-    <div className="Navbar">
+    <div className={`Navbar `}>
       <span className="set e1">
         <img src={dark_logo} alt="MASTERVANCE" />
         {/* <h1>LOGO</h1> */}
@@ -55,6 +60,41 @@ const Navbar = () => {
           </li>
         </ul>
       </span>
+      <ul className={`${isSidebarOpen ? "sidebar-open" : "sidebar-close"}`}>
+        <p className="close" onClick={toggleSidebar}>
+          x
+        </p>
+        <li>
+          <Link to="/" className="unformat-link">
+            <p>Home</p>
+          </Link>
+        </li>
+        <li>
+          <Link to="/courses" className="unformat-link">
+            <p>Courses</p>
+          </Link>
+        </li>
+        <li>
+          <Link className="unformat-link" to="/mentor">
+            <p>Mentor</p>
+          </Link>
+        </li>
+        <li>
+          <Link className="unformat-link" to="/community">
+            <p>Community</p>
+          </Link>
+        </li>
+        <li>
+          <Link className="unformat-link" to="/about">
+            <p>About Us</p>{" "}
+          </Link>
+        </li>
+        <br />
+        <button className="login-btn">LOGIN</button>
+        <br />
+        <br />
+        <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
+      </ul>
       <span className="set e3">
         <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
         <Link to="/login" className="unformat-link">
@@ -62,7 +102,9 @@ const Navbar = () => {
         </Link>
         <button className="apply">Apply Now</button>
       </span>
-      <button className="hbm">HBM</button>
+      <button className="hbm" onClick={toggleSidebar}>
+        HBM
+      </button>
     </div>
   );
 };
