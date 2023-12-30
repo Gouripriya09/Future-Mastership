@@ -2,6 +2,10 @@ import React from "react";
 import "./Home.css";
 import { fadeAnimationVariants } from "../../utils/helpers.js";
 import Navbar from "../../components/Navbar/Navbar";
+import homeHero from "../../assets/home-hero.png";
+import wc_right from "../../assets/wc-right.png";
+import wc from "../../assets/wc.png";
+import homeHero2 from "../../assets/homeHero2.png";
 import { motion } from "framer-motion";
 import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
@@ -33,7 +37,7 @@ const Home = () => {
           <button className="ls-btn">Apply Now</button>
         </div>
         <div className="rs">
-          <div className="img-p"></div>
+          <img src={homeHero} alt="" className="homeHero" />
         </div>
       </motion.div>
       <motion.div
@@ -46,18 +50,48 @@ const Home = () => {
         }}
       >
         <div className="ls2">
-          <div className="img-p2"></div>
+          <img src={homeHero2} alt="" className="homeHero2" />
         </div>
         <div className="rs2">
           <h1>
             Why <span className="col-class">Mastervance</span>?
           </h1>
           <ul className="why-h">
-            <li>Practical Learning</li>
-            <li>Real-World Impact</li>
-            <li>Cutting-Edge Curriculum</li>
-            <li>Industry-Level Experts</li>
-            <li>Dynamic Community Connection</li>
+            <li>
+              <i
+                className="fa-solid fa-circle-check"
+                style={{ color: "#00c7fc" }}
+              ></i>
+              Practical Learning
+            </li>
+            <li>
+              <i
+                className="fa-solid fa-circle-check"
+                style={{ color: "#00c7fc" }}
+              ></i>
+              Real-World Impact
+            </li>
+            <li>
+              <i
+                className="fa-solid fa-circle-check"
+                style={{ color: "#00c7fc" }}
+              ></i>
+              Cutting-Edge Curriculum
+            </li>
+            <li>
+              <i
+                className="fa-solid fa-circle-check"
+                style={{ color: "#00c7fc" }}
+              ></i>
+              Industry-Level Experts
+            </li>
+            <li>
+              <i
+                className="fa-solid fa-circle-check"
+                style={{ color: "#00c7fc" }}
+              ></i>
+              Dynamic Community Connection
+            </li>
           </ul>
         </div>
       </motion.div>
@@ -133,7 +167,8 @@ const Home = () => {
         }}
       >
         <div className="ls3">
-          <h1>
+          <img src={wc} alt="" className="wc"/>
+          {/* <h1>
             Weekly <span className="col-class">Challenges</span> !
           </h1>
           <ul className="why-h">
@@ -157,10 +192,10 @@ const Home = () => {
               Chrome notes topics of interest based on your recent browsing
               history.
             </li>
-          </ul>
+          </ul> */}
         </div>
         <div className="rs3">
-          <div className="img-p3"></div>
+          <img src={wc_right} alt="" className="wc-right" />
         </div>
       </motion.div>
       <motion.div className="container faq-h">

@@ -99,7 +99,10 @@
 .Login .foot .tac{
   min-width: 70%;
 }
-
+.google_logo{
+  width: 1.2rem; margin-right: 1rem;
+  transform: translateY(0.2rem);
+}
 
 @media (orientation: portrait) {
   .Login {

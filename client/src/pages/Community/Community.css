@@ -6,13 +6,20 @@
 }
 .com {
   flex-direction: column;
-  margin-top: -14rem;
+  margin-top: -4rem;
+}
+.com-ul i {
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.Community ul {
+  list-style: none;
 }
 .rs-c {
-  text-align: right;
   min-width: 50%;
   display: flex;
   font-size: 1.4rem;
+  flex-direction: column;
   justify-content: center;
 }
 .work-und {

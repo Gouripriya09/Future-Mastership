@@ -8,7 +8,36 @@
   color: var(--light);
   font-family: "Poppins";
 }
-.Navbar .hbm {
+.Navbar .e2 ul .dropdown {
+  position: relative;
+}
+
+.Navbar .e2 ul .dropdown p:hover {
+  border-bottom: 1px solid var(--dark);
+}
+
+.Navbar .e2 ul .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--secondary-dark);
+  list-style: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Navbar .e2 ul .dropdown-menu li {
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: background 0.2s;
+}
+
+.Navbar .e2 ul .dropdown-menu li:hover {
+  background: var(--dark);
+}
+
+.hbm {
   display: none;
 }
 .Navbar .e2 ul {
@@ -34,6 +63,8 @@
 .Navbar .e3 {
   margin-right: 1rem;
   margin-left: auto;
+  display: flex;
+  justify-content: baseline;
 }
 
 .Navbar .e2 ul li p {
@@ -67,12 +98,20 @@
   z-index: 100;
   top: -1rem;
 }
-.close{
+
+.Navbar .mode-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.close {
   font-size: 2rem;
   color: var(--primary);
   position: absolute;
   top: -4%;
   right: 8%;
+  cursor: pointer;
 }
 @media screen and (max-width: 918px) {
   .Navbar .e1 img {
@@ -83,12 +122,20 @@
   .Navbar .e1 img {
     width: 24vw;
   }
-  .Navbar .hbm {
-    display: block;
-  }
-  .e2,
-  .e3 {
+  .Navbar .e2,
+  .Navbar .e3 {
     display: none;
+  }
+  .hbm {
+    display: block;
+    filter: opacity(0.7);
+    position: absolute;
+    z-index: 1000;
+    font-size: 1.8rem;
+    top: 2.4%;
+    right: 4%;
+    width: 2rem;
+    color: var(--light);
   }
   .Navbar {
     margin-bottom: 2rem;

@@ -14,6 +14,8 @@ import Courses from "./pages/Courses/Courses";
 import Privacypolicy from "./pages/privacypolicy/privacypolicy";
 import Register from "./pages/Auth/Register";
 import Login from "./pages/Auth/Login";
+import IndustrialCourses from "./pages/Courses/IndustrialCourses";
+import EmergingCourses from "./pages/Courses/EmergingCourses";
 
 const App = () => {
   return (
@@ -31,7 +33,10 @@ const App = () => {
           <Route path="/terms_and_conditions" element={<Terms />} />
           <Route path="/privacypolicy" element={<Privacypolicy />} />
           <Route path="/refundpolicy" element={<Refund />} />
-          <Route path="/courses" element={<Courses />} />
+          <Route path="/free_courses" element={<Courses />} />
+          <Route path="/industrial_courses" element={<IndustrialCourses />} />
+          <Route path="/emerging_courses" element={<EmergingCourses />} />
+          <Route path="/free_courses" element={<Courses />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

@@ -22,15 +22,17 @@ const Community = () => {
           <img src={community} />
         </div>
         <div className="rs-c">
-          <h1>
-            The choice<br></br> community for
-            <br />{" "}
-            <div className="work-und">
-              <span className="col-class">digital workers</span>
-              <img src={underline} />
-            </div>
-            <br /> and Mastervance
+          <h1 className="f-ss">
+            <span className="col-class">Mastervance </span>Community
           </h1>
+          <h4>Where Learning Connects and Thrives!</h4>
+          <p>
+            At Mastervance, we recognize the power of community in fostering
+            meaningful connections, collaborative learning, and shared success
+            stories. Our community is a vibrant hub where learners, mentors, and
+            industry experts converge to create a dynamic ecosystem of
+            knowledge and growth.
+          </p>
         </div>
       </motion.div>
       <motion.div
@@ -41,12 +43,42 @@ const Community = () => {
         viewport={{ once: true }}
       >
         <h1 className="col-class f-ss">What You'll Find in Our Community:</h1>
-        <ul>
-          <li>Forums and Discussions</li>
-          <li>Virtual Events and Webinars</li>
-          <li>Study Materials and Resources</li>
-          <li>Internship and Job opportunities</li>
-          <li>Dynamic students</li>
+        <ul className="com-ul">
+          <li>
+            <i
+              className="fa-solid fa-circle-check"
+              style={{ color: "var(--primary)" }}
+            ></i>
+            Forums and Discussions
+          </li>
+          <li>
+            <i
+              className="fa-solid fa-circle-check"
+              style={{ color: "var(--primary)" }}
+            ></i>
+            Virtual Events and Webinars
+          </li>
+          <li>
+            <i
+              className="fa-solid fa-circle-check"
+              style={{ color: "var(--primary)" }}
+            ></i>
+            Study Materials and Resources
+          </li>
+          <li>
+            <i
+              className="fa-solid fa-circle-check"
+              style={{ color: "var(--primary)" }}
+            ></i>
+            Internship and Job opportunities
+          </li>
+          <li>
+            <i
+              className="fa-solid fa-circle-check"
+              style={{ color: "var(--primary)" }}
+            ></i>
+            Dynamic students
+          </li>
         </ul>
       </motion.div>
       <Footer />

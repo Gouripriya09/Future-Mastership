@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import aboutHero from "../../assets/aboutHero.png";
 import { motion } from "framer-motion";
 import { fadeAnimationVariants } from "../../utils/helpers";
 import "./About.css";
@@ -17,28 +18,30 @@ const About = () => {
       >
         <div className="ls ls-a">
           <h2 className="f-ss">
-            About Our <span className="col-class">Company</span>
+            About <span className="col-class">us</span>
           </h2>
           <p>
-            If you notice on their blog, a considerable number of content pieces
-            are directed at providing valuable insights and solutions for daily
-            audience pain points. By creating valuable content beginning from
-            the basics of marketing to more complex business decisions, HubSpot
-            engages a massive audience who will love its products.
+            Mastervance is a platform where students can upskill themselves by
+            learning trending courses in areas like AI, ML, Cyber Security,
+            Digital Forensics, Civil engineering, Electrical engineering,
+            Computer science, and so on. We also facilitates the creation of a
+            student community with like-minded individuals.
           </p>
           <h2 className="f-ss">
-            About Our <span className="col-class">Mission</span>
+            Our <span className="col-class">Mission</span>
           </h2>
           <p>
-            If you notice on their blog, a considerable number of content pieces
-            are directed at providing valuable insights and solutions for daily
-            audience pain points. By creating valuable content beginning from
-            the basics of marketing to more complex business decisions, HubSpot
-            engages a massive audience who will love its products.
+            Our mission is to empower individuals with the knowledge and skills
+            they need to excel in the dynamic landscapes of today and tomorrow.
+            We strive to break free from traditional education constraints,
+            offering industry-relevant courses that go beyond textbooks and
+            classrooms. With a focus on practicality, innovation, and community,
+            we're on a mission to unlock the full potential of every learner,
+            making education a transformative experience.
           </p>
         </div>
         <div className="rs rs-a">
-          <div className="img-p"></div>
+          <img src={aboutHero} alt="" className="abtHero"/>
         </div>
       </motion.div>
       <motion.div

@@ -2,6 +2,7 @@ import React from "react";
 import "./auth.css";
 import { Link } from "react-router-dom";
 import "../../index.css";
+import google_logo from "../../assets/google.png";
 
 const Login = () => {
   const initialMode = localStorage.getItem("themeMode") || "Dark";
@@ -41,7 +42,10 @@ const Login = () => {
             </p>
             <button className="login-btn">SUBMIT</button>
           </form>
-          <div className="google-box">Sign in with Google</div>
+          <div className="google-box">
+            <img src={google_logo} alt="" className="google_logo"/>
+            Sign in with Google
+          </div>
           <p className="support">Contact Support</p>
         </div>
       </div>

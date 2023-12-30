@@ -10,6 +10,13 @@ const Card = (props) => {
       </div>
       <div className="c-body">
         <h2 className="c-name">{props.name}</h2>
+        <div className="rating">
+          <i className="fa-solid fa-star" style={{ color: "#fecb3e" }}></i>
+          <i className="fa-solid fa-star" style={{ color: "#fecb3e" }}></i>
+          <i className="fa-solid fa-star" style={{ color: "#fecb3e" }}></i>
+          <i className="fa-solid fa-star" style={{ color: "#fecb3e" }}></i>
+          <i className="fa-solid fa-star" style={{ color: "#fecb3e" }}></i>
+        </div>
       </div>
     </div>
   );

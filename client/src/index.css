@@ -12,6 +12,9 @@
   --light: #000000;
   --dark: #ffffff;
 }
+.icons {
+  color: var(--light);
+}
 
 html {
   background: var(--dark);

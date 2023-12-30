@@ -1,5 +1,6 @@
 import React from "react";
 import "./auth.css";
+import google_logo from "../../assets/google.png";
 import { Link } from "react-router-dom";
 
 const Register = () => {
@@ -8,7 +9,7 @@ const Register = () => {
   return (
     <>
       <div className="container">
-        <div className="ls-auth reg-ls"></div>   
+        <div className="ls-auth reg-ls"></div>
         <div className="rs">
           <div className="Login light register">
             <div className="login-form">
@@ -63,7 +64,10 @@ const Register = () => {
                 </p>
                 <button className="login-btn">SUBMIT</button>
               </form>
-              <div className="google-box">Sign in with Google</div>
+              <div className="google-box">
+                <img src={google_logo} alt="" className="google_logo" />
+                Sign in with Google
+              </div>
             </div>
           </div>
         </div>
