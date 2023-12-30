@@ -36,7 +36,18 @@
 @media (orientation: portrait) {
   .course-card {
     width: 10em;
-    height: 12em;
+    height: 10em;
     margin: 0.5rem;
+  }
+  .course-card .top img{
+    width: 9.8rem;
+  }
+  .course-card .body{
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .course-card .bot .bot-2{
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem 0.2rem;
   }
 }
