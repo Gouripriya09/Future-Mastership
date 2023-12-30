@@ -12,6 +12,8 @@ import Community from "./pages/Community/Community";
 import Faq from "./pages/faq/faq";
 import Courses from "./pages/Courses/Courses";
 import Privacypolicy from "./pages/privacypolicy/privacypolicy";
+import Register from "./pages/Auth/Register";
+import Login from "./pages/Auth/Login";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/community" element={<Community />} />
           <Route path="/feedbacks" element={<Feedbacks />} />

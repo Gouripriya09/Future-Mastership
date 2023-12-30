@@ -57,7 +57,7 @@ const Navbar = () => {
       </span>
       <span className="set e3">
         <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
-        <Link to="/auth">
+        <Link to="/login" className="unformat-link">
           <button className="login-btn">LOGIN</button>
         </Link>
         <button className="apply">Apply Now</button>
