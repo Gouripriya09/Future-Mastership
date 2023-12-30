@@ -1,0 +1,16 @@
+.privacypolicy {
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .scroll-container {
+    height: fit-content;
+    padding: 1rem;
+    margin-bottom: 8rem;
+    width: 82vw;
+  }
+  .rf-d{
+    width: 80vw;
+  }

@@ -1,4 +1,4 @@
-.refund-policy {
+.tc {
   color: var(--light);
   display: flex;
   flex-direction: column;
@@ -11,6 +11,8 @@
   margin-bottom: 8rem;
   width: 82vw;
 }
-.rf-d{
-  width: 80vw;
+@media (orientation: portrait) {
+  .rf {
+    margin-left: 2rem;
+  }
 }

@@ -6,9 +6,11 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import NoPage from "./pages/NoPage/NoPage";
 import Mentor from "./pages/Mentors/Mentor";
+import Terms from "./pages/tc/terms";
 import Community from "./pages/Community/Community";
 import Faq from "./pages/faq/faq";
 import Courses from "./pages/Courses/Courses";
+import Privacypolicy from "./pages/privacypolicy/privacypolicy";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
           <Route path="/faq" element={<Faq />} />
           <Route path="/community" element={<Community />} />
           <Route path="/mentor" element={<Mentor />} />
+          <Route path="/terms_and_conditions" element={<Terms />} />
+          <Route path="/privacypolicy" element={<Privacypolicy />} />
           <Route path="/refundpolicy" element={<Refund />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="*" element={<NoPage />} />
