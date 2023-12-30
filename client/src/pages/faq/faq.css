@@ -1,0 +1,19 @@
+.faq,
+.faq-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faq-window {
+  width: 80vw;
+  border: 1px solid var(--secondary-dark);
+  margin-top: 2rem;
+  padding: 2rem;
+  padding-top: 0;
+  margin-bottom: 16vh;
+}
+@media (orientation: portrait) {
+  .faq-head {
+    margin-left: 1.2rem;
+  }
+}

@@ -7,6 +7,7 @@ import About from "./pages/About/About";
 import NoPage from "./pages/NoPage/NoPage";
 import Mentor from "./pages/Mentors/Mentor";
 import Community from "./pages/Community/Community";
+import Faq from "./pages/faq/faq";
 import Courses from "./pages/Courses/Courses";
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/community" element={<Community />} />
           <Route path="/mentor" element={<Mentor />} />
           <Route path="/refundpolicy" element={<Refund />} />
