@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { motion } from "framer-motion";
 import { footerVariant } from "../../utils/helpers";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -32,9 +33,18 @@ const Footer = () => {
       <div className="fc fc3">
         <p className="ul">Company</p>
         <ul>
-          <li>Privacy Policy</li>
-          <li>Terms & Conditions</li>
-          <li>FAQ</li>
+          <Link to="/privacypolicy" className="unformat-link">
+            <li>Privacy Policy</li>
+          </Link>
+          <Link to="/refundpolicy" className="unformat-link">
+            <li>Refund Policy</li>
+          </Link>
+          <Link to="/terms_and_conditions" className="unformat-link">
+            <li>Terms & Conditions</li>
+          </Link>
+          <Link to="/faq" className="unformat-link">
+            <li>FAQ</li>
+          </Link>
         </ul>
       </div>
       <div className="fc fc4">
