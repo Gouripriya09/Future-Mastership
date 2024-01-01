@@ -138,6 +138,7 @@ const Navbar = () => {
           <Link to="/login" className="unformat-link">
             <button className="login-btn">LOGIN</button>
           </Link>
+          <button>Apply Now</button>
           <br />
           <br />
         </ul>
@@ -150,7 +151,7 @@ const Navbar = () => {
           <Link to="/login" className="unformat-link">
             <button className="login-btn">LOGIN</button>
           </Link>
-          <button className="apply">Apply Now</button>
+          <button id="apply">Apply Now</button>
         </span>
       </div>
 

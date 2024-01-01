@@ -4,6 +4,7 @@ import { fadeAnimationVariants } from "../../utils/helpers.js";
 import Navbar from "../../components/Navbar/Navbar";
 import homeHero from "../../assets/home-hero.png";
 import wc_right from "../../assets/wc-right.png";
+import { Link } from "react-router-dom";
 import wc from "../../assets/wc.png";
 import homeHero2 from "../../assets/homeHero2.png";
 import { motion } from "framer-motion";
@@ -155,7 +156,9 @@ const Home = () => {
           once: true,
         }}
       >
-        View all reviews
+        <Link to="/feedbacks" className="unformat-link">
+          View all reviews
+        </Link>
       </motion.button>
       <motion.div
         className="container weekly-chal"
@@ -167,7 +170,7 @@ const Home = () => {
         }}
       >
         <div className="ls3">
-          <img src={wc} alt="" className="wc"/>
+          <img src={wc} alt="" className="wc" />
           {/* <h1>
             Weekly <span className="col-class">Challenges</span> !
           </h1>

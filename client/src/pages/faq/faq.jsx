@@ -10,7 +10,7 @@ const Faq = () => {
       <Navbar />
       <div className="faq-main light">
         <h1 className="f-ss col-class faq-head">Frequently Asked Questions</h1>
-        <p className="faq-sub">Some text goes here</p>
+        {/* <p className="faq-sub">Some text goes here</p> */}
         <div className="faq-window">
           <FoldCard
             qstn="1. What is Master Vance?"
