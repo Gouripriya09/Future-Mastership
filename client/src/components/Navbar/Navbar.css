@@ -74,10 +74,6 @@
 .Navbar .e2 ul li p:hover {
   border-bottom: 1px solid var(--primary);
 }
-#apply {
-  margin-top: 1rem;
-}
-
 .login-btn {
   background: none;
   color: var(--light);
