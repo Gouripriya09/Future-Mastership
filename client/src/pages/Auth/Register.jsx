@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import "./auth.css";
 import google_logo from "../../assets/google.png";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signInWithPopup,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  getAuth,
+} from "firebase/auth";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -12,15 +18,49 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [agreed, setAgreed] = useState(false);
 
-  // Call getAuth to create the auth object
+
   const auth = getAuth();
+  const handleGoogleSignIn = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      const userCredential = await signInWithPopup(auth, provider);
+      const isNewUser = userCredential.additionalUserInfo?.isNewUser || false;
+  
+      if (isNewUser) {
+        await updateProfile(userCredential.user, {
+          displayName: userCredential.additionalUserInfo?.profile?.name || '',
+        });
+      }
+  
+      // Use onAuthStateChanged to listen for authentication state changes
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is signed in
+          navigate("/");
+        } else {
+          // No user is signed in
+          console.error("Error signing in with Google: No user signed in");
+        }
+      });
+    } catch (error) {
+      console.error("Error signing in with Google:", error.message);
+    }
+  };
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    // Space for Validation checks
 
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      const auth = getAuth();
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      await updateProfile(userCredential.user, {
+        displayName: fullName,
+      });
+
       navigate("/");
     } catch (error) {
       console.error("Error registering:", error.message);
@@ -99,7 +139,7 @@ const Register = () => {
                 SUBMIT
               </button>
             </form>
-            <div className="google-box">
+            <div className="google-box" onClick={handleGoogleSignIn}>
               <img src={google_logo} alt="" className="google_logo" />
               Sign in with Google
             </div>

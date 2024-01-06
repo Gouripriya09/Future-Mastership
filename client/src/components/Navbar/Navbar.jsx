@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../AuthContext";
 import dark_logo from "../../assets/logo.png";
+import {
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
 import light_logo from "../../assets/logo-light.png";
 import "./Navbar.css";
+// import { color } from "framer-motion";
 
 const Navbar = () => {
+  const auth = useAuth();
   const navigate = useNavigate();
+
   const initialMode = localStorage.getItem("themeMode") || "Dark";
   document.documentElement.classList.add(initialMode);
 
@@ -17,6 +26,7 @@ const Navbar = () => {
     localStorage.setItem("themeMode", newMode);
     setMode(newMode);
   };
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState(null);
 
@@ -91,6 +101,13 @@ const Navbar = () => {
             </li>
           </ul>
         </span>
+        {auth.currentUser ? (
+          <span className="user-info">
+            <p className="light" style={{ color: "var(--light)" }}>
+              {auth.currentUser.displayName}
+            </p>
+          </span>
+        ) : null}
         <ul className={`${isSidebarOpen ? "sidebar-open" : "sidebar-close"}`}>
           <li>
             <Link to="/" className="unformat-link">
@@ -135,9 +152,19 @@ const Navbar = () => {
             className="fa-solid fa-circle-half-stroke mode-btn"
             onClick={toggleDarkMode}
           ></i>
-          <Link to="/login" className="unformat-link">
-            <button className="login-btn">LOGIN</button>
-          </Link>
+          {auth.currentUser ? (
+            <>
+              <button onClick={() => auth.logout()} className="logout-btn">
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="unformat-link">
+                <button className="login-btn">LOGIN</button>
+              </Link>
+            </>
+          )}
           <button>Apply Now</button>
           <br />
           <br />
@@ -148,9 +175,19 @@ const Navbar = () => {
             className="fa-solid fa-circle-half-stroke mode-btn"
             onClick={toggleDarkMode}
           ></i>
-          <Link to="/login" className="unformat-link">
-            <button className="login-btn">LOGIN</button>
-          </Link>
+          {auth.currentUser ? (
+            <>
+              <button onClick={() => auth.logout()} className="logout-btn">
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="unformat-link">
+                <button className="login-btn">LOGIN</button>
+              </Link>
+            </>
+          )}
           <button id="apply">Apply Now</button>
         </span>
       </div>
