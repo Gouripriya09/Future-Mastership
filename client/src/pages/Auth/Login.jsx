@@ -7,6 +7,8 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
+  TwitterAuthProvider,
+  GithubAuthProvider,
   getAuth,
 } from "firebase/auth";
 
@@ -35,6 +37,26 @@ const Login = () => {
       navigate("/");
     } catch (error) {
       console.error("Error signing in with Google:", error.message);
+    }
+  };
+
+  const handleTwitterSignIn = async () => {
+    try {
+      const provider = new TwitterAuthProvider();
+      await signInWithPopup(auth, provider);
+      navigate("/");
+    } catch (error) {
+      console.error("Error signing in with Twitter:", error.message);
+    }
+  };
+
+  const handleGithubSignIn = async () => {
+    try {
+      const provider = new GithubAuthProvider();
+      await signInWithPopup(auth, provider);
+      navigate("/");
+    } catch (error) {
+      console.error("Error signing in with GitHub:", error.message);
     }
   };
 
@@ -86,9 +108,10 @@ const Login = () => {
               SUBMIT
             </button>
           </form>
-          <div className="google-box" onClick={handleGoogleSignIn}>
-            <img src={google_logo} alt="" className="google_logo" />
-            Sign in with Google
+          <div className="google-box">
+            <i className="fa-brands fa-google logo" onClick={handleGoogleSignIn}></i>
+            <i className="fa-brands fa-twitter logo" onClick={handleTwitterSignIn}></i>
+            <i className="fa-brands fa-github logo" onClick={handleGithubSignIn}></i>
           </div>
           <p className="support">Contact Support</p>
         </div>

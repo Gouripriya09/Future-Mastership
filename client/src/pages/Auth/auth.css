@@ -85,26 +85,24 @@
   margin: 1rem 0;
 }
 
-.google-box {
-  margin-top: 1rem;
-  background-color: #fff;
-  color: #000;
-  height: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: center;
-  width: 16rem;
+.google-box { 
+  display: flex;
+  width: 50vw;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
 }
 .Login .foot .tac{
   min-width: 70%;
 }
-.google_logo{
-  width: 1.2rem; margin-right: 1rem;
-  transform: translateY(0.2rem);
+.google-box i{
+  transform: scale(3);
+  margin: 2rem;
+  cursor: pointer;
 }
-
+.google-box i:hover{
+  color: var(--primary);
+}
 @media (orientation: portrait) {
   .Login {
     margin-top: 1rem;

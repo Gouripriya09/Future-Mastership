@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./auth.css";
-import google_logo from "../../assets/google.png";
 import { Link, useNavigate } from "react-router-dom";
 import {
   createUserWithEmailAndPassword,
   updateProfile,
   signInWithPopup,
   GoogleAuthProvider,
+  TwitterAuthProvider,
+  GithubAuthProvider,
   onAuthStateChanged,
   getAuth,
 } from "firebase/auth";
@@ -18,45 +19,53 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [agreed, setAgreed] = useState(false);
 
-
   const auth = getAuth();
-  const handleGoogleSignIn = async () => {
+
+  const handleSocialSignIn = async (provider) => {
     try {
-      const provider = new GoogleAuthProvider();
       const userCredential = await signInWithPopup(auth, provider);
       const isNewUser = userCredential.additionalUserInfo?.isNewUser || false;
-  
+
       if (isNewUser) {
         await updateProfile(userCredential.user, {
-          displayName: userCredential.additionalUserInfo?.profile?.name || '',
+          displayName: userCredential.additionalUserInfo?.profile?.name || "",
         });
       }
-  
-      // Use onAuthStateChanged to listen for authentication state changes
+
       onAuthStateChanged(auth, (user) => {
         if (user) {
           // User is signed in
           navigate("/");
         } else {
           // No user is signed in
-          console.error("Error signing in with Google: No user signed in");
+          console.error("Error signing in with social provider: No user signed in");
         }
       });
     } catch (error) {
-      console.error("Error signing in with Google:", error.message);
+      console.error("Error signing in with social provider:", error.message);
     }
+  };
+
+  const handleGoogleSignIn = () => {
+    const provider = new GoogleAuthProvider();
+    handleSocialSignIn(provider);
+  };
+
+  const handleTwitterSignIn = () => {
+    const provider = new TwitterAuthProvider();
+    handleSocialSignIn(provider);
+  };
+
+  const handleGithubSignIn = () => {
+    const provider = new GithubAuthProvider();
+    handleSocialSignIn(provider);
   };
 
   const handleRegister = async (e) => {
     e.preventDefault();
 
     try {
-      const auth = getAuth();
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(userCredential.user, {
         displayName: fullName,
       });
@@ -139,9 +148,10 @@ const Register = () => {
                 SUBMIT
               </button>
             </form>
-            <div className="google-box" onClick={handleGoogleSignIn}>
-              <img src={google_logo} alt="" className="google_logo" />
-              Sign in with Google
+            <div className="google-box">
+              <i className="fa-brands fa-google logo" onClick={handleGoogleSignIn}></i>
+              <i className="fa-brands fa-x-twitter logo" onClick={handleTwitterSignIn}></i>
+              <i className="fa-brands fa-github logo" onClick={handleGithubSignIn}></i>
             </div>
           </div>
         </div>
