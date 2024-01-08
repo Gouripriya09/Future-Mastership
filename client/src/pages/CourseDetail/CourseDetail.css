@@ -1,0 +1,89 @@
+.CourseDetail #hero-course {
+  background-color: var(--primary);
+  width: 96vw;
+  margin-top: -4rem;
+  border-radius: 0.5rem;
+  padding: 1.2rem 0;
+  justify-content: space-around;
+  align-items: center;
+}
+#pfile {
+  margin-right: 1rem;
+  background-color: var(--dark);
+  content: "";
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 10rem;
+}
+.fot {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.left-course {
+  width: fit-content;
+}
+.CourseDetail .enroll {
+  color: var(--light);
+  margin-top: 1.5rem;
+  background-color: var(--secondary-dark);
+}
+.CourseDetail .right-course .course-box {
+  width: 20vw;
+  color: var(--dark);
+  border-radius: 1rem;
+  background-color: #fff;
+  height: fit-content;
+  padding: 0.5rem 1.5rem;
+}
+.cb-1 {
+  border-bottom: 1px solid var(--dark);
+}
+.cb-2 {
+  border-bottom: 1px solid var(--dark);
+}
+.cb-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  margin-top: 1.2rem;
+  width: 100%;
+}
+.course-box-head {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.course-box-desc {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-top: -0.5rem;
+}
+.course-box li i {
+  margin-right: 0.8rem;
+}
+.course-box-list li {
+  display: flex;
+  align-items: center;
+  margin-top: -1rem;
+}
+.course-box {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.sub {
+  margin-top: -0.8rem;
+  font-size: 0.8rem;
+  margin-left: 12%;
+  font-weight: 100;
+}
+#related-sec {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#related {
+  display: flex;
+}

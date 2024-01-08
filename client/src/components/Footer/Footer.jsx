@@ -77,7 +77,7 @@ const Footer = () => {
           <br />
         </div>
       </motion.div>
-      <p className="cc">Mastervance CC © 2024</p>
+      <p className="cc">Mastervance © 2024</p>
     </>
   );
 };

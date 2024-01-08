@@ -5,6 +5,7 @@ import Refund from "./pages/Refund_Policy/Refund";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import NoPage from "./pages/NoPage/NoPage";
+import CourseDetail from "./pages/CourseDetail/CourseDetail";
 import Feedbacks from "./pages/feedbacks/feedbacks";
 import Mentor from "./pages/Mentors/Mentor";
 import Terms from "./pages/tc/terms";
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/course" element={<CourseDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/community" element={<Community />} />

@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 import AI from "../../assets/AI.png";
 
 const CourseCard = () => {
@@ -11,7 +12,9 @@ const CourseCard = () => {
       <div className="body">Artificial Intelligence</div>
       <div className="bot">
         <p className="bot-1">₹499</p>
-        <p className="bot-2"> Apply Now</p>
+        <Link to="/course" className="unformat-link">
+          <p className="bot-2"> Apply Now</p>
+        </Link>
       </div>
     </div>
   );
