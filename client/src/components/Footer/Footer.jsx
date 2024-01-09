@@ -19,8 +19,8 @@ const Footer = () => {
         <div className="fc fc1">
           <h2>Mastervance</h2>
           <p>
-            Chrome notes topics of interest based on your recent browsing
-            history.
+            We empower students to become masters of tomorrow's world. Our
+            platform is a gateway to the latest advancements in technology.
           </p>
         </div>
         <div className="fc fc2">
