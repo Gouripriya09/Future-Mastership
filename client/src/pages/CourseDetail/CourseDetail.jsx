@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import { motion } from "framer";
+import { motion } from "framer-motion";
+import { fadeAnimationVariants } from "../../utils/helpers";
 import rev from "../../assets/rev.png";
 import CourseCard from "../../components/Course/CourseCard";
 import "./CourseDetail.css";
@@ -13,7 +14,16 @@ const CourseDetail = () => {
   return (
     <div className="CourseDetail light">
       <Navbar />
-      <motion.div className="container" id="hero-course">
+      <motion.div
+        className="container"
+        id="hero-course"
+        variants={fadeAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
         <div className="left-course">
           <h2>Course Name</h2>
           <div className="fot">
@@ -70,7 +80,14 @@ const CourseDetail = () => {
           </div>
         </div>
       </motion.div>
-      <motion.div>
+      <motion.div
+        variants={fadeAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
         <div className="course-nav" id="course-nav">
           <ul className="course-nav-ul">
             <li className="course-nav-li">
@@ -291,7 +308,16 @@ const CourseDetail = () => {
           </div>
         </div>
       </motion.div>
-      <motion.div className="container" id="related-sec">
+      <motion.div
+        className="container"
+        id="related-sec"
+        variants={fadeAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
         <h1>Other Courses</h1>
         <div id="related">
           <CourseCard />

@@ -78,7 +78,7 @@
   margin-top: -0.8rem;
   font-size: 0.8rem;
   margin-left: 12%;
-  font-weight: 100;
+  font-weight: 200;
 }
 #related-sec {
   width: 100%;
@@ -143,7 +143,7 @@
 }
 #ass-c {
   width: 72vw;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 200;
 }
 #content-main-li {
@@ -164,6 +164,7 @@
 }
 .inst {
   display: flex;
+  align-items: center;
 }
 #inst-c .inst-abt {
   width: 64vw;
@@ -176,7 +177,7 @@
 #rev-c {
   margin-left: 8rem;
 }
-#rev-head{
+#rev-head {
   font-weight: 400;
   margin-top: 4rem;
   font-size: 1.4rem;
@@ -186,4 +187,62 @@
   width: fit-content;
   gap: 1.2rem;
   justify-content: space-evenly;
+}
+
+@media screen and (max-width: 981px) {
+  .CourseDetail #hero-course {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2rem;
+    gap: 4rem;
+  }
+  .CourseDetail .right-course .course-box {
+    width: 72vw;
+  }
+  .sub {
+    font-weight: 300;
+  }
+  .course-nav {
+    margin-top: 0;
+    width: 100%;
+  }
+  .course-nav-ul {
+    font-size: 1.4rem;
+    padding: 0;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    /* list-style: disc; */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #related {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #what-c,
+  #about-c,
+  #content-c,
+  #ass-c,
+  #inst-c,
+  #rev-c {
+    margin-left: 1rem;
+  }
+  #about-c {
+    width: 88vw;
+  }
+  #ass-c {
+    width: 88vw;
+    font-size: 1rem;
+  }
+  .pfile {
+    width: 6rem;
+    height: 6rem;
+  }
+  #rev-c{
+    margin-bottom: 4rem;
+  }
 }
