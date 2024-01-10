@@ -86,7 +86,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link className="unformat-link" to="/mentor">
-                <p>Mentor</p>
+                <p>Mentors</p>
               </Link>
             </li>
             <li>

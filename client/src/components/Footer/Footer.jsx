@@ -24,7 +24,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="fc fc2">
-          <p className="ul">Resources</p>
+          <p className="ul">Connect</p>
           <ul>
             <Link to="/community" className="unformat-link">
               <li>Community</li>
@@ -41,7 +41,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="fc fc3">
-          <p className="ul">Company</p>
+          <p className="ul">Resources</p>
           <ul>
             <Link to="/privacypolicy" className="unformat-link">
               <li>Privacy Policy</li>
@@ -68,7 +68,7 @@ const Footer = () => {
           </div>
           <p className="ul">Contact Us</p>
           <p>
-            <i class="fa-solid fa-phone"></i> Ph.No 9391232598
+            <i class="fa-solid fa-phone"></i> Ph.No 9110799941
           </p>
           <p>
             <i class="fa-solid fa-envelope"></i> Email mastervance16@gmail.com
