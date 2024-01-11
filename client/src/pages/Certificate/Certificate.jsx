@@ -18,7 +18,7 @@ const Cert = () => {
   <div className="input">
     Certificate Serial Number
     <div className="verify">
-    <input type="text"  />
+    <input type="number" placeholder="Enter Number" />
     </div>
     
   </div>
