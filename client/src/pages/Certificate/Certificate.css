@@ -1,0 +1,26 @@
+
+.cert h3{
+    font-size: 40px;
+    color: white;
+    padding-left: 432px;
+    
+}
+.cert1 p{
+    font-size: 20px;
+    color: white;
+    justify-content: center;
+    padding-left: 432px;
+    
+}
+.input{
+    font-size: 12px;
+    color: white;
+    padding-left: 432px;
+}
+.verify input{
+    width: 340px;
+    margin-left: 2.5px;
+    margin-bottom: 40px;
+}
+
+

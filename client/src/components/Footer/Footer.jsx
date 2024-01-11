@@ -55,6 +55,9 @@ const Footer = () => {
             <Link to="/faq" className="unformat-link">
               <li>FAQ</li>
             </Link>
+            <Link to="/Certificate" className="unformat-link">
+              <li>Verify Certificate</li>
+             </Link> 
           </ul>
         </div>
         <div className="fc fc4">

@@ -17,6 +17,7 @@ import Register from "./pages/Auth/Register";
 import Login from "./pages/Auth/Login";
 import IndustrialCourses from "./pages/Courses/IndustrialCourses";
 import EmergingCourses from "./pages/Courses/EmergingCourses";
+import Cert from "./pages/Certificate/Certificate";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/course" element={<CourseDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/Certificate" element={<Cert />} /> 
           <Route path="/community" element={<Community />} />
           <Route path="/feedbacks" element={<Feedbacks />} />
           <Route path="/mentor" element={<Mentor />} />
