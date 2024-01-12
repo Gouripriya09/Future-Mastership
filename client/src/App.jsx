@@ -5,6 +5,7 @@ import Refund from "./pages/Refund_Policy/Refund";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import NoPage from "./pages/NoPage/NoPage";
+import RazorpayPaymentGateway from "./pages/Razorpay/RazorpayPaymentGateway";
 import CourseDetail from "./pages/CourseDetail/CourseDetail";
 import Feedbacks from "./pages/feedbacks/feedbacks";
 import Mentor from "./pages/Mentors/Mentor";
@@ -26,11 +27,12 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/payment" element={<RazorpayPaymentGateway />} />
           <Route path="/register" element={<Register />} />
           <Route path="/course" element={<CourseDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/faq" element={<Faq />} />
-          <Route path="/Certificate" element={<Cert />} /> 
+          <Route path="/Certificate" element={<Cert />} />
           <Route path="/community" element={<Community />} />
           <Route path="/feedbacks" element={<Feedbacks />} />
           <Route path="/mentor" element={<Mentor />} />

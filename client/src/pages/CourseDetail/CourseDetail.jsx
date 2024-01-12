@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { fadeAnimationVariants } from "../../utils/helpers";
 import rev from "../../assets/rev.png";
 import CourseCard from "../../components/Course/CourseCard";
@@ -30,7 +31,9 @@ const CourseDetail = () => {
             <div id="pfile"></div>
             <p>Instructor Name</p>
           </div>
-          <button className="enroll">Enroll</button>
+          <Link to="/payment" className="unformat-link">
+            <button className="enroll">Enroll</button>
+          </Link>
         </div>
         <div className="right-course">
           <div className="course-box">
