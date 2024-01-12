@@ -4,6 +4,10 @@
   justify-content: center;
   align-items: center;
 }
+.com-btn:hover {
+  filter: opacity(0.7);
+  transform: scale(1);
+}
 .com {
   flex-direction: column;
   margin-top: -4rem;

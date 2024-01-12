@@ -10,12 +10,9 @@ const FoldCard = (props) => {
 
   return (
     <div className={`foldCard ${isOpen ? "foldCard-opened" : ""}`}>
-      <div className="q">
+      <div className="q" onClick={toggleAnswer}>
         <span className="qstn">{props.qstn}</span>
-        <span
-          className={`arrow ${isOpen ? "minus" : "plus"} col-class`}
-          onClick={toggleAnswer}
-        >
+        <span className={`arrow ${isOpen ? "minus" : "plus"} col-class`}>
           {isOpen ? "-" : "+"}
         </span>
       </div>

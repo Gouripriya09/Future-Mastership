@@ -5,6 +5,7 @@ import "./Mentor.css";
 import Footer from "../../components/Footer/Footer";
 import { Variant2, fadeAnimationVariants } from "../../utils/helpers";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Mentor = () => {
   return (
@@ -48,7 +49,14 @@ const Mentor = () => {
             custom={2}
             className="apply-mentor"
           >
-            Apply as Mentor
+            <a
+              href="https://forms.gle/1Esq9Re3PxK6hPUR9"
+              className="unformat-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apply as Mentor
+            </a>
           </motion.button>
           <br></br>
           <br />

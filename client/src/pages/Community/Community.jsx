@@ -30,9 +30,19 @@ const Community = () => {
             At Mastervance, we recognize the power of community in fostering
             meaningful connections, collaborative learning, and shared success
             stories. Our community is a vibrant hub where learners, mentors, and
-            industry experts converge to create a dynamic ecosystem of
-            knowledge and growth.
+            industry experts converge to create a dynamic ecosystem of knowledge
+            and growth.
           </p>
+          <button className="com-btn">
+            <a
+              href="https://chat.whatsapp.com/JuK9wnxmdQE8go7GluXPER"
+              target="_blank"
+              className="unformat-link"
+              rel="noopener noreferrer"
+            >
+              Join Now
+            </a>
+          </button>
         </div>
       </motion.div>
       <motion.div

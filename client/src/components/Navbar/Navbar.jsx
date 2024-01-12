@@ -165,7 +165,15 @@ const Navbar = () => {
               </Link>
             </>
           )}
-          <button>Apply Now</button>
+          {auth.currentUser ? (
+            <Link to="/free_courses" className="unformat-link">
+              <button id="apply">Apply Now</button>
+            </Link>
+          ) : (
+            <Link to="/register" className="unformat-link">
+              <button id="apply">Apply Now</button>
+            </Link>
+          )}
           <br />
           <br />
         </ul>
@@ -188,7 +196,15 @@ const Navbar = () => {
               </Link>
             </>
           )}
-          <button id="apply">Apply Now</button>
+          {auth.currentUser ? (
+            <Link to="/free_courses" className="unformat-link">
+              <button id="apply">Apply Now</button>
+            </Link>
+          ) : (
+            <Link to="/register" className="unformat-link">
+              <button id="apply">Apply Now</button>
+            </Link>
+          )}
         </span>
       </div>
 

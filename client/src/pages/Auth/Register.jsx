@@ -38,7 +38,9 @@ const Register = () => {
           navigate("/");
         } else {
           // No user is signed in
-          console.error("Error signing in with social provider: No user signed in");
+          console.error(
+            "Error signing in with social provider: No user signed in"
+          );
         }
       });
     } catch (error) {
@@ -65,7 +67,11 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       await updateProfile(userCredential.user, {
         displayName: fullName,
       });
@@ -125,18 +131,19 @@ const Register = () => {
                 />
               </div>
               <div className="foot">
-                <label>
-                  <input
-                    type="checkbox"
-                    name="remember"
-                    checked={agreed}
-                    onChange={handleCheckboxChange}
-                  />
+                <input
+                  type="checkbox"
+                  id="tc-btn"
+                  name="remember"
+                  checked={agreed}
+                  onChange={handleCheckboxChange}
+                />
+                <p id="tc-t">
                   I agree to the{" "}
                   <Link to="/terms_and_conditions" className="unformat-link">
                     <span className="col-class">terms and conditions</span>
                   </Link>
-                </label>
+                </p>
               </div>
               <p>
                 <Link to="/login" className="unformat-link">
@@ -149,9 +156,18 @@ const Register = () => {
               </button>
             </form>
             <div className="google-box">
-              <i className="fa-brands fa-google logo" onClick={handleGoogleSignIn}></i>
-              <i className="fa-brands fa-x-twitter logo" onClick={handleTwitterSignIn}></i>
-              <i className="fa-brands fa-github logo" onClick={handleGithubSignIn}></i>
+              <i
+                className="fa-brands fa-google logo"
+                onClick={handleGoogleSignIn}
+              ></i>
+              <i
+                className="fa-brands fa-x-twitter logo"
+                onClick={handleTwitterSignIn}
+              ></i>
+              <i
+                className="fa-brands fa-github logo"
+                onClick={handleGithubSignIn}
+              ></i>
             </div>
           </div>
         </div>

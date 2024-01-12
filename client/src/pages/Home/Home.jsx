@@ -113,11 +113,10 @@ const Home = () => {
           </div>
           <h3 className="what-others">What Others Think About Us !</h3>
           <p className="what-para">
-            Skills can often be divided into domain-general and domain-specific
-            skills. For example, in the domain of work, some general skills
-            would include time management, teamwork and leadership,
-            self-motivation and others, whereas domain-specific skills would be
-            used only for a certain job.
+            At Master Vance, we value your input as it helps us continually
+            enhance your learning experience. Your feedback is instrumental in
+            shaping the future of our platform, ensuring that it remains a
+            dynamic and effective resource for learners like yourself.
           </p>
         </div>
       </motion.div>

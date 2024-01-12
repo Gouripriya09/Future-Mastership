@@ -1,5 +1,6 @@
 .q {
   display: flex;
+  cursor: pointer;
   justify-content: space-between;
   border-bottom: 1px solid var(--primary);
   padding: 10px;
@@ -11,7 +12,6 @@
 }
 
 .arrow {
-  cursor: pointer;
   transition: all 0.5s ease;
   font-size: 2rem;
 }
