@@ -18,12 +18,15 @@
 
 .Navbar .e2 ul .dropdown-menu {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 100%;
+  width: fit-content;
   left: 0;
   background: var(--secondary-dark);
   list-style: none;
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 

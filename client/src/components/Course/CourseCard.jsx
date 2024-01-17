@@ -3,7 +3,7 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import AI from "../../assets/Course.png";
 
-const CourseCard = () => {
+const CourseCard = (props) => {
   return (
     <div className="course-card">
       <div className="top">
@@ -11,17 +11,17 @@ const CourseCard = () => {
       </div>
       <div className="body">
         <Link to="/course" className="unformat-link">
-          <h2>Web Development | Complete FullStack Course | HTML CSS JS</h2>
+          <h2>{props.title}</h2>
         </Link>
         <div className="body-sub">
-          <p>Joshi Patel</p>
+          <p>{props.name}</p>
           <p>
-            4.7 <i class="fa-solid fa-star"></i> (88 Reviews)
+            {props.rating} <i class="fa-solid fa-star"></i> ({props.num} Reviews)
           </p>
         </div>
       </div>
       <div className="bot">
-        <p className="bot-1">₹499</p>
+        <p className="bot-1">₹{props.price}</p>
       </div>
     </div>
   );
