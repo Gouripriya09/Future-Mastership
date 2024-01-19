@@ -11,6 +11,8 @@ import {
   onAuthStateChanged,
   getAuth,
 } from "firebase/auth";
+import { collection, addDoc } from "firebase/firestore";
+import { db, auth } from "../../firebase";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -25,23 +27,41 @@ const Register = () => {
     try {
       const userCredential = await signInWithPopup(auth, provider);
       const isNewUser = userCredential.additionalUserInfo?.isNewUser || false;
+      let userDocRef;
 
       if (isNewUser) {
         await updateProfile(userCredential.user, {
           displayName: userCredential.additionalUserInfo?.profile?.name || "",
         });
+        window.alert(userCredential.user.uid);
+        window.alert("Hi");
+
+        userDocRef = await addDoc(collection(db, "users"), {
+          uid: userCredential.user.uid,
+          name: userCredential.additionalUserInfo?.profile?.name || "",
+          email: userCredential.user.email,
+        });
       }
 
-      onAuthStateChanged(auth, (user) => {
-        if (user) {
-          // User is signed in
-          navigate("/");
-        } else {
-          // No user is signed in
-          console.error(
-            "Error signing in with social provider: No user signed in"
-          );
-        }
+      console.log("User document created with ID: ", userDocRef?.id);
+
+      // Wait for onAuthStateChanged to complete before navigating
+      await new Promise((resolve) => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+          if (user) {
+            // User is signed in
+            navigate("/phone");
+          } else {
+            // No user is signed in
+            console.error(
+              "Error signing in with social provider: No user signed in"
+            );
+          }
+          // Resolve the promise after onAuthStateChanged callback
+          resolve();
+          // Unsubscribe to avoid memory leaks
+          unsubscribe();
+        });
       });
     } catch (error) {
       console.error("Error signing in with social provider:", error.message);

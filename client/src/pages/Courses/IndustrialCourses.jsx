@@ -23,7 +23,13 @@ const IndustrialCourses = () => {
             }}
             custom={index}
           >
-            <CourseCard />
+            <CourseCard
+              title="Web Development | Complete FullStack Course | HTML CSS JS"
+              name="Joshi Patel"
+              rating="4.7"
+              num="432"
+              price="599"
+            />
           </motion.div>
         ))}
       </motion.div>
