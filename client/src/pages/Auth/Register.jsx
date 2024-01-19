@@ -33,6 +33,8 @@ const Register = () => {
         await updateProfile(userCredential.user, {
           displayName: userCredential.additionalUserInfo?.profile?.name || "",
         });
+        window.alert(userCredential.user.uid);
+        window.alert("Hi");
 
         userDocRef = await addDoc(collection(db, "users"), {
           uid: userCredential.user.uid,

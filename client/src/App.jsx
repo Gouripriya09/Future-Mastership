@@ -20,6 +20,7 @@ import IndustrialCourses from "./pages/Courses/IndustrialCourses";
 import EmergingCourses from "./pages/Courses/EmergingCourses";
 import Cert from "./pages/Certificate/Certificate";
 import Auth2 from "./pages/Auth/Auth2";
+import FC1 from "./pages/CourseDetail/pages/FC1";
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
           <Route path="/industrial_courses" element={<IndustrialCourses />} />
           <Route path="/emerging_courses" element={<EmergingCourses />} />
           <Route path="/free_courses" element={<Courses />} />
+          <Route path="/FC1" element={<FC1 />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

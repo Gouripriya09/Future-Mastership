@@ -323,10 +323,34 @@ const CourseDetail = () => {
       >
         <h1>Other Courses</h1>
         <div id="related">
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
+          <CourseCard
+            title="Web Development | Complete FullStack Course | HTML CSS JS"
+            name="Joshi Patel"
+            rating="4.7"
+            num="432"
+            price="599"
+          />
+          <CourseCard
+            title="Web Development | Complete FullStack Course | HTML CSS JS"
+            name="Joshi Patel"
+            rating="4.7"
+            num="432"
+            price="599"
+          />
+          <CourseCard
+            title="Web Development | Complete FullStack Course | HTML CSS JS"
+            name="Joshi Patel"
+            rating="4.7"
+            num="432"
+            price="599"
+          />
+          <CourseCard
+            title="Web Development | Complete FullStack Course | HTML CSS JS"
+            name="Joshi Patel"
+            rating="4.7"
+            num="432"
+            price="599"
+          />
         </div>
       </motion.div>
       <Footer />
