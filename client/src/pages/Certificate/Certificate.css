@@ -19,8 +19,14 @@
 }
 .verify input{
     width: 340px;
+    height: 30px;
     margin-left: 2.5px;
     margin-bottom: 40px;
+}
+.button{
+    height: 10px;
+    width: 35px;
+    margin-left: 10px;
 }
 
 
