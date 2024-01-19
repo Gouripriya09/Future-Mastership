@@ -26,7 +26,7 @@ const FC2 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Networking Basics Course</h2>
+          <h2>Python Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,10 +38,9 @@ const FC2 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">Networking Basics Course</p>
+              <p className="course-box-head">Python Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts of computing with our networking 
-              Basics Course.
+              Dive into the fundamental concepts of computing with our Python Course
               </p>
             </div>
             <div className="cb-2">
@@ -131,8 +130,10 @@ const FC2 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Explore the fundamentals of computer networking with our <br />Networking Basics COurse. This course is designed to provide a <br />
-          foundational understanding of networking concepts, protocols, <br /> and technologies
+          Embark on journey into the versatile world of python programming.
+          <br />This course is designed for beginners and aims to provide a <br />
+          solid foundation in python, covering syntax, data structures, and <br />
+          and practical applications.
           </p>
         </div>
         <div id="what-c">
@@ -144,7 +145,7 @@ const FC2 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Grasp the basics of computer networks and their components.
+                Grab the fundamentals of Python programming.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -157,7 +158,7 @@ const FC2 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Understand common networking protocols and their functions.
+                Develop skills in solving problems using Python 
               </p>
             </li>
             {/* <p className="sub-c">
@@ -171,8 +172,7 @@ const FC2 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Gain insights into the essentials of network security and 
-                troubleshooting.
+                Gain practical experience in building python applications.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -221,64 +221,62 @@ const FC2 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1: Introduction to Networking
+              Module 1: Introduction to Python
               <ul id="child-ul-c">
-                <li id="content-child-li">Overview of Computer Networks</li>
-                <li id="content-child-li">Types of Networks (LAN, WAN, MAN)</li>
+                <li id="content-child-li">Python Basics and Syntax</li>
+                <li id="content-child-li">Variables and Data Types</li>
                 <li id="content-child-li">
-                  Importance of Networking in Modern Life
+                  Control Flow and Loops 
                 </li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: Networking Protocols
+              Module 2: Data Structures in Python
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                  TCP/IP Protocol Suite
+                  Lists, Tuples, and Sets
                 </li>
-                <li id="content-child-li">OSI Model and its Layers</li>
-                <li id="content-child-li">Common Networking Protocols (HTTP, FTP, DNS)</li>
+                <li id="content-child-li">Dictionaries and their applications</li>
+                <li id="content-child-li">Advanced Data Structures</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 3: Networking Devices and Infrastructure
+              Module 3: Function and Modules
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                  Routers, Switches, and Hubs
+                  Function Definion and Usage 
                 </li>
-                <li id="content-child-li">Network Topologies</li>
-                <li id="content-child-li">IP Addressing and Subnetting</li>
+                <li id="content-child-li">Creation and Important Modules</li>
+                <li id="content-child-li">Error Handling in Python</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 4: Wireless Networking
+              Module 4: File handling and Input/Output
               <ul id="child-ul-c">
-                <li id="content-child-li">Basics of Wireless Communication</li>
-                <li id="content-child-li">Wi-Fi Standards and Security</li>
-                <li id="content-child-li">Configuring a Wireless Network</li>
+                <li id="content-child-li">Reading and Writing Files</li>
+                <li id="content-child-li">Working with File Format</li>
+                <li id="content-child-li">Input and Output Operations</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5: Network Security Basics
+              Module 5: Introduction to Python Libraries 
               <ul id="child-ul-c">
-                <li id="content-child-li">Overview of Cybersecurity</li>
+                <li id="content-child-li">Basic Data Analysis in Python</li>
                 <li id="content-child-li">
-                  Introduction to Network Security
+                  Overview of Popular Python Libraties (e.g., Numpy, Pandas)
                 </li>
                 <li id="content-child-li">
                  Common Security Threats and vulnerability
                 </li>
-                <li id="content-child-li">
-                 Best Practices for Security Networks
-                </li>
+                
               </ul>
             </li>
           </ul>
@@ -286,9 +284,9 @@ const FC2 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Quizzes: Assess understanding of networking concepts.</p>
-          <p>Nerwork Configuration Exercises: Hands-on tasks to configure basic network settings.</p>
-          <p>Final Networking Project: Design and present a simple network <br /> configuration.</p>
+          <p>Coding Assignments: Implement Python solutions for various tasks.</p>
+          <p>Mid-term Project: Develop a practical Python applications</p>
+          <p>Final Exam: Comprehensive assessment of python programming skills</p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>
@@ -358,4 +356,4 @@ const FC2 = () => {
   );
 };
 
-export default FC2;
+export default Tech1;
