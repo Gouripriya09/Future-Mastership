@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
+import Navbar from "../../../components/Navbar/Navbar";
+import Footer from "../../../components/Footer/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { fadeAnimationVariants } from "../../utils/helpers";
-import rev from "../../assets/rev.png";
-import CourseCard from "../../components/Course/CourseCard";
+import { fadeAnimationVariants } from "../../../utils/helpers";
+import rev from "../../../assets/rev.png";
+import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
 const CourseDetail = () => {

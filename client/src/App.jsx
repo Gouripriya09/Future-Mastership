@@ -6,7 +6,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import NoPage from "./pages/NoPage/NoPage";
 import RazorpayPaymentGateway from "./pages/Razorpay/RazorpayPaymentGateway";
-import CourseDetail from "./pages/CourseDetail/CourseDetail";
+import CourseDetail from "./pages/CourseDetail/template/CourseDetail";
 import Feedbacks from "./pages/feedbacks/feedbacks";
 import Mentor from "./pages/Mentors/Mentor";
 import Terms from "./pages/tc/terms";
@@ -19,6 +19,7 @@ import Login from "./pages/Auth/Login";
 import IndustrialCourses from "./pages/Courses/IndustrialCourses";
 import EmergingCourses from "./pages/Courses/EmergingCourses";
 import Cert from "./pages/Certificate/Certificate";
+import Auth2 from "./pages/Auth/Auth2";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/payment" element={<RazorpayPaymentGateway />} />
+          <Route path="/phone" element={<Auth2 />} />
           <Route path="/register" element={<Register />} />
           <Route path="/course" element={<CourseDetail />} />
           <Route path="/login" element={<Login />} />
