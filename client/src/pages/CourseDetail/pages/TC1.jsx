@@ -26,7 +26,7 @@ const TC1 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Artificial Intelligence (AI) Course</h2>
+          <h2>Python Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +38,9 @@ const TC1 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">Artificial Intelligence Course</p>
+              <p className="course-box-head">Python Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts with our Artificial Intelligence Course
+              Dive into the fundamental concepts of computing with our Python Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,9 +130,10 @@ const TC1 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Master the foundations of Artificial Intelligence with our AI course.
-          <br /> This course provides a deep dive into the dynamic field of AI, covering
-          <br /> everything from fundamental concepts to practical applications. 
+          Embark on journey into the versatile world of python programming.
+          <br />This course is designed for beginners and aims to provide a <br />
+          solid foundation in python, covering syntax, data structures, and <br />
+          and practical applications.
           </p>
         </div>
         <div id="what-c">
@@ -144,7 +145,7 @@ const TC1 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Understand the core principles and applications of Artificial Intelligence.
+                Grab the fundamentals of Python programming.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -157,7 +158,7 @@ const TC1 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Possess the ability to apply machine learning algorithms and techniques.
+                Develop skills in solving problems using Python 
               </p>
             </li>
             {/* <p className="sub-c">
@@ -171,8 +172,7 @@ const TC1 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Gain practical experience in developing AI solutions for real-world challenges.
-
+                Gain practical experience in building python applications.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -221,77 +221,61 @@ const TC1 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1: Introduction to AI
+              Module 1: Introduction to Python
               <ul id="child-ul-c">
-                <li id="content-child-li">Overview of AI and its Applications</li>
-                <li id="content-child-li">Historical Evolution and Milestones
-</li>
+                <li id="content-child-li">Python Basics and Syntax</li>
+                <li id="content-child-li">Variables and Data Types</li>
                 <li id="content-child-li">
-                Ethical Considerations in AI
-                </li>
-                <li id="content-child-li">
-                Machine Learning Basics
+                  Control Flow and Loops 
                 </li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: Fundamentals of Machine Learning
+              Module 2: Data Structures in Python
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Model Training and Evaluation
+                  Lists, Tuples, and Sets
                 </li>
-                <li id="content-child-li">Neural Networks and Deep Learning</li>
-                
+                <li id="content-child-li">Dictionaries and their applications</li>
+                <li id="content-child-li">Advanced Data Structures</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 3: Understanding Neural Networks
-
+              Module 3: Function and Modules
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Deep Learning Architectures
+                  Function Definion and Usage 
                 </li>
-                <li id="content-child-li">Practical Applications in AI</li>
-                <li id="content-child-li">Natural Language Processing (NLP)</li>
+                <li id="content-child-li">Creation and Important Modules</li>
+                <li id="content-child-li">Error Handling in Python</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 4: Introduction to NLP
-
+              Module 4: File handling and Input/Output
               <ul id="child-ul-c">
-                <li id="content-child-li">Text Analysis and Sentiment Analysis</li>
-                <li id="content-child-li">Language Generation and Understanding</li>
-                <li id="content-child-li">Computer Vision</li>
+                <li id="content-child-li">Reading and Writing Files</li>
+                <li id="content-child-li">Working with File Format</li>
+                <li id="content-child-li">Input and Output Operations</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5: Basics of Computer Vision
-
+              Module 5: Introduction to Python Libraries 
               <ul id="child-ul-c">
-                <li id="content-child-li">Image Recognition and Object Detection</li>
+                <li id="content-child-li">Basic Data Analysis in Python</li>
                 <li id="content-child-li">
-                Applications in Industry
+                  Overview of Popular Python Libraties (e.g., Numpy, Pandas)
                 </li>
-
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 6: AI Applications in Industry
-
-              <ul id="child-ul-c">
-                <li id="content-child-li">Case Studies: AI in Healthcare, Finance, and more</li>
-                <li id="content-child-li">AI Implementation Challenges</li>
-                <li id="content-child-li">Future Trends in AI</li>
-              </ul>
-            </li>
-          </ul>      
+                <li id="content-child-li">
+                 Common Security Threats and vulnerability
+                </li>
                 
               </ul>
             </li>
@@ -300,9 +284,9 @@ const TC1 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Quizzes and Assignments: Assess understanding of theoretical concepts.</p>
-          <p>Hands-on AI Project: Apply AI techniques to solve a real-world problem.</p>
-          <p>Final Exam: Comprehensive assessment covering all aspects of the course.</p>
+          <p>Coding Assignments: Implement Python solutions for various tasks.</p>
+          <p>Mid-term Project: Develop a practical Python applications</p>
+          <p>Final Exam: Comprehensive assessment of python programming skills</p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>
@@ -372,4 +356,4 @@ const TC1 = () => {
   );
 };
 
-export default TC1;
+export default Tc1;

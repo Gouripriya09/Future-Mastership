@@ -26,7 +26,7 @@ const TC4 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Digital forensics Course</h2>
+          <h2>Data Analytics Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +38,9 @@ const TC4 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">Digital forensics Course</p>
+              <p className="course-box-head">Data Analytics Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts with our Digital forensics Course
+              Dive into the fundamental concepts with our Data Analytics Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,10 +130,9 @@ const TC4 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Delve into the world of Digital Forensics with our comprehensive course. This <br />
-          program equips learners with the skills needed to investigate and analyze <br />
-          digital evidence in various contexts.
- 
+          Embark on journey into the realm of Data Analytics. This course is
+          <br />tailored for individuals seeking to harness the power of data <br />
+          to make informed business decisions. 
           </p>
         </div>
         <div id="what-c">
@@ -145,7 +144,7 @@ const TC4 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Acquire skills in digital evidence collection and analysis.
+              Understand the fundamentals of Data Analytics.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -158,7 +157,7 @@ const TC4 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Understand forensic tools and techniques.
+              Apply satistical methods and tools for Data Analytics.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -172,8 +171,7 @@ const TC4 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Apply digital forensics in legal and investigative scenarios.
-
+               Gain practical experience in data visualization and interpretation.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -222,95 +220,61 @@ const TC4 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1:  Introduction to Digital Forensics
-
+              Module 1: Introduction to Data Analytics
               <ul id="child-ul-c">
-                <li id="content-child-li">Digital Forensics Overview
-
-</li>
-                <li id="content-child-li">Legal and Ethical Considerations</li>
-
+                <li id="content-child-li">Overview of Data Analytics and its applications</li>
+                <li id="content-child-li">Data Analytics lifecycle</li>
                 <li id="content-child-li">
-                Digital Forensics Lifecycle
+                  Ethical considerations in Data Analytics
                 </li>
-                
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: Digital Evidence Collection and Preservation
-
+              Module 2: Satistical analysis for Data Analytics 
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Collection and Handling of Digital Evidence
-
+                  Descriptive Satistics and Visualization
                 </li>
-                <li id="content-child-li">Chain of Custody</li>
-                <li id="content-child-li">Preservation Techniques
-
-</li>
+                <li id="content-child-li">Probability Distribution</li>
+                <li id="content-child-li">Satistical inference</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 3: Forensic Tools and Techniques
-
+              Module 3: Data Wrangling and Cleaning
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Popular Forensic Tools
-
+                  Data cleaning techniques
                 </li>
-                <li id="content-child-li">File System Analysis
-</li>
-                <li id="content-child-li">Memory Forensics</li>
+                <li id="content-child-li">Handling Missing Data</li>
+                <li id="content-child-li">Transforming and Reshaping Data</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 4: Mobile Device Forensics
+              Module 4: Data Visualization
               <ul id="child-ul-c">
-                <li id="content-child-li">Challenges in Mobile Forensics
-</li>
-                <li id="content-child-li">Extraction and Analysis of Mobile Data
-
-
-</li>
-                <li id="content-child-li">Case Studies in Mobile Forensics
-
-
-</li>
+                <li id="content-child-li">Principles of Data Visualization</li>
+                <li id="content-child-li">Tools of data Visaualization (e.g., Matplotlib, Seaborn)</li>
+                <li id="content-child-li">Creating Effective Visualization</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5:  Network Forensics
+              Module 5: Introduction to MAchine Learning for Data Analytics
               <ul id="child-ul-c">
-                <li id="content-child-li">Investigating Network-Based Attacks
-</li>
+                <li id="content-child-li">Overview of Machine Learning Concepts</li>
                 <li id="content-child-li">
-                Packet Analysis
-
+                  Supervised and Unsupervised Learning
                 </li>
-                <li id="content-child-li">Network Forensics Tools
-
-
-</li>
-
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 6:  Legal Aspects of Digital Forensics
-              <ul id="child-ul-c">
-                <li id="content-child-li">Digital Forensics in Legal Proceedings
-</li>
-                <li id="content-child-li">Expert Witness Testimony</li>
-                <li id="content-child-li">Ethical Considerations in Digital Forensics</li>
-              </ul>
-            </li>
-          </ul>      
+                <li id="content-child-li">
+                 Applications of ML in Data Analytics
+                </li>
                 
               </ul>
             </li>
@@ -319,11 +283,13 @@ const TC4 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Digital Forensics Case Studies: Analyze and report on real-world digital forensics cases.</p>
-          <p>Practical Forensic Analysis: Hands-on projects involving the analysis of digital evidence.</p>
-          <p>Final Digital Forensics Project: Develop and present a comprehensive digital forensics <br />
-             investigation.
-</p>
+          <p>Data Analysis Projects: Apply Data Analytics techniques to real-world
+            <br />applications.</p>
+          <p>Satistical Analysis Assignments: Implement Statistical methods for 
+            <br />data interpretation
+          </p>
+          <p>Final Data Analytics Project: Comprehensive assessment of Data Analytics
+            <br />skills through a practical project.</p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>

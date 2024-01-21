@@ -8,7 +8,7 @@ import rev from "../../../assets/rev.png";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
-const Tech3 = () => {
+const TRC5 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -26,7 +26,7 @@ const Tech3 = () => {
         }}
       >
         <div className="left-course">
-          <h2>React.js Course</h2>
+          <h2>Internet of Things (IoT) Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +38,9 @@ const Tech3 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">react.js Course</p>
+              <p className="course-box-head">Internet of Things (IoT) Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts of computing with our React.js Course
+              Dive into the fundamental concepts with our Internet of Things (IoT) Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,9 +130,10 @@ const Tech3 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Unlock the potencial of modern web developmentwith React.js. This 
-          <br />course is designed for web developers aiming to master React.js<br />
-          for building interactive and dynamic user interfaces. 
+          Explore the interconnected world of IoT with our hands-on course. This <br />
+          program teaches learners how to design, implement, and secure IoT <br />
+          solutions for diverse applications.
+ 
           </p>
         </div>
         <div id="what-c">
@@ -144,7 +145,7 @@ const Tech3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Understanding the fundamentals of React.js and its ecosystem.
+              Understand IoT architecture and components.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -157,7 +158,7 @@ const Tech3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Develop single page applications with React.js.
+              Develop IoT applications and solutions.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -171,7 +172,8 @@ const Tech3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Gain practical experience in building interactive web interfaces.
+              Implement security measures for IoT devices.
+
               </p>
             </li>
             {/* <p className="sub-c">
@@ -220,61 +222,95 @@ const Tech3 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1: Introduction to React.js
+              Module 1:  Introduction to IoT
               <ul id="child-ul-c">
-                <li id="content-child-li">Overview of React.js and its benifits</li>
-                <li id="content-child-li">Setting up a React.js Development Environment</li>
+                <li id="content-child-li">Overview of IoT and Its Applications
+
+</li>
+                <li id="content-child-li">IoT Architecture and Components</li>
+
                 <li id="content-child-li">
-                  JSX syntax and components 
+                IoT Communication Protocols
                 </li>
+                
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: React.js Components and Props
+              Module 2: IoT Architecture and Components
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                  Building and using React.js components
+                Edge Computing in IoT
+
+
                 </li>
-                <li id="content-child-li">Props and State in React.js</li>
-                <li id="content-child-li">Component lifecycle</li>
+                <li id="content-child-li">IoT Devices and Sensors</li>
+                <li id="content-child-li">IoT Gateway
+
+</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 3: React.js Router and Navigation
+              Module 3: IoT Protocols and Communication
+
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                  Navigating between pages with React Router
+                MQTT and CoAP Protocols
+
                 </li>
-                <li id="content-child-li">Dynamic Routing in React.js</li>
-                <li id="content-child-li">Handling Navigation Events</li>
+                <li id="content-child-li">Security in IoT Communication
+</li>
+                <li id="content-child-li">Wireless Communication in IoT</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 4: State management with Redux
+              Module 4: IoT Application Development
               <ul id="child-ul-c">
-                <li id="content-child-li">Introduction to Redux and its Components</li>
-                <li id="content-child-li">Implementing Redux in React.js apllications</li>
-                <li id="content-child-li">Asynchronous Operations with Redux Thunk</li>
+                <li id="content-child-li">Programming IoT Devices
+</li>
+                <li id="content-child-li">IoT Cloud Platforms
+
+
+</li>
+                <li id="content-child-li">Edge Analytics in IoT
+
+</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5: Advanced React.js Concepts
+              Module 5:  IoT Security Challenges
               <ul id="child-ul-c">
-                <li id="content-child-li">Hooks and Functional Components</li>
+                <li id="content-child-li">Common Security Threats in IoT
+</li>
                 <li id="content-child-li">
-                  Context API in React.js
+                Secure Design Principles
+
                 </li>
-                <li id="content-child-li">
-                 Testing React Components
-                </li>
+                <li id="content-child-li">Encryption and Authentication in IoT
+
+
+</li>
+
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 6:  Case Studies: IoT in Industry
+
+              <ul id="child-ul-c">
+                <li id="content-child-li">Real-world Applications of IoT in Various Industries
+</li>
+                <li id="content-child-li">Implementation Challenges and Success Stories
+</li>
+                <li id="content-child-li">Future Trends in IoT</li>
+              </ul>
+            </li>
+          </ul>      
                 
               </ul>
             </li>
@@ -283,10 +319,11 @@ const Tech3 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Coding Assignments: Implement React.js solutions for various UI scenarios.</p>
-          <p>Mid-term Project: Develop an interactive React.js application.</p>
-          <p>Final React.js Project: Comprehensive assessment of React.js skills <br />
-          through a complex web application.</p>
+          <p>IoT Project Development: Hands-on project designing and implementing an IoT solution.</p>
+          <p>IoT Security Assessment: Evaluate and enhance the security of an existing IoT system.</p>
+          <p>IoT Implementation Challenge: Develop and present a comprehensive plan for implementing <br />
+             IoT in a specific industry.
+</p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>
@@ -356,4 +393,4 @@ const Tech3 = () => {
   );
 };
 
-export default Tech3;
+export default TRC5;

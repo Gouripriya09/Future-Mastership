@@ -8,7 +8,7 @@ import rev from "../../../assets/rev.png";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
-const Tech5 = () => {
+const TRC3 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -26,7 +26,7 @@ const Tech5 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Digital Marketing Course</h2>
+          <h2>Machine Learning (ML) Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +38,9 @@ const Tech5 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">Digital Marketing Course</p>
+              <p className="course-box-head">Cyber Security Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts with our Digital Marketing Course
+              Dive into the fundamental concepts with our Cyber Security Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,9 +130,10 @@ const Tech5 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Explore the dynamic field of Digital Marketing with the comprehensive
-          <br />course. Tailored for marketers and business professionals. It covers <br />
-          key digital marketing strategies and tools. 
+          Secure digital landscapes with our Cyber Security course. This <br />
+           program provides a comprehensive understanding of cybersecurity <br />
+            principles, ethical hacking, and best practices.
+ 
           </p>
         </div>
         <div id="what-c">
@@ -144,7 +145,7 @@ const Tech5 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Understand the core principles of Digital Marketing.
+              Understand cybersecurity fundamentals and their importance.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -157,8 +158,7 @@ const Tech5 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Apply various digital marketing strategies to promote products
-              <br />and services.
+              Identify and mitigate security vulnerabilities.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -172,8 +172,8 @@ const Tech5 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-               Gain practical experience in creating effective digital 
-               <br />marketing compaigns.
+              Gain hands-on experience in ethical hacking techniques.
+
               </p>
             </li>
             {/* <p className="sub-c">
@@ -222,61 +222,89 @@ const Tech5 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1: Introduction to Digital Marketing
+              Module 1: Introduction to Cyber Security
+
               <ul id="child-ul-c">
-                <li id="content-child-li">Overview of Digital Marketing channels</li>
-                <li id="content-child-li">Evalution of Digital Marketing</li>
+                <li id="content-child-li">Fundamentals of Cyber Security
+</li>
+                <li id="content-child-li">Cyber Threat Landscape </li>
+
                 <li id="content-child-li">
-                Digital Marketing Strategies and Objectives
+                Importance of Cybersecurity in Modern Businesses
                 </li>
+                
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: Search Engine OptimiZation (SEO)
+              Module 2: Network Security
+
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                  Basics of SEO
+                Firewall and Intrusion Detection Systems
                 </li>
-                <li id="content-child-li">On-page and Off-page SEO</li>
-                <li id="content-child-li">SEO Tools and Analytics</li>
+                <li id="content-child-li">Secure Network Architectures</li>
+                <li id="content-child-li">Virtual Private Networks (VPNs)
+</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 3: Social Media Marketing
+              Module 3: Web Application Security
+
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                  Leveraging Social Media Platforms for Marketing
+                Common Web Application Vulnerabilities
                 </li>
-                <li id="content-child-li">Creating Engaging Content</li>
-                <li id="content-child-li">Social Media Analytics</li>
+                <li id="content-child-li">Secure Coding Practices</li>
+                <li id="content-child-li">Web Application Firewalls (WAF)</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 4: Email Marketing
+              Module 4: Ethical Hacking Techniques
               <ul id="child-ul-c">
-                <li id="content-child-li">Designing Effective Email Compaigns</li>
-                <li id="content-child-li">Email Automation and Segmentation</li>
-                <li id="content-child-li">Email Marketing Analytics</li>
+                <li id="content-child-li">Penetration Testing Fundamentals
+</li>
+                <li id="content-child-li">Exploitation Techniques and Tools
+
+</li>
+                <li id="content-child-li">Reporting and Remediation
+
+
+</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5: Pay-Per-Click (PPC) Advertising
+              Module 5: Incident Response and Forensics
+
               <ul id="child-ul-c">
-                <li id="content-child-li">Introduction to PPC</li>
+                <li id="content-child-li">Incident Response Planning
+</li>
                 <li id="content-child-li">
-                  Craeting and Managing PPC Compaigns
+                Digital Forensics Fundamentals
+
                 </li>
-                <li id="content-child-li">
-                 PPC Analytics and Optimization
-                </li>
+                <li id="content-child-li">Malware Analysis
+
+</li>
+
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 6: Cybersecurity Policies and Compliance
+              <ul id="child-ul-c">
+                <li id="content-child-li">Regulatory Compliance in Cybersecurity
+</li>
+                <li id="content-child-li">Security Policies and Procedures</li>
+                <li id="content-child-li">Security Awareness Training</li>
+              </ul>
+            </li>
+          </ul>      
                 
               </ul>
             </li>
@@ -285,12 +313,12 @@ const Tech5 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Digital Marketing Comapign Projects: Develop and implement Digital 
-            <br />Marketing Compaigns.</p>
-          <p>SEO Analysis Assignments: Apply SEO techniques to optimize online content.
-          </p>
-          <p>Final Digital Marketing Project: Comprehensive assessment of Digital Marketing
-            <br />skills through a practical compaign.</p>
+          <p>Cybersecurity Challenges: Simulated scenarios to assess incident response skills.</p>
+          <p>Ethical Hacking Simulations: Hands-on exercises in identifying and exploiting <br />
+             vulnerabilities.</p>
+          <p>Security Audit Project: Develop and present a comprehensive security audit for <br />
+             an organization.
+</p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>
@@ -360,4 +388,4 @@ const Tech5 = () => {
   );
 };
 
-export default Tech5;
+export default TRC3;

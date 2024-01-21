@@ -8,7 +8,7 @@ import rev from "../../../assets/rev.png";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
-const Tech2 = () => {
+const TRC2 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -26,7 +26,7 @@ const Tech2 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Python Course</h2>
+          <h2>Machine Learning (ML) Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +38,9 @@ const Tech2 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">Java Course</p>
+              <p className="course-box-head">Machine Learning Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts of computing with our Java Course
+              Dive into the fundamental concepts with our Machine Learning Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,9 +130,10 @@ const Tech2 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Dive into the world of java programming with this comprehensive course. <br />
-          Designed for beginners, it covers Java fundamentals, object-oriented <br />
-          programming, and application development.
+          Unlock the power of data with our Machine Learning course. This <br />
+         comprehensive program is designed to equip learners with the <br />
+         knowledge and skills needed to harness the potential of machine learning.
+ 
           </p>
         </div>
         <div id="what-c">
@@ -144,7 +145,7 @@ const Tech2 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Understand Java programming language fundamentals.
+              Grasp the fundamentals of machine learning and its applications.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -157,7 +158,7 @@ const Tech2 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Apply object-oriented principles to develop Java applications.
+              Apply a variety of supervised and unsupervised learning algorithms.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -171,7 +172,8 @@ const Tech2 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Gain practical experience in building Java applications.
+              Develop practical skills in data analysis, model evaluation, and deployment.
+
               </p>
             </li>
             {/* <p className="sub-c">
@@ -220,59 +222,81 @@ const Tech2 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1: Introduction to Java
+              Module 1: Introduction to Machine Learning
               <ul id="child-ul-c">
-                <li id="content-child-li">Java Basics and Syntax</li>
-                <li id="content-child-li">Variables, Data Types and Operators </li>
+                <li id="content-child-li">Basics of ML and Its Applications
+</li>
+                <li id="content-child-li">Machine Learning Lifecycle
+</li>
                 <li id="content-child-li">
-                  Control Flow and Loops in Java
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 2: Object-Oriented programming (OOP) in Java
-              <ul id="child-ul-c">
-                <li id="content-child-li">
-                  Classes and Objects
-                </li>
-                <li id="content-child-li">Inheritance and Polymorphism</li>
-                <li id="content-child-li">Abstraction ad Encapsulation</li>
-              </ul>
-            </li>
-          </ul>
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 3: Java Standard Library
-              <ul id="child-ul-c">
-                <li id="content-child-li">
-                  Overview of Java Standard Library
-                </li>
-                <li id="content-child-li">Input and Output Operators in java</li>
-                <li id="content-child-li">Exception Handling</li>
-              </ul>
-            </li>
-          </ul>
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 4: Java Collections Framework
-              <ul id="child-ul-c">
-                <li id="content-child-li">Lists, Sets and Maps in Java</li>
-                <li id="content-child-li">Iterators and Comparators</li>
-                <li id="content-child-li">Working with Collections</li>
-              </ul>
-            </li>
-          </ul>
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 5: Introduction to Java Application Development
-              <ul id="child-ul-c">
-                <li id="content-child-li">Building simple Java Application</li>
-                <li id="content-child-li">
-                  GUI Development with JavaFX
+                Introduction to Data Preprocessing
                 </li>
                 
+              </ul>
+            </li>
+          </ul>
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 2: Supervised Learning and Classification
+              <ul id="child-ul-c">
+                <li id="content-child-li">
+                Decision Trees and Random Forest
+                </li>
+                <li id="content-child-li">Support Vector Machines</li>
+                <li id="content-child-li">Ensemble Learning Techniques</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 3: Unsupervised Learning and Clustering
+
+              <ul id="child-ul-c">
+                <li id="content-child-li">
+                K-Means and Hierarchical Clustering
+                </li>
+                <li id="content-child-li">Dimensionality Reduction Techniques</li>
+                <li id="content-child-li">Anomaly Detection</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 4: Model Evaluation and Optimization
+              <ul id="child-ul-c">
+                <li id="content-child-li">Metrics for Model Evaluation
+</li>
+                <li id="content-child-li">Hyperparameter Tuning
+</li>
+                <li id="content-child-li">Model Deployment Strategies
+
+</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 5: Advanced ML Algorithms
+
+              <ul id="child-ul-c">
+                <li id="content-child-li">Neural Networks and Deep Learning</li>
+                <li id="content-child-li">
+                Reinforcement Learning
+
+                </li>
+                <li id="content-child-li">Time Series Analysis
+</li>
+
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 6: Real-world ML Applications
+              <ul id="child-ul-c">
+                <li id="content-child-li">Case Studies: ML in Finance, Healthcare, and Marketing</li>
+                <li id="content-child-li">Challenges in Implementing ML Solutions</li>
+                <li id="content-child-li">Future Trends in ML</li>
+              </ul>
+            </li>
+          </ul>      
                 
               </ul>
             </li>
@@ -281,10 +305,10 @@ const Tech2 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Coding Assignments: Implement Java solutions for various tasks.</p>
-          <p>Object-Oriented Programming Project: Develop a Java application using OOP Principles.</p>
-          <p>Final Java Application Project: Comprehensive assessment of Java programming <br /> 
-            skills through a real-world application</p>
+          <p>Data Analysis Projects: Apply ML techniques to real-world datasets.</p>
+          <p>ML Algorithm Implementations: Hands-on implementation of ML algorithms</p>
+          <p>Final Machine Learning Project: Develop a comprehensive ML solution for <br />
+             a specific domain.</p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>
@@ -354,4 +378,4 @@ const Tech2 = () => {
   );
 };
 
-export default Tech2;
+export default TRC2;

@@ -26,7 +26,7 @@ const TC3 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Machine Learning (ML) Course</h2>
+          <h2>React.js Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +38,9 @@ const TC3 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">Cyber Security Course</p>
+              <p className="course-box-head">react.js Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts with our Cyber Security Course
+              Dive into the fundamental concepts of computing with our React.js Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,10 +130,9 @@ const TC3 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Secure digital landscapes with our Cyber Security course. This <br />
-           program provides a comprehensive understanding of cybersecurity <br />
-            principles, ethical hacking, and best practices.
- 
+          Unlock the potencial of modern web developmentwith React.js. This 
+          <br />course is designed for web developers aiming to master React.js<br />
+          for building interactive and dynamic user interfaces. 
           </p>
         </div>
         <div id="what-c">
@@ -145,7 +144,7 @@ const TC3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Understand cybersecurity fundamentals and their importance.
+                Understanding the fundamentals of React.js and its ecosystem.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -158,7 +157,7 @@ const TC3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Identify and mitigate security vulnerabilities.
+                Develop single page applications with React.js.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -172,8 +171,7 @@ const TC3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Gain hands-on experience in ethical hacking techniques.
-
+                Gain practical experience in building interactive web interfaces.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -222,89 +220,61 @@ const TC3 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1: Introduction to Cyber Security
-
+              Module 1: Introduction to React.js
               <ul id="child-ul-c">
-                <li id="content-child-li">Fundamentals of Cyber Security
-</li>
-                <li id="content-child-li">Cyber Threat Landscape </li>
-
+                <li id="content-child-li">Overview of React.js and its benifits</li>
+                <li id="content-child-li">Setting up a React.js Development Environment</li>
                 <li id="content-child-li">
-                Importance of Cybersecurity in Modern Businesses
+                  JSX syntax and components 
                 </li>
-                
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: Network Security
-
+              Module 2: React.js Components and Props
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Firewall and Intrusion Detection Systems
+                  Building and using React.js components
                 </li>
-                <li id="content-child-li">Secure Network Architectures</li>
-                <li id="content-child-li">Virtual Private Networks (VPNs)
-</li>
+                <li id="content-child-li">Props and State in React.js</li>
+                <li id="content-child-li">Component lifecycle</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 3: Web Application Security
-
+              Module 3: React.js Router and Navigation
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Common Web Application Vulnerabilities
+                  Navigating between pages with React Router
                 </li>
-                <li id="content-child-li">Secure Coding Practices</li>
-                <li id="content-child-li">Web Application Firewalls (WAF)</li>
+                <li id="content-child-li">Dynamic Routing in React.js</li>
+                <li id="content-child-li">Handling Navigation Events</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 4: Ethical Hacking Techniques
+              Module 4: State management with Redux
               <ul id="child-ul-c">
-                <li id="content-child-li">Penetration Testing Fundamentals
-</li>
-                <li id="content-child-li">Exploitation Techniques and Tools
-
-</li>
-                <li id="content-child-li">Reporting and Remediation
-
-
-</li>
+                <li id="content-child-li">Introduction to Redux and its Components</li>
+                <li id="content-child-li">Implementing Redux in React.js apllications</li>
+                <li id="content-child-li">Asynchronous Operations with Redux Thunk</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5: Incident Response and Forensics
-
+              Module 5: Advanced React.js Concepts
               <ul id="child-ul-c">
-                <li id="content-child-li">Incident Response Planning
-</li>
+                <li id="content-child-li">Hooks and Functional Components</li>
                 <li id="content-child-li">
-                Digital Forensics Fundamentals
-
+                  Context API in React.js
                 </li>
-                <li id="content-child-li">Malware Analysis
-
-</li>
-
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 6: Cybersecurity Policies and Compliance
-              <ul id="child-ul-c">
-                <li id="content-child-li">Regulatory Compliance in Cybersecurity
-</li>
-                <li id="content-child-li">Security Policies and Procedures</li>
-                <li id="content-child-li">Security Awareness Training</li>
-              </ul>
-            </li>
-          </ul>      
+                <li id="content-child-li">
+                 Testing React Components
+                </li>
                 
               </ul>
             </li>
@@ -313,12 +283,10 @@ const TC3 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Cybersecurity Challenges: Simulated scenarios to assess incident response skills.</p>
-          <p>Ethical Hacking Simulations: Hands-on exercises in identifying and exploiting <br />
-             vulnerabilities.</p>
-          <p>Security Audit Project: Develop and present a comprehensive security audit for <br />
-             an organization.
-</p>
+          <p>Coding Assignments: Implement React.js solutions for various UI scenarios.</p>
+          <p>Mid-term Project: Develop an interactive React.js application.</p>
+          <p>Final React.js Project: Comprehensive assessment of React.js skills <br />
+          through a complex web application.</p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>

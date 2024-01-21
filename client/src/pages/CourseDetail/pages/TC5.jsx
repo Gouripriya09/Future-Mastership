@@ -26,7 +26,7 @@ const TC5 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Internet of Things (IoT) Course</h2>
+          <h2>Digital Marketing Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +38,9 @@ const TC5 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">Internet of Things (IoT) Course</p>
+              <p className="course-box-head">Digital Marketing Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts with our Internet of Things (IoT) Course
+              Dive into the fundamental concepts with our Digital Marketing Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,10 +130,9 @@ const TC5 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Explore the interconnected world of IoT with our hands-on course. This <br />
-          program teaches learners how to design, implement, and secure IoT <br />
-          solutions for diverse applications.
- 
+          Explore the dynamic field of Digital Marketing with the comprehensive
+          <br />course. Tailored for marketers and business professionals. It covers <br />
+          key digital marketing strategies and tools. 
           </p>
         </div>
         <div id="what-c">
@@ -145,7 +144,7 @@ const TC5 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Understand IoT architecture and components.
+              Understand the core principles of Digital Marketing.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -158,7 +157,8 @@ const TC5 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Develop IoT applications and solutions.
+              Apply various digital marketing strategies to promote products
+              <br />and services.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -172,8 +172,8 @@ const TC5 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Implement security measures for IoT devices.
-
+               Gain practical experience in creating effective digital 
+               <br />marketing compaigns.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -222,95 +222,61 @@ const TC5 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1:  Introduction to IoT
+              Module 1: Introduction to Digital Marketing
               <ul id="child-ul-c">
-                <li id="content-child-li">Overview of IoT and Its Applications
-
-</li>
-                <li id="content-child-li">IoT Architecture and Components</li>
-
+                <li id="content-child-li">Overview of Digital Marketing channels</li>
+                <li id="content-child-li">Evalution of Digital Marketing</li>
                 <li id="content-child-li">
-                IoT Communication Protocols
+                Digital Marketing Strategies and Objectives
                 </li>
-                
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: IoT Architecture and Components
+              Module 2: Search Engine OptimiZation (SEO)
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Edge Computing in IoT
-
-
+                  Basics of SEO
                 </li>
-                <li id="content-child-li">IoT Devices and Sensors</li>
-                <li id="content-child-li">IoT Gateway
-
-</li>
+                <li id="content-child-li">On-page and Off-page SEO</li>
+                <li id="content-child-li">SEO Tools and Analytics</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 3: IoT Protocols and Communication
-
+              Module 3: Social Media Marketing
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                MQTT and CoAP Protocols
-
+                  Leveraging Social Media Platforms for Marketing
                 </li>
-                <li id="content-child-li">Security in IoT Communication
-</li>
-                <li id="content-child-li">Wireless Communication in IoT</li>
+                <li id="content-child-li">Creating Engaging Content</li>
+                <li id="content-child-li">Social Media Analytics</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 4: IoT Application Development
+              Module 4: Email Marketing
               <ul id="child-ul-c">
-                <li id="content-child-li">Programming IoT Devices
-</li>
-                <li id="content-child-li">IoT Cloud Platforms
-
-
-</li>
-                <li id="content-child-li">Edge Analytics in IoT
-
-</li>
+                <li id="content-child-li">Designing Effective Email Compaigns</li>
+                <li id="content-child-li">Email Automation and Segmentation</li>
+                <li id="content-child-li">Email Marketing Analytics</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5:  IoT Security Challenges
+              Module 5: Pay-Per-Click (PPC) Advertising
               <ul id="child-ul-c">
-                <li id="content-child-li">Common Security Threats in IoT
-</li>
+                <li id="content-child-li">Introduction to PPC</li>
                 <li id="content-child-li">
-                Secure Design Principles
-
+                  Craeting and Managing PPC Compaigns
                 </li>
-                <li id="content-child-li">Encryption and Authentication in IoT
-
-
-</li>
-
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 6:  Case Studies: IoT in Industry
-
-              <ul id="child-ul-c">
-                <li id="content-child-li">Real-world Applications of IoT in Various Industries
-</li>
-                <li id="content-child-li">Implementation Challenges and Success Stories
-</li>
-                <li id="content-child-li">Future Trends in IoT</li>
-              </ul>
-            </li>
-          </ul>      
+                <li id="content-child-li">
+                 PPC Analytics and Optimization
+                </li>
                 
               </ul>
             </li>
@@ -319,11 +285,12 @@ const TC5 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>IoT Project Development: Hands-on project designing and implementing an IoT solution.</p>
-          <p>IoT Security Assessment: Evaluate and enhance the security of an existing IoT system.</p>
-          <p>IoT Implementation Challenge: Develop and present a comprehensive plan for implementing <br />
-             IoT in a specific industry.
-</p>
+          <p>Digital Marketing Comapign Projects: Develop and implement Digital 
+            <br />Marketing Compaigns.</p>
+          <p>SEO Analysis Assignments: Apply SEO techniques to optimize online content.
+          </p>
+          <p>Final Digital Marketing Project: Comprehensive assessment of Digital Marketing
+            <br />skills through a practical compaign.</p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>
