@@ -8,7 +8,7 @@ import rev from "../../../assets/rev.png";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
-const TC3 = () => {
+const TC4 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -26,7 +26,7 @@ const TC3 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Machine Learning (ML) Course</h2>
+          <h2>Digital forensics Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +38,9 @@ const TC3 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">Cyber Security Course</p>
+              <p className="course-box-head">Digital forensics Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts with our Cyber Security Course
+              Dive into the fundamental concepts with our Digital forensics Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,9 +130,9 @@ const TC3 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Secure digital landscapes with our Cyber Security course. This <br />
-           program provides a comprehensive understanding of cybersecurity <br />
-            principles, ethical hacking, and best practices.
+          Delve into the world of Digital Forensics with our comprehensive course. This <br />
+          program equips learners with the skills needed to investigate and analyze <br />
+          digital evidence in various contexts.
  
           </p>
         </div>
@@ -145,7 +145,7 @@ const TC3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Understand cybersecurity fundamentals and their importance.
+              Acquire skills in digital evidence collection and analysis.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -158,7 +158,7 @@ const TC3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Identify and mitigate security vulnerabilities.
+              Understand forensic tools and techniques.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -172,7 +172,7 @@ const TC3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Gain hands-on experience in ethical hacking techniques.
+              Apply digital forensics in legal and investigative scenarios.
 
               </p>
             </li>
@@ -222,15 +222,16 @@ const TC3 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1: Introduction to Cyber Security
+              Module 1:  Introduction to Digital Forensics
 
               <ul id="child-ul-c">
-                <li id="content-child-li">Fundamentals of Cyber Security
+                <li id="content-child-li">Digital Forensics Overview
+
 </li>
-                <li id="content-child-li">Cyber Threat Landscape </li>
+                <li id="content-child-li">Legal and Ethical Considerations</li>
 
                 <li id="content-child-li">
-                Importance of Cybersecurity in Modern Businesses
+                Digital Forensics Lifecycle
                 </li>
                 
               </ul>
@@ -238,42 +239,15 @@ const TC3 = () => {
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: Network Security
+              Module 2: Digital Evidence Collection and Preservation
 
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Firewall and Intrusion Detection Systems
+                Collection and Handling of Digital Evidence
+
                 </li>
-                <li id="content-child-li">Secure Network Architectures</li>
-                <li id="content-child-li">Virtual Private Networks (VPNs)
-</li>
-              </ul>
-            </li>
-          </ul>
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 3: Web Application Security
-
-              <ul id="child-ul-c">
-                <li id="content-child-li">
-                Common Web Application Vulnerabilities
-                </li>
-                <li id="content-child-li">Secure Coding Practices</li>
-                <li id="content-child-li">Web Application Firewalls (WAF)</li>
-              </ul>
-            </li>
-          </ul>
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 4: Ethical Hacking Techniques
-              <ul id="child-ul-c">
-                <li id="content-child-li">Penetration Testing Fundamentals
-</li>
-                <li id="content-child-li">Exploitation Techniques and Tools
-
-</li>
-                <li id="content-child-li">Reporting and Remediation
-
+                <li id="content-child-li">Chain of Custody</li>
+                <li id="content-child-li">Preservation Techniques
 
 </li>
               </ul>
@@ -281,27 +255,59 @@ const TC3 = () => {
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5: Incident Response and Forensics
+              Module 3: Forensic Tools and Techniques
 
               <ul id="child-ul-c">
-                <li id="content-child-li">Incident Response Planning
-</li>
                 <li id="content-child-li">
-                Digital Forensics Fundamentals
+                Popular Forensic Tools
 
                 </li>
-                <li id="content-child-li">Malware Analysis
+                <li id="content-child-li">File System Analysis
+</li>
+                <li id="content-child-li">Memory Forensics</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 4: Mobile Device Forensics
+              <ul id="child-ul-c">
+                <li id="content-child-li">Challenges in Mobile Forensics
+</li>
+                <li id="content-child-li">Extraction and Analysis of Mobile Data
+
+
+</li>
+                <li id="content-child-li">Case Studies in Mobile Forensics
+
+
+</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 5:  Network Forensics
+              <ul id="child-ul-c">
+                <li id="content-child-li">Investigating Network-Based Attacks
+</li>
+                <li id="content-child-li">
+                Packet Analysis
+
+                </li>
+                <li id="content-child-li">Network Forensics Tools
+
 
 </li>
 
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 6: Cybersecurity Policies and Compliance
+              Module 6:  Legal Aspects of Digital Forensics
               <ul id="child-ul-c">
-                <li id="content-child-li">Regulatory Compliance in Cybersecurity
+                <li id="content-child-li">Digital Forensics in Legal Proceedings
 </li>
-                <li id="content-child-li">Security Policies and Procedures</li>
-                <li id="content-child-li">Security Awareness Training</li>
+                <li id="content-child-li">Expert Witness Testimony</li>
+                <li id="content-child-li">Ethical Considerations in Digital Forensics</li>
               </ul>
             </li>
           </ul>      
@@ -313,11 +319,10 @@ const TC3 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Cybersecurity Challenges: Simulated scenarios to assess incident response skills.</p>
-          <p>Ethical Hacking Simulations: Hands-on exercises in identifying and exploiting <br />
-             vulnerabilities.</p>
-          <p>Security Audit Project: Develop and present a comprehensive security audit for <br />
-             an organization.
+          <p>Digital Forensics Case Studies: Analyze and report on real-world digital forensics cases.</p>
+          <p>Practical Forensic Analysis: Hands-on projects involving the analysis of digital evidence.</p>
+          <p>Final Digital Forensics Project: Develop and present a comprehensive digital forensics <br />
+             investigation.
 </p>
         </div>
         <div id="inst-c">
@@ -388,4 +393,4 @@ const TC3 = () => {
   );
 };
 
-export default TC3;
+export default TC4;

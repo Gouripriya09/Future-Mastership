@@ -8,7 +8,7 @@ import rev from "../../../assets/rev.png";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
-const TC3 = () => {
+const TC5 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -26,7 +26,7 @@ const TC3 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Machine Learning (ML) Course</h2>
+          <h2>Internet of Things (IoT) Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +38,9 @@ const TC3 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">Cyber Security Course</p>
+              <p className="course-box-head">Internet of Things (IoT) Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts with our Cyber Security Course
+              Dive into the fundamental concepts with our Internet of Things (IoT) Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,9 +130,9 @@ const TC3 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Secure digital landscapes with our Cyber Security course. This <br />
-           program provides a comprehensive understanding of cybersecurity <br />
-            principles, ethical hacking, and best practices.
+          Explore the interconnected world of IoT with our hands-on course. This <br />
+          program teaches learners how to design, implement, and secure IoT <br />
+          solutions for diverse applications.
  
           </p>
         </div>
@@ -145,7 +145,7 @@ const TC3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Understand cybersecurity fundamentals and their importance.
+              Understand IoT architecture and components.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -158,7 +158,7 @@ const TC3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Identify and mitigate security vulnerabilities.
+              Develop IoT applications and solutions.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -172,7 +172,7 @@ const TC3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Gain hands-on experience in ethical hacking techniques.
+              Implement security measures for IoT devices.
 
               </p>
             </li>
@@ -222,15 +222,15 @@ const TC3 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1: Introduction to Cyber Security
-
+              Module 1:  Introduction to IoT
               <ul id="child-ul-c">
-                <li id="content-child-li">Fundamentals of Cyber Security
+                <li id="content-child-li">Overview of IoT and Its Applications
+
 </li>
-                <li id="content-child-li">Cyber Threat Landscape </li>
+                <li id="content-child-li">IoT Architecture and Components</li>
 
                 <li id="content-child-li">
-                Importance of Cybersecurity in Modern Businesses
+                IoT Communication Protocols
                 </li>
                 
               </ul>
@@ -238,42 +238,15 @@ const TC3 = () => {
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: Network Security
-
+              Module 2: IoT Architecture and Components
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Firewall and Intrusion Detection Systems
+                Edge Computing in IoT
+
+
                 </li>
-                <li id="content-child-li">Secure Network Architectures</li>
-                <li id="content-child-li">Virtual Private Networks (VPNs)
-</li>
-              </ul>
-            </li>
-          </ul>
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 3: Web Application Security
-
-              <ul id="child-ul-c">
-                <li id="content-child-li">
-                Common Web Application Vulnerabilities
-                </li>
-                <li id="content-child-li">Secure Coding Practices</li>
-                <li id="content-child-li">Web Application Firewalls (WAF)</li>
-              </ul>
-            </li>
-          </ul>
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 4: Ethical Hacking Techniques
-              <ul id="child-ul-c">
-                <li id="content-child-li">Penetration Testing Fundamentals
-</li>
-                <li id="content-child-li">Exploitation Techniques and Tools
-
-</li>
-                <li id="content-child-li">Reporting and Remediation
-
+                <li id="content-child-li">IoT Devices and Sensors</li>
+                <li id="content-child-li">IoT Gateway
 
 </li>
               </ul>
@@ -281,27 +254,60 @@ const TC3 = () => {
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5: Incident Response and Forensics
+              Module 3: IoT Protocols and Communication
 
               <ul id="child-ul-c">
-                <li id="content-child-li">Incident Response Planning
-</li>
                 <li id="content-child-li">
-                Digital Forensics Fundamentals
+                MQTT and CoAP Protocols
 
                 </li>
-                <li id="content-child-li">Malware Analysis
+                <li id="content-child-li">Security in IoT Communication
+</li>
+                <li id="content-child-li">Wireless Communication in IoT</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 4: IoT Application Development
+              <ul id="child-ul-c">
+                <li id="content-child-li">Programming IoT Devices
+</li>
+                <li id="content-child-li">IoT Cloud Platforms
+
+
+</li>
+                <li id="content-child-li">Edge Analytics in IoT
+
+</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 5:  IoT Security Challenges
+              <ul id="child-ul-c">
+                <li id="content-child-li">Common Security Threats in IoT
+</li>
+                <li id="content-child-li">
+                Secure Design Principles
+
+                </li>
+                <li id="content-child-li">Encryption and Authentication in IoT
+
 
 </li>
 
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 6: Cybersecurity Policies and Compliance
+              Module 6:  Case Studies: IoT in Industry
+
               <ul id="child-ul-c">
-                <li id="content-child-li">Regulatory Compliance in Cybersecurity
+                <li id="content-child-li">Real-world Applications of IoT in Various Industries
 </li>
-                <li id="content-child-li">Security Policies and Procedures</li>
-                <li id="content-child-li">Security Awareness Training</li>
+                <li id="content-child-li">Implementation Challenges and Success Stories
+</li>
+                <li id="content-child-li">Future Trends in IoT</li>
               </ul>
             </li>
           </ul>      
@@ -313,11 +319,10 @@ const TC3 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Cybersecurity Challenges: Simulated scenarios to assess incident response skills.</p>
-          <p>Ethical Hacking Simulations: Hands-on exercises in identifying and exploiting <br />
-             vulnerabilities.</p>
-          <p>Security Audit Project: Develop and present a comprehensive security audit for <br />
-             an organization.
+          <p>IoT Project Development: Hands-on project designing and implementing an IoT solution.</p>
+          <p>IoT Security Assessment: Evaluate and enhance the security of an existing IoT system.</p>
+          <p>IoT Implementation Challenge: Develop and present a comprehensive plan for implementing <br />
+             IoT in a specific industry.
 </p>
         </div>
         <div id="inst-c">
@@ -388,4 +393,4 @@ const TC3 = () => {
   );
 };
 
-export default TC3;
+export default TC5;
