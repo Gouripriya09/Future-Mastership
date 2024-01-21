@@ -57,7 +57,7 @@ const Footer = () => {
             </Link>
             <Link to="/Certificate" className="unformat-link">
               <li>Verify Certificate</li>
-             </Link> 
+            </Link>
           </ul>
         </div>
         <div className="fc fc4">
@@ -101,11 +101,18 @@ const Footer = () => {
           </div>
           <p className="ul">Contact Us</p>
           <p>
-            <i class="fa-solid fa-phone"></i> Ph.No 9110799941
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:9110799941" class="unformat-link">
+              Ph.No 9110799941
+            </a>
           </p>
           <p>
-            <i class="fa-solid fa-envelope"></i> Email mastervance16@gmail.com
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:mastervance16@gmail.com" class="unformat-link">
+              Email mastervance16@gmail.com
+            </a>
           </p>
+
           <br></br>
           <br />
         </div>
