@@ -8,7 +8,7 @@ import rev from "../../../assets/rev.png";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
-const FC2 = () => {
+const Tech2 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

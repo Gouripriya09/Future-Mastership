@@ -8,7 +8,7 @@ import rev from "../../../assets/rev.png";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
-const Tech1 = () => {
+const Tech4 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -26,7 +26,7 @@ const Tech1 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Python Course</h2>
+          <h2>Data Analytics Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +38,9 @@ const Tech1 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">Python Course</p>
+              <p className="course-box-head">Data Analytics Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts of computing with our Python Course
+              Dive into the fundamental concepts with our Data Analytics Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,10 +130,9 @@ const Tech1 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Embark on journey into the versatile world of python programming.
-          <br />This course is designed for beginners and aims to provide a <br />
-          solid foundation in python, covering syntax, data structures, and <br />
-          and practical applications.
+          Embark on journey into the realm of Data Analytics. This course is
+          <br />tailored for individuals seeking to harness the power of data <br />
+          to make informed business decisions. 
           </p>
         </div>
         <div id="what-c">
@@ -145,7 +144,7 @@ const Tech1 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Grab the fundamentals of Python programming.
+              Understand the fundamentals of Data Analytics.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -158,7 +157,7 @@ const Tech1 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Develop skills in solving problems using Python 
+              Apply satistical methods and tools for Data Analytics.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -172,7 +171,7 @@ const Tech1 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Gain practical experience in building python applications.
+               Gain practical experience in data visualization and interpretation.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -221,60 +220,60 @@ const Tech1 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1: Introduction to Python
+              Module 1: Introduction to Data Analytics
               <ul id="child-ul-c">
-                <li id="content-child-li">Python Basics and Syntax</li>
-                <li id="content-child-li">Variables and Data Types</li>
+                <li id="content-child-li">Overview of Data Analytics and its applications</li>
+                <li id="content-child-li">Data Analytics lifecycle</li>
                 <li id="content-child-li">
-                  Control Flow and Loops 
+                  Ethical considerations in Data Analytics
                 </li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: Data Structures in Python
+              Module 2: Satistical analysis for Data Analytics 
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                  Lists, Tuples, and Sets
+                  Descriptive Satistics and Visualization
                 </li>
-                <li id="content-child-li">Dictionaries and their applications</li>
-                <li id="content-child-li">Advanced Data Structures</li>
+                <li id="content-child-li">Probability Distribution</li>
+                <li id="content-child-li">Satistical inference</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 3: Function and Modules
+              Module 3: Data Wrangling and Cleaning
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                  Function Definion and Usage 
+                  Data cleaning techniques
                 </li>
-                <li id="content-child-li">Creation and Important Modules</li>
-                <li id="content-child-li">Error Handling in Python</li>
+                <li id="content-child-li">Handling Missing Data</li>
+                <li id="content-child-li">Transforming and Reshaping Data</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 4: File handling and Input/Output
+              Module 4: Data Visualization
               <ul id="child-ul-c">
-                <li id="content-child-li">Reading and Writing Files</li>
-                <li id="content-child-li">Working with File Format</li>
-                <li id="content-child-li">Input and Output Operations</li>
+                <li id="content-child-li">Principles of Data Visualization</li>
+                <li id="content-child-li">Tools of data Visaualization (e.g., Matplotlib, Seaborn)</li>
+                <li id="content-child-li">Creating Effective Visualization</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5: Introduction to Python Libraries 
+              Module 5: Introduction to MAchine Learning for Data Analytics
               <ul id="child-ul-c">
-                <li id="content-child-li">Basic Data Analysis in Python</li>
+                <li id="content-child-li">Overview of Machine Learning Concepts</li>
                 <li id="content-child-li">
-                  Overview of Popular Python Libraties (e.g., Numpy, Pandas)
+                  Supervised and Unsupervised Learning
                 </li>
                 <li id="content-child-li">
-                 Common Security Threats and vulnerability
+                 Applications of ML in Data Analytics
                 </li>
                 
               </ul>
@@ -284,9 +283,13 @@ const Tech1 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Coding Assignments: Implement Python solutions for various tasks.</p>
-          <p>Mid-term Project: Develop a practical Python applications</p>
-          <p>Final Exam: Comprehensive assessment of python programming skills</p>
+          <p>Data Analysis Projects: Apply Data Analytics techniques to real-world
+            <br />applications.</p>
+          <p>Satistical Analysis Assignments: Implement Statistical methods for 
+            <br />data interpretation
+          </p>
+          <p>Final Data Analytics Project: Comprehensive assessment of Data Analytics
+            <br />skills through a practical project.</p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>
@@ -356,4 +359,4 @@ const Tech1 = () => {
   );
 };
 
-export default Tech1;
+export default Tech4;

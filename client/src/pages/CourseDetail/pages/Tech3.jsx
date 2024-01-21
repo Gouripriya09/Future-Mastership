@@ -8,7 +8,7 @@ import rev from "../../../assets/rev.png";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
-const Tech1 = () => {
+const Tech3 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -26,7 +26,7 @@ const Tech1 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Python Course</h2>
+          <h2>React.js Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +38,9 @@ const Tech1 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">Python Course</p>
+              <p className="course-box-head">react.js Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts of computing with our Python Course
+              Dive into the fundamental concepts of computing with our React.js Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,10 +130,9 @@ const Tech1 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Embark on journey into the versatile world of python programming.
-          <br />This course is designed for beginners and aims to provide a <br />
-          solid foundation in python, covering syntax, data structures, and <br />
-          and practical applications.
+          Unlock the potencial of modern web developmentwith React.js. This 
+          <br />course is designed for web developers aiming to master React.js<br />
+          for building interactive and dynamic user interfaces. 
           </p>
         </div>
         <div id="what-c">
@@ -145,7 +144,7 @@ const Tech1 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Grab the fundamentals of Python programming.
+                Understanding the fundamentals of React.js and its ecosystem.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -158,7 +157,7 @@ const Tech1 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Develop skills in solving problems using Python 
+                Develop single page applications with React.js.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -172,7 +171,7 @@ const Tech1 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Gain practical experience in building python applications.
+                Gain practical experience in building interactive web interfaces.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -221,60 +220,60 @@ const Tech1 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1: Introduction to Python
+              Module 1: Introduction to React.js
               <ul id="child-ul-c">
-                <li id="content-child-li">Python Basics and Syntax</li>
-                <li id="content-child-li">Variables and Data Types</li>
+                <li id="content-child-li">Overview of React.js and its benifits</li>
+                <li id="content-child-li">Setting up a React.js Development Environment</li>
                 <li id="content-child-li">
-                  Control Flow and Loops 
+                  JSX syntax and components 
                 </li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: Data Structures in Python
+              Module 2: React.js Components and Props
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                  Lists, Tuples, and Sets
+                  Building and using React.js components
                 </li>
-                <li id="content-child-li">Dictionaries and their applications</li>
-                <li id="content-child-li">Advanced Data Structures</li>
+                <li id="content-child-li">Props and State in React.js</li>
+                <li id="content-child-li">Component lifecycle</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 3: Function and Modules
+              Module 3: React.js Router and Navigation
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                  Function Definion and Usage 
+                  Navigating between pages with React Router
                 </li>
-                <li id="content-child-li">Creation and Important Modules</li>
-                <li id="content-child-li">Error Handling in Python</li>
+                <li id="content-child-li">Dynamic Routing in React.js</li>
+                <li id="content-child-li">Handling Navigation Events</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 4: File handling and Input/Output
+              Module 4: State management with Redux
               <ul id="child-ul-c">
-                <li id="content-child-li">Reading and Writing Files</li>
-                <li id="content-child-li">Working with File Format</li>
-                <li id="content-child-li">Input and Output Operations</li>
+                <li id="content-child-li">Introduction to Redux and its Components</li>
+                <li id="content-child-li">Implementing Redux in React.js apllications</li>
+                <li id="content-child-li">Asynchronous Operations with Redux Thunk</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5: Introduction to Python Libraries 
+              Module 5: Advanced React.js Concepts
               <ul id="child-ul-c">
-                <li id="content-child-li">Basic Data Analysis in Python</li>
+                <li id="content-child-li">Hooks and Functional Components</li>
                 <li id="content-child-li">
-                  Overview of Popular Python Libraties (e.g., Numpy, Pandas)
+                  Context API in React.js
                 </li>
                 <li id="content-child-li">
-                 Common Security Threats and vulnerability
+                 Testing React Components
                 </li>
                 
               </ul>
@@ -284,9 +283,10 @@ const Tech1 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Coding Assignments: Implement Python solutions for various tasks.</p>
-          <p>Mid-term Project: Develop a practical Python applications</p>
-          <p>Final Exam: Comprehensive assessment of python programming skills</p>
+          <p>Coding Assignments: Implement React.js solutions for various UI scenarios.</p>
+          <p>Mid-term Project: Develop an interactive React.js application.</p>
+          <p>Final React.js Project: Comprehensive assessment of React.js skills <br />
+          through a complex web application.</p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>
@@ -356,4 +356,4 @@ const Tech1 = () => {
   );
 };
 
-export default Tech1;
+export default Tech3;
