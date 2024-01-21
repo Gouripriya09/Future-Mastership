@@ -38,7 +38,7 @@ const Auth2 = () => {
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
         />
-        <Link to="/" className="unformat-link">
+        <Link to="/dashboard" className="unformat-link">
           <button type="submit">Submit Phone Number</button>
         </Link>
       </form>
