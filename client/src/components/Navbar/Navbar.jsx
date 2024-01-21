@@ -13,7 +13,12 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const auth = useAuth();
+  const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false);
+
   const navigate = useNavigate();
+  const toggleProfileDropdown = () => {
+    setProfileDropdownOpen(!isProfileDropdownOpen);
+  };
 
   const initialMode = localStorage.getItem("themeMode") || "Dark";
   document.documentElement.classList.add(initialMode);
@@ -103,9 +108,17 @@ const Navbar = () => {
         </span>
         {auth.currentUser ? (
           <span className="user-info">
-            <p className="light" style={{ color: "var(--light)" }}>
-              {auth.currentUser.displayName}
-            </p>
+            <Link to="/dashboard" className="unformat-link">
+              <img
+                src={auth.currentUser.photoURL}
+                alt="Profile"
+                style={{
+                  width: "2.5rem",
+                  height: "2.5rem",
+                  borderRadius: "50%",
+                }}
+              />
+            </Link>
           </span>
         ) : null}
         <ul className={`${isSidebarOpen ? "sidebar-open" : "sidebar-close"}`}>
@@ -185,7 +198,10 @@ const Navbar = () => {
           ></i>
           {auth.currentUser ? (
             <>
-              <button onClick={() => auth.logout()} className="logout-btn">
+              <button
+                onClick={() => auth.logout().then(navigate("/login"))}
+                className="logout-btn"
+              >
                 Logout
               </button>
             </>

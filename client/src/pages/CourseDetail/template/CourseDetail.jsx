@@ -31,7 +31,7 @@ const CourseDetail = () => {
             <div id="pfile"></div>
             <p>Instructor Name</p>
           </div>
-          <Link to="/payment" className="unformat-link">
+          <Link to="/phone" className="unformat-link">
             <button className="enroll">Enroll</button>
           </Link>
         </div>
