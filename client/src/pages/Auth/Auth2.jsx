@@ -9,6 +9,7 @@ const Auth2 = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
 
   const handlePhoneNumberSubmit = async (e) => {
+    window.alert("payment successful");
     e.preventDefault();
 
     // Update the user's profile in Firestore with the provided phone number

@@ -26,20 +26,18 @@ const Register = () => {
   const handleSocialSignIn = async (provider) => {
     try {
       const userCredential = await signInWithPopup(auth, provider);
+      // console.log(userCredential);
       const isNewUser = userCredential.additionalUserInfo?.isNewUser || false;
       let userDocRef;
 
-      if (isNewUser) {
-        await updateProfile(userCredential.user, {
-          displayName: userCredential.additionalUserInfo?.profile?.name || "",
-        });
-
-        userDocRef = await addDoc(collection(db, "users"), {
-          uid: userCredential.user.uid,
-          name: userCredential.additionalUserInfo?.profile?.name || "",
-          email: userCredential.user.email,
-        });
-      }
+      await updateProfile(userCredential.user, {
+        displayName: userCredential.additionalUserInfo?.profile?.name || "",
+      });
+      userDocRef = await addDoc(collection(db, "users"), {
+        uid: userCredential.user.uid,
+        name: userCredential._tokenResponse.fullName,
+        email: userCredential.user.email,
+      });
 
       console.log("User document created with ID: ", userDocRef?.id);
 
@@ -85,6 +83,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
+      let userDocRef;
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
@@ -93,10 +92,15 @@ const Register = () => {
       await updateProfile(userCredential.user, {
         displayName: fullName,
       });
+      userDocRef = await addDoc(collection(db, "users"), {
+        uid: userCredential.user.uid,
+        name: fullName,
+        email: email,
+      });
 
       navigate("/");
     } catch (error) {
-      console.error("Error registering:", error.message);
+      window.alert("Error registering:", error.message);
     }
   };
 

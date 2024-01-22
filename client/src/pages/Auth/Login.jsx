@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./auth.css";
 import google_logo from "../../assets/google.png";
 import { Link } from "react-router-dom";
+import { collection, addDoc } from "firebase/firestore";
+import { db, auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import {
   signInWithEmailAndPassword,
@@ -21,7 +23,6 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
@@ -32,8 +33,15 @@ const Login = () => {
 
   const handleGoogleSignIn = async () => {
     try {
+      let userDocRef;
       const provider = new GoogleAuthProvider();
-      await signInWithPopup(auth, provider);
+      const userCredential = await signInWithPopup(auth, provider);
+      userDocRef = await addDoc(collection(db, "users"), {
+        uid: userCredential.user.uid,
+        name: userCredential._tokenResponse.fullName,
+        email: userCredential.user.email,
+      });
+
       navigate("/");
     } catch (error) {
       console.error("Error signing in with Google:", error.message);
@@ -42,8 +50,14 @@ const Login = () => {
 
   const handleTwitterSignIn = async () => {
     try {
+      let userDocRef;
       const provider = new TwitterAuthProvider();
-      await signInWithPopup(auth, provider);
+      const userCredential = await signInWithPopup(auth, provider);
+      userDocRef = await addDoc(collection(db, "users"), {
+        uid: userCredential.user.uid,
+        name: userCredential._tokenResponse.fullName,
+        email: userCredential.user.email,
+      });
       navigate("/");
     } catch (error) {
       console.error("Error signing in with Twitter:", error.message);
@@ -52,8 +66,14 @@ const Login = () => {
 
   const handleGithubSignIn = async () => {
     try {
+      let userDocRef;
       const provider = new GithubAuthProvider();
-      await signInWithPopup(auth, provider);
+      const userCredential = await signInWithPopup(auth, provider);
+      userDocRef = await addDoc(collection(db, "users"), {
+        uid: userCredential.user.uid,
+        name: userCredential._tokenResponse.fullName,
+        email: userCredential.user.email,
+      });
       navigate("/");
     } catch (error) {
       console.error("Error signing in with GitHub:", error.message);
@@ -109,9 +129,18 @@ const Login = () => {
             </button>
           </form>
           <div className="google-box">
-            <i className="fa-brands fa-google logo" onClick={handleGoogleSignIn}></i>
-            <i className="fa-brands fa-twitter logo" onClick={handleTwitterSignIn}></i>
-            <i className="fa-brands fa-github logo" onClick={handleGithubSignIn}></i>
+            <i
+              className="fa-brands fa-google logo"
+              onClick={handleGoogleSignIn}
+            ></i>
+            <i
+              className="fa-brands fa-twitter logo"
+              onClick={handleTwitterSignIn}
+            ></i>
+            <i
+              className="fa-brands fa-github logo"
+              onClick={handleGithubSignIn}
+            ></i>
           </div>
           <p className="support">Contact Support</p>
         </div>

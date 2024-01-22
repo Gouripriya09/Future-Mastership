@@ -1,14 +1,42 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../../AuthContext";
-import { auth } from "../../firebase";
+import { auth, db } from "../../firebase";
+import { collection, setDoc, doc } from "firebase/firestore";
 import "./styles.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 const Dashboard = () => {
-  useEffect(() => {
-    window.alert("payment successful");
-  }, []);
+  const [newName, setNewName] = useState("");
+  const [newPhone, setNewPhone] = useState("");
+
+  const handleProfileUpdate = async (e) => {
+    e.preventDefault();
+
+    try {
+      const updatedProfile = {};
+      // Check if the user has a phone number, and add it to the profile update if available
+      if (newPhone !== "" && auth.currentUser.phoneNumber === null) {
+        updatedProfile.phoneNumber = newPhone;
+      }
+
+      // Update phone number and other information in Firestore
+      const userRef = doc(db, "users", auth.currentUser.uid);
+
+      // Use setDoc to create or update the user document
+      await setDoc(userRef, {
+        uid: auth.currentUser.uid,
+        name: newName || auth.currentUser.displayName,
+        email: auth.currentUser.email,
+        phone: newPhone || null,
+        // Add other fields as needed
+      });
+
+      console.log("Profile updated successfully!");
+    } catch (error) {
+      console.error("Error updating profile:", error.message);
+    }
+  };
 
   return (
     <div className="light dashboard">
@@ -50,6 +78,27 @@ const Dashboard = () => {
           </div>
         )}
       </div>
+      <form onSubmit={handleProfileUpdate}>
+        <label htmlFor="name">Name</label>
+        <input
+          type="text"
+          placeholder={auth.currentUser.displayName}
+          name="name"
+          onChange={(e) => setNewName(e.target.value)}
+        />
+        <br />
+        <label htmlFor="phone">Phone</label>
+
+        <input
+          type="number"
+          placeholder="Phone"
+          name="phone"
+          value={newPhone}
+          onChange={(e) => setNewPhone(e.target.value)}
+        />
+        <br />
+        <button type="submit">Update Profile</button>
+      </form>
       <Footer />
     </div>
   );
