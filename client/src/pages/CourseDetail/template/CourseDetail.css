@@ -200,6 +200,7 @@
   .CourseDetail .right-course .course-box {
     width: 72vw;
   }
+
   .sub {
     font-weight: 300;
   }
@@ -223,7 +224,6 @@
     justify-content: center;
     flex-wrap: wrap;
   }
-  #what-c,
   #about-c,
   #content-c,
   #ass-c,
@@ -242,7 +242,10 @@
     width: 6rem;
     height: 6rem;
   }
-  #rev-c{
+  #content-child-li {
+    width: 100%;
+  }
+  #rev-c {
     margin-bottom: 4rem;
   }
 }
