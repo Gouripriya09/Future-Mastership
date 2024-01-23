@@ -167,6 +167,9 @@
   .ls .hero-sub {
     font-size: 1rem;
   }
+  .rs {
+    margin-top: -3rem;
+  }
   .ls .ls-btn {
     width: fit-content;
     font-size: 1.1rem;
