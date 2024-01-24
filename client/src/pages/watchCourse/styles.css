@@ -1,0 +1,48 @@
+.watchNav {
+  display: flex;
+  margin-top: -4.8rem;
+  align-items: center;
+  background-color: var(--dark);
+}
+.back-btn {
+  margin-inline: 2.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 1s;
+}
+.back-btn:hover {
+  transform: scale(1.2);
+}
+.watch-head {
+  font-size: 1.5rem;
+}
+.inner-watch-head {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.fa-clock {
+  color: #b197fc;
+}
+.fa-folder-open {
+  color: #ffd43b;
+}
+.fa-circle-play {
+  color: #63e6be;
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(6, "1fr");
+  grid-template-areas: "ls ls rs rs rs rs";
+  margin-bottom: 4rem;
+}
+.main-ls {
+  grid-area: ls;
+  background-color: hotpink;
+  height: 40vh;
+}
+.main-rs {
+  grid-area: rs;
+  background-color: darkkhaki;
+}

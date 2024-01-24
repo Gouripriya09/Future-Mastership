@@ -22,6 +22,7 @@ import Cert from "./pages/Certificate/Certificate";
 import Auth2 from "./pages/Auth/Auth2";
 import FC1 from "./pages/CourseDetail/pages/FC1";
 import Dashboard from "./pages/dashboard/dashboard";
+import WatchCourse from "./pages/watchCourse/watchCourse";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/course" element={<CourseDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/watchCourse" element={<WatchCourse />} />
           <Route path="/Certificate" element={<Cert />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/community" element={<Community />} />
