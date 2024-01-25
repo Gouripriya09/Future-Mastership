@@ -1,6 +1,6 @@
 .watchNav {
   display: flex;
-  margin-top: -4.8rem;
+  margin-top: -5rem;
   align-items: center;
   background-color: var(--dark);
 }
@@ -32,17 +32,102 @@
   color: #63e6be;
 }
 .main {
-  display: grid;
-  grid-template-columns: repeat(6, "1fr");
-  grid-template-areas: "ls ls rs rs rs rs";
-  margin-bottom: 4rem;
+  display: flex;
+  margin-bottom: 5rem;
 }
 .main-ls {
-  grid-area: ls;
-  background-color: hotpink;
-  height: 40vh;
+  min-width: 26%;
+  border-right: 1px solid var(--secondary-dark);
+  padding-right: 1rem;
+  min-height: 90vh;
+}
+
+.fa-play {
+  color: var(--light);
+}
+.time {
+  margin-left: auto;
+  width: 20%;
+  align-items: baseline;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
 }
 .main-rs {
-  grid-area: rs;
-  background-color: darkkhaki;
+  min-width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.cc {
+  margin-inline: auto;
+}
+.fa-chevron-down,
+.fa-pause {
+  color: var(--light);
+}
+.dropC {
+  border-top: 1px solid var(--secondary-dark);
+  border-bottom: 1px solid var(--secondary-dark);
+}
+.dropC-head {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  align-items: baseline;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.1s;
+  font-weight: 400;
+}
+.videoStream {
+  width: 68rem;
+  filter: opacity(0.7);
+  background-color: var(--secondary-dark);
+  height: 40rem;
+}
+.stream {
+  margin-inline: auto;
+}
+.dropC-head:hover {
+  background-color: var(--secondary-dark);
+}
+.dropC-ul {
+  list-style: none;
+}
+.main input[type="checkbox"] {
+  border: none;
+  transform: scale(1.4);
+}
+.dropC-li {
+  display: flex;
+  padding-right: 1.4rem;
+  font-size: 1.2rem;
+  align-items: baseline;
+  gap: 1.1rem;
+  justify-content: flex-start;
+  margin-top: 0.8rem;
+}
+.dropC-body {
+  overflow: hidden;
+}
+.dropC-closed {
+  height: 0;
+}
+.des {
+  margin-inline: auto;
+  font-size: 1.4rem;
+  width: 78%;
+}
+.res {
+  width: 80%;
+  margin-inline: auto;
+}
+.fa-file {
+  font-size: 2rem;
+}
+.res-in {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  gap: 1rem;
 }
