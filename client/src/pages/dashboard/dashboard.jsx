@@ -42,6 +42,7 @@ const Dashboard = () => {
     <div className="light dashboard">
       <Navbar />
       <h1>Courses: List of courses</h1>
+      {console.log(auth.currentUser)}
       <div>
         <p>Display Name: {auth.currentUser.displayName}</p>
         <p>Email: {auth.currentUser.email}</p>

@@ -10,9 +10,9 @@ const EmergingCourses = () => {
   return (
     <motion.div className="light courses">
       <Navbar />
-      <h1 className="col-class f-ss courses-heading">Emerging Courses</h1>
+      <h1 className="col-class f-ss courses-heading">Trending Courses</h1>
       <motion.div className="card-container">
-        {[0, 1, 2, 3, 4, 5, 6, 7].map((index) => (
+        {/* {[0, 1, 2, 3, 4, 5, 6, 7].map((index) => (
           <motion.div
             key={index}
             variants={Variant3}
@@ -29,7 +29,52 @@ const EmergingCourses = () => {
               num="432"
               price="599"/>
           </motion.div>
-        ))}
+        ))} */}
+        <Link to="/TRC1" className="unformat-link">
+          <CourseCard
+            title="Artificial Intelligence (AI) Course"
+            name="unkown"
+            rating="0"
+            num="0"
+            price="599"
+          />
+        </Link>
+        <Link to="/TRC2" className="unformat-link">
+          <CourseCard
+            title="Machine Learning (ML) Course"
+            name="unkown"
+            rating="0"
+            num="0"
+            price="599"
+          />
+        </Link>
+        <Link to="/TRC3" className="unformat-link">
+          <CourseCard
+            title="Cybersecurity Course"
+            name="unkown"
+            rating="0"
+            num="0"
+            price="599"
+          />
+        </Link>
+        <Link to="/TRC4" className="unformat-link">
+          <CourseCard
+            title="Digital Forensics Course"
+            name="unkown"
+            rating="0"
+            num="0"
+            price="599"
+          />
+        </Link>
+        <Link to="/TRC4" className="unformat-link">
+          <CourseCard
+            title="Internet of Things (IoT) Course"
+            name="unkown"
+            rating="0"
+            num="0"
+            price="599"
+          />
+        </Link>
       </motion.div>
       <Footer />
     </motion.div>

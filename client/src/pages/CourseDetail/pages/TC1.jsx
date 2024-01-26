@@ -356,4 +356,4 @@ const TC1 = () => {
   );
 };
 
-export default Tc1;
+export default TC1;

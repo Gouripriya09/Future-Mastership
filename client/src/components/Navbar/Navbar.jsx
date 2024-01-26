@@ -78,13 +78,13 @@ const Navbar = () => {
               {isDropdownOpen && (
                 <ul className="dropdown-menu">
                   <li onClick={() => handleCourseSelect("industrial_courses")}>
-                    Industrial Courses
+                    Technical Courses
                   </li>
                   <li onClick={() => handleCourseSelect("free_courses")}>
                     Free Courses
                   </li>
                   <li onClick={() => handleCourseSelect("emerging_courses")}>
-                    Emerging Courses
+                    Trending Courses
                   </li>
                 </ul>
               )}
@@ -134,13 +134,13 @@ const Navbar = () => {
             {isDropdownOpen && (
               <ul className="dropdown-menu">
                 <li onClick={() => handleCourseSelect("industrial_courses")}>
-                  Industrial Courses
+                  Technical Courses
                 </li>
                 <li onClick={() => handleCourseSelect("free_courses")}>
                   Free Courses
                 </li>
                 <li onClick={() => handleCourseSelect("emerging_courses")}>
-                  Emerging Courses
+                  Trending Courses
                 </li>
               </ul>
             )}

@@ -10,13 +10,12 @@ const CourseCard = (props) => {
         <img src={AI} alt="Course Image" />
       </div>
       <div className="body">
-        <Link to="/course" className="unformat-link">
-          <h2>{props.title}</h2>
-        </Link>
+        <h2>{props.title}</h2>
         <div className="body-sub">
           <p>{props.name}</p>
           <p>
-            {props.rating} <i class="fa-solid fa-star"></i> ({props.num} Reviews)
+            {props.rating} <i class="fa-solid fa-star"></i> ({props.num}{" "}
+            Reviews)
           </p>
         </div>
       </div>
