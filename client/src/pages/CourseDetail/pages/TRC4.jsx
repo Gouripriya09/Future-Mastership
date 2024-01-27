@@ -35,7 +35,7 @@ const TRC4 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Digital forensics Course</h2>
+          <h2>Digital Forensics Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>

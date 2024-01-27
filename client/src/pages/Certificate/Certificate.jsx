@@ -10,19 +10,22 @@ const Cert = () => {
         <Navbar />
 <div className="cert">
     <h3>Verify Certificate</h3>
-      <div className="cert1"> <p>To verify the legitimacy of any certificate issued <br />
-        by Mastervance please enter "Certificate Serial <br /> 
+      <div className="cert1"> <p>To verify the legitimacy of any certificate issued 
+        by Mastervance please enter "Certificate Serial 
         Number" given on your certificate.
        </p>
        </div>
   <div className="input">
     Certificate Serial Number
     <div className="verify">
-    <input type="number" placeholder="Enter Number" />
-    <button className="button">verify</button>
+    <input type="number" placeholder="Enter Number" /></div>
+    <div className="btn"><button className="button">verify</button>
+    <button className="button-1">Generate </button>
     </div>
     
-  </div>
+    </div>
+    
+  
 </div>
 <Footer />
 </div>

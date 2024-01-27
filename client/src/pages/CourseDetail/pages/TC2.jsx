@@ -35,7 +35,7 @@ const TC2 = () => {
         }}
       >
         <div className="left-course">
-          <h2>Python Course</h2>
+          <h2>Java Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>

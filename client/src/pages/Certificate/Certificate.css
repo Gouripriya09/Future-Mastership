@@ -1,32 +1,105 @@
-
+.cert{
+    display: block;
+    width: 100%;
+}
 .cert h3{
     font-size: 40px;
     color: var(--light);
-    padding-left: 432px;
-    
+    padding-left: 432px; 
 }
 .cert1 p{
     font-size: 20px;
     color: var(--light);
     justify-content: center;
     padding-left: 432px;
-    
+    width: 35%;    
 }
 .input{
     font-size: 12px;
     color: var(--light);
     padding-left: 432px;
+    height: 50%;
 }
 .verify input{
     width: 340px;
     height: 30px;
     margin-left: 2.5px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 .button{
     height: 10px;
-    width: 35px;
-    margin-left: 10px;
+    width: 55px;
+    margin-left: 33px;
+    margin-bottom: 50px;
+    padding-left: 10px;    
+}
+.button-1{
+    display: inline;
+    margin: 10px 25px;    
 }
 
 
+
+
+/* Large Desktop */
+@media only screen and (min-width: 1200px){
+    .cert h3, .cert1 p, .input{
+        padding-left: 432px;
+    }
+}
+
+/*  Desktop */
+@media only screen and (max-width: 1199px) and (min-width:769px){
+    .cert h3, .cert1 p, .input{
+        padding-left: 382px;
+    }
+}
+/*  Tablet */
+@media only screen and (max-width:768px) and (min-width:430px){
+    .cert h3, .cert1 p, .input{
+        padding-left: 20px;
+    }
+    .cert h3{
+        font-size: 30px;
+    }
+    .cert p{
+        width: 70%;
+        font-size: 15px;
+    }
+    .button{
+        margin-left: 10px;
+        margin-bottom: 30px;
+    }
+}
+/*  Android */
+@media only screen and (max-width:429px){
+    .cert h3, .cert1 p, .input{
+        padding-left: 10px;
+    }
+    .input{
+        width: 75%;
+    }
+    .cert h3{
+        font-size: 20px;
+    }
+    .cert p{
+        width: 75%;
+        font-size: 12px;
+        text-align: justify;
+        letter-spacing: auto;
+    }
+    .button{
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+    .verify input{
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        padding-top: 5px;
+    }
+    .button-1{
+        margin-left: 10px ;
+    }
+    
+}
