@@ -12,7 +12,10 @@
   bottom: 0;
   justify-content: space-evenly;
 }
-
+.fa-phone,
+.fa-envelope {
+  margin-right: 0.5rem;
+}
 .fc {
   height: 88%;
   width: 21.5%;
