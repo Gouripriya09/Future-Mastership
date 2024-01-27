@@ -15,6 +15,15 @@ const FC2 = () => {
   return (
     <div className="CourseDetail light">
       <Navbar />
+      <div className="nav3">
+        <p>
+          Courses /{" "}
+          <Link to="/free_courses" className="unformat-link">
+            Free Courses
+          </Link>{" "}
+          / Networking Basics Course
+        </p>
+      </div>
       <motion.div
         className="container"
         id="hero-course"

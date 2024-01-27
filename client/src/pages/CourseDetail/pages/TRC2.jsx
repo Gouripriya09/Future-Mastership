@@ -15,6 +15,15 @@ const TRC2 = () => {
   return (
     <div className="CourseDetail light">
       <Navbar />
+      <div className="nav3">
+        <p>
+          Courses /{" "}
+          <Link to="/emerging_courses" className="unformat-link">
+            Trending Courses
+          </Link>{" "}
+          / Machine Learning (ML) Course
+        </p>
+      </div>
       <motion.div
         className="container"
         id="hero-course"

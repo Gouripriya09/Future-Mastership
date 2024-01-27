@@ -7,6 +7,18 @@
   justify-content: space-around;
   align-items: center;
 }
+.nav3 {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: start;
+  padding-left: 1.5rem;
+  width: 100%;
+  /* background-color: rgb(6, 28, 6); */
+  color: var(--light);
+  transform: translateY(-3.5rem);
+  font-weight: 400rem;
+}
+
 #pfile,
 .pfile {
   margin-right: 1rem;
@@ -242,7 +254,7 @@
     width: 6rem;
     height: 6rem;
   }
-  #rev-c{
+  #rev-c {
     margin-bottom: 4rem;
   }
 }

@@ -15,6 +15,15 @@ const TC3 = () => {
   return (
     <div className="CourseDetail light">
       <Navbar />
+      <div className="nav3">
+        <p>
+          Courses /{" "}
+          <Link to="/industrial_courses" className="unformat-link">
+            Technical Courses
+          </Link>{" "}
+          / ReactJS Course
+        </p>
+      </div>
       <motion.div
         className="container"
         id="hero-course"
@@ -26,7 +35,7 @@ const TC3 = () => {
         }}
       >
         <div className="left-course">
-          <h2>React.js Course</h2>
+          <h2>ReactJS Course</h2>
           <div className="fot">
             <div id="pfile"></div>
             <p>Instructor Name</p>
@@ -38,9 +47,9 @@ const TC3 = () => {
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
-              <p className="course-box-head">react.js Course</p>
+              <p className="course-box-head">ReactJS Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts of computing with our React.js Course
+              Dive into the fundamental concepts of computing with our ReactJS Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,8 +139,8 @@ const TC3 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Unlock the potencial of modern web developmentwith React.js. This 
-          <br />course is designed for web developers aiming to master React.js<br />
+          Unlock the potencial of modern web developmentwith ReactJS. This 
+          <br />course is designed for web developers aiming to master ReactJS<br />
           for building interactive and dynamic user interfaces. 
           </p>
         </div>
@@ -144,7 +153,7 @@ const TC3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Understanding the fundamentals of React.js and its ecosystem.
+                Understanding the fundamentals of ReactJS and its ecosystem.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -157,7 +166,7 @@ const TC3 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Develop single page applications with React.js.
+                Develop single page applications with ReactJS.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -220,10 +229,10 @@ const TC3 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1: Introduction to React.js
+              Module 1: Introduction to ReactJS
               <ul id="child-ul-c">
-                <li id="content-child-li">Overview of React.js and its benifits</li>
-                <li id="content-child-li">Setting up a React.js Development Environment</li>
+                <li id="content-child-li">Overview of ReactJS and its benifits</li>
+                <li id="content-child-li">Setting up a ReactJS Development Environment</li>
                 <li id="content-child-li">
                   JSX syntax and components 
                 </li>
@@ -232,24 +241,24 @@ const TC3 = () => {
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: React.js Components and Props
+              Module 2: ReactJS Components and Props
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                  Building and using React.js components
+                  Building and using ReactJS components
                 </li>
-                <li id="content-child-li">Props and State in React.js</li>
+                <li id="content-child-li">Props and State in ReactJS</li>
                 <li id="content-child-li">Component lifecycle</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 3: React.js Router and Navigation
+              Module 3: ReactJS Router and Navigation
               <ul id="child-ul-c">
                 <li id="content-child-li">
                   Navigating between pages with React Router
                 </li>
-                <li id="content-child-li">Dynamic Routing in React.js</li>
+                <li id="content-child-li">Dynamic Routing in ReactJS</li>
                 <li id="content-child-li">Handling Navigation Events</li>
               </ul>
             </li>
@@ -259,18 +268,18 @@ const TC3 = () => {
               Module 4: State management with Redux
               <ul id="child-ul-c">
                 <li id="content-child-li">Introduction to Redux and its Components</li>
-                <li id="content-child-li">Implementing Redux in React.js apllications</li>
+                <li id="content-child-li">Implementing Redux in ReactJS apllications</li>
                 <li id="content-child-li">Asynchronous Operations with Redux Thunk</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5: Advanced React.js Concepts
+              Module 5: Advanced ReactJS Concepts
               <ul id="child-ul-c">
                 <li id="content-child-li">Hooks and Functional Components</li>
                 <li id="content-child-li">
-                  Context API in React.js
+                  Context API in ReactJS
                 </li>
                 <li id="content-child-li">
                  Testing React Components
@@ -283,9 +292,9 @@ const TC3 = () => {
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Coding Assignments: Implement React.js solutions for various UI scenarios.</p>
-          <p>Mid-term Project: Develop an interactive React.js application.</p>
-          <p>Final React.js Project: Comprehensive assessment of React.js skills <br />
+          <p>Coding Assignments: Implement ReactJS solutions for various UI scenarios.</p>
+          <p>Mid-term Project: Develop an interactive ReactJS application.</p>
+          <p>Final ReactJS Project: Comprehensive assessment of ReactJS skills <br />
           through a complex web application.</p>
         </div>
         <div id="inst-c">

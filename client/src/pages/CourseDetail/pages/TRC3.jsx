@@ -15,6 +15,15 @@ const TRC3 = () => {
   return (
     <div className="CourseDetail light">
       <Navbar />
+      <div className="nav3">
+        <p>
+          Courses /{" "}
+          <Link to="/emerging_courses" className="unformat-link">
+            Trending Courses
+          </Link>{" "}
+          / CyberSecurity Course
+        </p>
+      </div>
       <motion.div
         className="container"
         id="hero-course"
@@ -40,7 +49,8 @@ const TRC3 = () => {
             <div className="cb-1">
               <p className="course-box-head">Cyber Security Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts with our Cyber Security Course
+                Dive into the fundamental concepts with our Cyber Security
+                Course
               </p>
             </div>
             <div className="cb-2">
@@ -130,10 +140,11 @@ const TRC3 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Secure digital landscapes with our Cyber Security course. This <br />
-           program provides a comprehensive understanding of cybersecurity <br />
+            Secure digital landscapes with our Cyber Security course. This{" "}
+            <br />
+            program provides a comprehensive understanding of cybersecurity{" "}
+            <br />
             principles, ethical hacking, and best practices.
- 
           </p>
         </div>
         <div id="what-c">
@@ -144,9 +155,7 @@ const TRC3 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-              Understand cybersecurity fundamentals and their importance.
-              </p>
+              <p>Understand cybersecurity fundamentals and their importance.</p>
             </li>
             {/* <p className="sub-c">
               Explore the core concepts, history, and ethical considerations
@@ -157,9 +166,7 @@ const TRC3 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-              Identify and mitigate security vulnerabilities.
-              </p>
+              <p>Identify and mitigate security vulnerabilities.</p>
             </li>
             {/* <p className="sub-c">
               Dive into the fundamentals of machine learning, covering
@@ -171,10 +178,7 @@ const TRC3 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-              Gain hands-on experience in ethical hacking techniques.
-
-              </p>
+              <p>Gain hands-on experience in ethical hacking techniques.</p>
             </li>
             {/* <p className="sub-c">
               Uncover the mysteries of neural networks, deep learning
@@ -223,40 +227,34 @@ const TRC3 = () => {
           <ul id="main-ul-c">
             <li id="content-main-li">
               Module 1: Introduction to Cyber Security
-
               <ul id="child-ul-c">
-                <li id="content-child-li">Fundamentals of Cyber Security
-</li>
+                <li id="content-child-li">Fundamentals of Cyber Security</li>
                 <li id="content-child-li">Cyber Threat Landscape </li>
 
                 <li id="content-child-li">
-                Importance of Cybersecurity in Modern Businesses
+                  Importance of Cybersecurity in Modern Businesses
                 </li>
-                
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
               Module 2: Network Security
-
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Firewall and Intrusion Detection Systems
+                  Firewall and Intrusion Detection Systems
                 </li>
                 <li id="content-child-li">Secure Network Architectures</li>
-                <li id="content-child-li">Virtual Private Networks (VPNs)
-</li>
+                <li id="content-child-li">Virtual Private Networks (VPNs)</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
               Module 3: Web Application Security
-
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Common Web Application Vulnerabilities
+                  Common Web Application Vulnerabilities
                 </li>
                 <li id="content-child-li">Secure Coding Practices</li>
                 <li id="content-child-li">Web Application Firewalls (WAF)</li>
@@ -267,58 +265,54 @@ const TRC3 = () => {
             <li id="content-main-li">
               Module 4: Ethical Hacking Techniques
               <ul id="child-ul-c">
-                <li id="content-child-li">Penetration Testing Fundamentals
-</li>
-                <li id="content-child-li">Exploitation Techniques and Tools
-
-</li>
-                <li id="content-child-li">Reporting and Remediation
-
-
-</li>
+                <li id="content-child-li">Penetration Testing Fundamentals</li>
+                <li id="content-child-li">Exploitation Techniques and Tools</li>
+                <li id="content-child-li">Reporting and Remediation</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
               Module 5: Incident Response and Forensics
-
               <ul id="child-ul-c">
-                <li id="content-child-li">Incident Response Planning
-</li>
-                <li id="content-child-li">
-                Digital Forensics Fundamentals
+                <li id="content-child-li">Incident Response Planning</li>
+                <li id="content-child-li">Digital Forensics Fundamentals</li>
+                <li id="content-child-li">Malware Analysis</li>
 
-                </li>
-                <li id="content-child-li">Malware Analysis
-
-</li>
-
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 6: Cybersecurity Policies and Compliance
-              <ul id="child-ul-c">
-                <li id="content-child-li">Regulatory Compliance in Cybersecurity
-</li>
-                <li id="content-child-li">Security Policies and Procedures</li>
-                <li id="content-child-li">Security Awareness Training</li>
-              </ul>
-            </li>
-          </ul>      
-                
+                <ul id="main-ul-c">
+                  <li id="content-main-li">
+                    Module 6: Cybersecurity Policies and Compliance
+                    <ul id="child-ul-c">
+                      <li id="content-child-li">
+                        Regulatory Compliance in Cybersecurity
+                      </li>
+                      <li id="content-child-li">
+                        Security Policies and Procedures
+                      </li>
+                      <li id="content-child-li">Security Awareness Training</li>
+                    </ul>
+                  </li>
+                </ul>
               </ul>
             </li>
           </ul>
-          
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Cybersecurity Challenges: Simulated scenarios to assess incident response skills.</p>
-          <p>Ethical Hacking Simulations: Hands-on exercises in identifying and exploiting <br />
-             vulnerabilities.</p>
-          <p>Security Audit Project: Develop and present a comprehensive security audit for <br />
-             an organization.
-</p>
+          <p>
+            Cybersecurity Challenges: Simulated scenarios to assess incident
+            response skills.
+          </p>
+          <p>
+            Ethical Hacking Simulations: Hands-on exercises in identifying and
+            exploiting <br />
+            vulnerabilities.
+          </p>
+          <p>
+            Security Audit Project: Develop and present a comprehensive security
+            audit for <br />
+            an organization.
+          </p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>

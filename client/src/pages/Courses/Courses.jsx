@@ -11,6 +11,9 @@ const Courses = () => {
   return (
     <motion.div className="light courses">
       <Navbar />
+      <div className="nav2">
+        <p>Courses / Free Courses</p>
+      </div>
       <h1 className="col-class f-ss courses-heading">Free Courses</h1>
       <motion.div className="card-container">
         {/* {[0, 1, 2, 3, 4, 5, 6, 7].map((index) => (

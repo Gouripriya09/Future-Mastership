@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import CourseCard from "../../components/Course/CourseCard";
 import "./Courses.css";
 import { Variant3 } from "../../utils/helpers";
@@ -10,6 +11,9 @@ const EmergingCourses = () => {
   return (
     <motion.div className="light courses">
       <Navbar />
+      <div className="nav2">
+        <p>Courses / Trending Courses</p>
+      </div>
       <h1 className="col-class f-ss courses-heading">Trending Courses</h1>
       <motion.div className="card-container">
         {/* {[0, 1, 2, 3, 4, 5, 6, 7].map((index) => (
@@ -66,7 +70,7 @@ const EmergingCourses = () => {
             price="599"
           />
         </Link>
-        <Link to="/TRC4" className="unformat-link">
+        <Link to="/TRC5" className="unformat-link">
           <CourseCard
             title="Internet of Things (IoT) Course"
             name="unkown"

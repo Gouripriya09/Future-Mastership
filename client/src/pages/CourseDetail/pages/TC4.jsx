@@ -15,6 +15,15 @@ const TC4 = () => {
   return (
     <div className="CourseDetail light">
       <Navbar />
+      <div className="nav3">
+        <p>
+          Courses /{" "}
+          <Link to="/industrial_courses" className="unformat-link">
+            Technical Courses
+          </Link>{" "}
+          / Data Analytics Course
+        </p>
+      </div>
       <motion.div
         className="container"
         id="hero-course"
