@@ -203,6 +203,9 @@
   .Home .ls {
     margin-bottom: 4rem;
   }
+  .line{
+    width: 6rem;
+  }
   .Home .container {
     flex-direction: column;
     margin-bottom: 5rem;

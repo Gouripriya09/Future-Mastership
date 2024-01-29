@@ -2,13 +2,71 @@ import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Footer from "../../../components/Footer/Footer";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useAuth } from "../../../AuthContext";
+import { Link, useNavigate } from "react-router-dom";
 import { fadeAnimationVariants } from "../../../utils/helpers";
 import rev from "../../../assets/rev.png";
+import { auth, db } from "../../../firebase";
+import {
+  collection,
+  doc,
+  updateDoc,
+  getDocs,
+  getDoc,
+} from "firebase/firestore";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
 const TC2 = () => {
+  const navigate = useNavigate();
+  const [userDocId, setUserDocId] = useState(null);
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const usersRef = collection(db, "users");
+        const querySnapshot = await getDocs(usersRef);
+
+        querySnapshot.forEach((doc) => {
+          if (doc.data().uid === auth.currentUser.uid) {
+            setUserDocId(doc.id);
+            console.log(doc.id); // Store the document ID associated with the current user
+          }
+        });
+      } catch (error) {
+        console.error("Error fetching user data:", error.message);
+      }
+    };
+
+    fetchUserData();
+  }, [auth.currentUser.uid]);
+
+  const handleEnroll = async () => {
+    try {
+      const userDocRef = doc(db, "users", userDocId);
+      const userDocSnapshot = await getDoc(userDocRef);
+
+      if (userDocSnapshot.exists()) {
+        const userData = userDocSnapshot.data();
+        const coursesArray = userData.courses || [];
+
+        // Check if "TC2" is already in the courses array
+        if (!coursesArray.includes("TC2")) {
+          coursesArray.push("TC2");
+
+          // Update the user document with the updated courses array
+          await updateDoc(userDocRef, { courses: coursesArray });
+
+          console.log("Enrolled in TC2 successfully!");
+          navigate("/dashboard");
+        } else {
+          console.log("Already enrolled in TC2.");
+        }
+      }
+    } catch (error) {
+      console.error("Error enrolling in TC2:", error.message);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -40,16 +98,18 @@ const TC2 = () => {
             <div id="pfile"></div>
             <p>Instructor Name</p>
           </div>
-          <Link to="/payment" className="unformat-link">
-            <button className="enroll">Enroll</button>
-          </Link>
+
+          <button className="enroll" onClick={handleEnroll}>
+            Enroll
+          </button>
         </div>
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
               <p className="course-box-head">Java Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts of computing with our Java Course
+                Dive into the fundamental concepts of computing with our Java
+                Course
               </p>
             </div>
             <div className="cb-2">
@@ -139,9 +199,11 @@ const TC2 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Dive into the world of java programming with this comprehensive course. <br />
-          Designed for beginners, it covers Java fundamentals, object-oriented <br />
-          programming, and application development.
+            Dive into the world of java programming with this comprehensive
+            course. <br />
+            Designed for beginners, it covers Java fundamentals, object-oriented{" "}
+            <br />
+            programming, and application development.
           </p>
         </div>
         <div id="what-c">
@@ -152,9 +214,7 @@ const TC2 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-                Understand Java programming language fundamentals.
-              </p>
+              <p>Understand Java programming language fundamentals.</p>
             </li>
             {/* <p className="sub-c">
               Explore the core concepts, history, and ethical considerations
@@ -179,9 +239,7 @@ const TC2 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-                Gain practical experience in building Java applications.
-              </p>
+              <p>Gain practical experience in building Java applications.</p>
             </li>
             {/* <p className="sub-c">
               Uncover the mysteries of neural networks, deep learning
@@ -232,10 +290,10 @@ const TC2 = () => {
               Module 1: Introduction to Java
               <ul id="child-ul-c">
                 <li id="content-child-li">Java Basics and Syntax</li>
-                <li id="content-child-li">Variables, Data Types and Operators </li>
                 <li id="content-child-li">
-                  Control Flow and Loops in Java
+                  Variables, Data Types and Operators{" "}
                 </li>
+                <li id="content-child-li">Control Flow and Loops in Java</li>
               </ul>
             </li>
           </ul>
@@ -243,9 +301,7 @@ const TC2 = () => {
             <li id="content-main-li">
               Module 2: Object-Oriented programming (OOP) in Java
               <ul id="child-ul-c">
-                <li id="content-child-li">
-                  Classes and Objects
-                </li>
+                <li id="content-child-li">Classes and Objects</li>
                 <li id="content-child-li">Inheritance and Polymorphism</li>
                 <li id="content-child-li">Abstraction ad Encapsulation</li>
               </ul>
@@ -255,10 +311,10 @@ const TC2 = () => {
             <li id="content-main-li">
               Module 3: Java Standard Library
               <ul id="child-ul-c">
+                <li id="content-child-li">Overview of Java Standard Library</li>
                 <li id="content-child-li">
-                  Overview of Java Standard Library
+                  Input and Output Operators in java
                 </li>
-                <li id="content-child-li">Input and Output Operators in java</li>
                 <li id="content-child-li">Exception Handling</li>
               </ul>
             </li>
@@ -278,22 +334,23 @@ const TC2 = () => {
               Module 5: Introduction to Java Application Development
               <ul id="child-ul-c">
                 <li id="content-child-li">Building simple Java Application</li>
-                <li id="content-child-li">
-                  GUI Development with JavaFX
-                </li>
-                
-                
+                <li id="content-child-li">GUI Development with JavaFX</li>
               </ul>
             </li>
           </ul>
-          
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
           <p>Coding Assignments: Implement Java solutions for various tasks.</p>
-          <p>Object-Oriented Programming Project: Develop a Java application using OOP Principles.</p>
-          <p>Final Java Application Project: Comprehensive assessment of Java programming <br /> 
-            skills through a real-world application</p>
+          <p>
+            Object-Oriented Programming Project: Develop a Java application
+            using OOP Principles.
+          </p>
+          <p>
+            Final Java Application Project: Comprehensive assessment of Java
+            programming <br />
+            skills through a real-world application
+          </p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>

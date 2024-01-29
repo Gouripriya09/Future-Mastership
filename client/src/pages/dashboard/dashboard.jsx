@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../../AuthContext";
 import { auth, db } from "../../firebase";
-import { collection, setDoc, doc } from "firebase/firestore";
+import { collection, setDoc, doc, updateDoc, getDocs, getDoc } from "firebase/firestore";
 import "./styles.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
@@ -9,6 +9,29 @@ import Footer from "../../components/Footer/Footer";
 const Dashboard = () => {
   const [newName, setNewName] = useState("");
   const [newPhone, setNewPhone] = useState("");
+  const [userDocId, setUserDocId] = useState(null);
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const usersRef = collection(db, "users");
+        const querySnapshot = await getDocs(usersRef);
+
+        querySnapshot.forEach((doc) => {
+          if (doc.data().uid === auth.currentUser.uid) {
+            setUserDocId(doc.id);
+            setUserData(doc.data());
+            console.log(doc.id); // Store the document ID associated with the current user
+          }
+        });
+      } catch (error) {
+        console.error("Error fetching user data:", error.message);
+      }
+    };
+
+    fetchUserData();
+  }, [auth.currentUser.uid]);
 
   const handleProfileUpdate = async (e) => {
     e.preventDefault();
@@ -16,21 +39,26 @@ const Dashboard = () => {
     try {
       const updatedProfile = {};
       // Check if the user has a phone number, and add it to the profile update if available
-      if (newPhone !== "" && auth.currentUser.phoneNumber === null) {
+      if (newPhone !== "" && !userData.phoneNumber) {
         updatedProfile.phoneNumber = newPhone;
       }
 
+      // Update name if it's different from the current value
+      if (newName !== "" && newName !== userData.name) {
+        updatedProfile.name = newName;
+      }
+
       // Update phone number and other information in Firestore
-      const userRef = doc(db, "users", auth.currentUser.uid);
+      const userRef = doc(db, "users", userDocId);
+
+      // Fetch the existing document data
+      const existingData = (await getDoc(userRef)).data();
+
+      // Merge the existing data with the updated profile
+      const updatedData = { ...existingData, ...updatedProfile };
 
       // Use setDoc to create or update the user document
-      await setDoc(userRef, {
-        uid: auth.currentUser.uid,
-        name: newName || auth.currentUser.displayName,
-        email: auth.currentUser.email,
-        phone: newPhone || null,
-        // Add other fields as needed
-      });
+      await setDoc(userRef, updatedData);
 
       console.log("Profile updated successfully!");
     } catch (error) {
@@ -42,7 +70,6 @@ const Dashboard = () => {
     <div className="light dashboard">
       <Navbar />
       <h1>Courses: List of courses</h1>
-      {console.log(auth.currentUser)}
       <div>
         <p>Display Name: {auth.currentUser.displayName}</p>
         <p>Email: {auth.currentUser.email}</p>

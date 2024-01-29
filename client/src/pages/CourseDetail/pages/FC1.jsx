@@ -1,17 +1,77 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Footer from "../../../components/Footer/Footer";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { fadeAnimationVariants } from "../../../utils/helpers";
 import rev from "../../../assets/rev.png";
 import CourseCard from "../../../components/Course/CourseCard";
+import { auth, db } from "../../../firebase";
+import {
+  doc,
+  getDoc,
+  collection,
+  Timestamp,
+  updateDoc,
+  arrayUnion,
+  getDocs,
+} from "firebase/firestore";
 import "./CourseDetail.css";
 
 const FC1 = () => {
+  const [userDocId, setUserDocId] = useState(null);
+  const navigate = useNavigate();
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const usersRef = collection(db, "users");
+        const querySnapshot = await getDocs(usersRef);
+
+        querySnapshot.forEach((doc) => {
+          if (doc.data().uid === auth.currentUser.uid) {
+            setUserDocId(doc.id);
+            console.log(doc.id); // Store the document ID associated with the current user
+          }
+        });
+      } catch (error) {
+        console.error("Error fetching user data:", error.message);
+      }
+    };
+
+    fetchUserData();
+  }, [auth.currentUser.uid]);
+
+  const handleEnroll = async () => {
+    try {
+      const userDocRef = doc(db, "users", userDocId);
+      const userDocSnapshot = await getDoc(userDocRef);
+
+      if (userDocSnapshot.exists()) {
+        const userData = userDocSnapshot.data();
+        const coursesArray = userData.courses || [];
+
+        // Check if "TC1" is already in the courses array
+        if (!coursesArray.includes("FC1")) {
+          coursesArray.push("FC1");
+
+          // Update the user document with the updated courses array
+          await updateDoc(userDocRef, { courses: coursesArray });
+
+          console.log("Enrolled in FC1 successfully!");
+          navigate("/dashboard");
+        } else {
+          console.log("Already enrolled in FC1.");
+        }
+      }
+    } catch (error) {
+      console.error("Error enrolling in FC1:", error.message);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="CourseDetail light">
       <Navbar />
@@ -40,9 +100,9 @@ const FC1 = () => {
             <div id="pfile"></div>
             <p>Instructor Name</p>
           </div>
-          <Link to="/payment" className="unformat-link">
-            <button className="enroll">Enroll</button>
-          </Link>
+          <button className="enroll" onClick={handleEnroll}>
+            Enroll
+          </button>
         </div>
         <div className="right-course">
           <div className="course-box">

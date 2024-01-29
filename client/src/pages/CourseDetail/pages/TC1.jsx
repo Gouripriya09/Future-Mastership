@@ -2,16 +2,75 @@ import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Footer from "../../../components/Footer/Footer";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useAuth } from "../../../AuthContext";
+import { Link, useNavigate } from "react-router-dom";
 import { fadeAnimationVariants } from "../../../utils/helpers";
 import rev from "../../../assets/rev.png";
+import { auth, db } from "../../../firebase";
+import {
+  collection,
+  doc,
+  updateDoc,
+  getDocs,
+  getDoc,
+} from "firebase/firestore";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
 const TC1 = () => {
+  const navigate = useNavigate();
+  const [userDocId, setUserDocId] = useState(null);
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const usersRef = collection(db, "users");
+        const querySnapshot = await getDocs(usersRef);
+
+        querySnapshot.forEach((doc) => {
+          if (doc.data().uid === auth.currentUser.uid) {
+            setUserDocId(doc.id);
+            console.log(doc.id); // Store the document ID associated with the current user
+          }
+        });
+      } catch (error) {
+        console.error("Error fetching user data:", error.message);
+      }
+    };
+
+    fetchUserData();
+  }, [auth.currentUser.uid]);
+
+  const handleEnroll = async () => {
+    try {
+      const userDocRef = doc(db, "users", userDocId);
+      const userDocSnapshot = await getDoc(userDocRef);
+
+      if (userDocSnapshot.exists()) {
+        const userData = userDocSnapshot.data();
+        const coursesArray = userData.courses || [];
+
+        // Check if "TC1" is already in the courses array
+        if (!coursesArray.includes("TC1")) {
+          coursesArray.push("TC1");
+
+          // Update the user document with the updated courses array
+          await updateDoc(userDocRef, { courses: coursesArray });
+
+          console.log("Enrolled in TC1 successfully!");
+          navigate("/dashboard");
+        } else {
+          console.log("Already enrolled in TC1.");
+        }
+      }
+    } catch (error) {
+      console.error("Error enrolling in TC1:", error.message);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="CourseDetail light">
       <Navbar />
@@ -40,16 +99,17 @@ const TC1 = () => {
             <div id="pfile"></div>
             <p>Instructor Name</p>
           </div>
-          <Link to="/payment" className="unformat-link">
-            <button className="enroll">Enroll</button>
-          </Link>
+          <button className="enroll" onClick={handleEnroll}>
+            Enroll
+          </button>
         </div>
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
               <p className="course-box-head">Python Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts of computing with our Python Course
+                Dive into the fundamental concepts of computing with our Python
+                Course
               </p>
             </div>
             <div className="cb-2">
@@ -139,10 +199,12 @@ const TC1 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Embark on journey into the versatile world of python programming.
-          <br />This course is designed for beginners and aims to provide a <br />
-          solid foundation in python, covering syntax, data structures, and <br />
-          and practical applications.
+            Embark on journey into the versatile world of python programming.
+            <br />
+            This course is designed for beginners and aims to provide a <br />
+            solid foundation in python, covering syntax, data structures, and{" "}
+            <br />
+            and practical applications.
           </p>
         </div>
         <div id="what-c">
@@ -153,9 +215,7 @@ const TC1 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-                Grab the fundamentals of Python programming.
-              </p>
+              <p>Grab the fundamentals of Python programming.</p>
             </li>
             {/* <p className="sub-c">
               Explore the core concepts, history, and ethical considerations
@@ -166,9 +226,7 @@ const TC1 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-                Develop skills in solving problems using Python 
-              </p>
+              <p>Develop skills in solving problems using Python</p>
             </li>
             {/* <p className="sub-c">
               Dive into the fundamentals of machine learning, covering
@@ -180,9 +238,7 @@ const TC1 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-                Gain practical experience in building python applications.
-              </p>
+              <p>Gain practical experience in building python applications.</p>
             </li>
             {/* <p className="sub-c">
               Uncover the mysteries of neural networks, deep learning
@@ -234,9 +290,7 @@ const TC1 = () => {
               <ul id="child-ul-c">
                 <li id="content-child-li">Python Basics and Syntax</li>
                 <li id="content-child-li">Variables and Data Types</li>
-                <li id="content-child-li">
-                  Control Flow and Loops 
-                </li>
+                <li id="content-child-li">Control Flow and Loops</li>
               </ul>
             </li>
           </ul>
@@ -244,10 +298,10 @@ const TC1 = () => {
             <li id="content-main-li">
               Module 2: Data Structures in Python
               <ul id="child-ul-c">
+                <li id="content-child-li">Lists, Tuples, and Sets</li>
                 <li id="content-child-li">
-                  Lists, Tuples, and Sets
+                  Dictionaries and their applications
                 </li>
-                <li id="content-child-li">Dictionaries and their applications</li>
                 <li id="content-child-li">Advanced Data Structures</li>
               </ul>
             </li>
@@ -256,9 +310,7 @@ const TC1 = () => {
             <li id="content-main-li">
               Module 3: Function and Modules
               <ul id="child-ul-c">
-                <li id="content-child-li">
-                  Function Definion and Usage 
-                </li>
+                <li id="content-child-li">Function Definion and Usage</li>
                 <li id="content-child-li">Creation and Important Modules</li>
                 <li id="content-child-li">Error Handling in Python</li>
               </ul>
@@ -276,26 +328,28 @@ const TC1 = () => {
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 5: Introduction to Python Libraries 
+              Module 5: Introduction to Python Libraries
               <ul id="child-ul-c">
                 <li id="content-child-li">Basic Data Analysis in Python</li>
                 <li id="content-child-li">
                   Overview of Popular Python Libraties (e.g., Numpy, Pandas)
                 </li>
                 <li id="content-child-li">
-                 Common Security Threats and vulnerability
+                  Common Security Threats and vulnerability
                 </li>
-                
               </ul>
             </li>
           </ul>
-          
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Coding Assignments: Implement Python solutions for various tasks.</p>
+          <p>
+            Coding Assignments: Implement Python solutions for various tasks.
+          </p>
           <p>Mid-term Project: Develop a practical Python applications</p>
-          <p>Final Exam: Comprehensive assessment of python programming skills</p>
+          <p>
+            Final Exam: Comprehensive assessment of python programming skills
+          </p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>

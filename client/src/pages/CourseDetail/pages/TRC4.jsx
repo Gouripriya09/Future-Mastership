@@ -2,13 +2,71 @@ import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Footer from "../../../components/Footer/Footer";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useAuth } from "../../../AuthContext";
+import { Link, useNavigate } from "react-router-dom";
 import { fadeAnimationVariants } from "../../../utils/helpers";
 import rev from "../../../assets/rev.png";
+import { auth, db } from "../../../firebase";
+import {
+  collection,
+  doc,
+  updateDoc,
+  getDocs,
+  getDoc,
+} from "firebase/firestore";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
 const TRC4 = () => {
+  const navigate = useNavigate();
+  const [userDocId, setUserDocId] = useState(null);
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const usersRef = collection(db, "users");
+        const querySnapshot = await getDocs(usersRef);
+
+        querySnapshot.forEach((doc) => {
+          if (doc.data().uid === auth.currentUser.uid) {
+            setUserDocId(doc.id);
+            console.log(doc.id); // Store the document ID associated with the current user
+          }
+        });
+      } catch (error) {
+        console.error("Error fetching user data:", error.message);
+      }
+    };
+
+    fetchUserData();
+  }, [auth.currentUser.uid]);
+
+  const handleEnroll = async () => {
+    try {
+      const userDocRef = doc(db, "users", userDocId);
+      const userDocSnapshot = await getDoc(userDocRef);
+
+      if (userDocSnapshot.exists()) {
+        const userData = userDocSnapshot.data();
+        const coursesArray = userData.courses || [];
+
+        // Check if "TRC4" is already in the courses array
+        if (!coursesArray.includes("TRC4")) {
+          coursesArray.push("TRC4");
+
+          // Update the user document with the updated courses array
+          await updateDoc(userDocRef, { courses: coursesArray });
+
+          console.log("Enrolled in TRC4 successfully!");
+          navigate("/dashboard");
+        } else {
+          console.log("Already enrolled in TRC4.");
+        }
+      }
+    } catch (error) {
+      console.error("Error enrolling in TRC4:", error.message);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -40,16 +98,18 @@ const TRC4 = () => {
             <div id="pfile"></div>
             <p>Instructor Name</p>
           </div>
-          <Link to="/payment" className="unformat-link">
-            <button className="enroll">Enroll</button>
-          </Link>
+
+          <button className="enroll" onClick={handleEnroll}>
+            Enroll
+          </button>
         </div>
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
               <p className="course-box-head">Digital forensics Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts with our Digital forensics Course
+                Dive into the fundamental concepts with our Digital forensics
+                Course
               </p>
             </div>
             <div className="cb-2">
@@ -139,10 +199,11 @@ const TRC4 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Delve into the world of Digital Forensics with our comprehensive course. This <br />
-          program equips learners with the skills needed to investigate and analyze <br />
-          digital evidence in various contexts.
- 
+            Delve into the world of Digital Forensics with our comprehensive
+            course. This <br />
+            program equips learners with the skills needed to investigate and
+            analyze <br />
+            digital evidence in various contexts.
           </p>
         </div>
         <div id="what-c">
@@ -153,9 +214,7 @@ const TRC4 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-              Acquire skills in digital evidence collection and analysis.
-              </p>
+              <p>Acquire skills in digital evidence collection and analysis.</p>
             </li>
             {/* <p className="sub-c">
               Explore the core concepts, history, and ethical considerations
@@ -166,9 +225,7 @@ const TRC4 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-              Understand forensic tools and techniques.
-              </p>
+              <p>Understand forensic tools and techniques.</p>
             </li>
             {/* <p className="sub-c">
               Dive into the fundamentals of machine learning, covering
@@ -181,8 +238,7 @@ const TRC4 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Apply digital forensics in legal and investigative scenarios.
-
+                Apply digital forensics in legal and investigative scenarios.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -231,48 +287,33 @@ const TRC4 = () => {
           <h1>Course Content:</h1>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 1:  Introduction to Digital Forensics
-
+              Module 1: Introduction to Digital Forensics
               <ul id="child-ul-c">
-                <li id="content-child-li">Digital Forensics Overview
-
-</li>
+                <li id="content-child-li">Digital Forensics Overview</li>
                 <li id="content-child-li">Legal and Ethical Considerations</li>
 
-                <li id="content-child-li">
-                Digital Forensics Lifecycle
-                </li>
-                
+                <li id="content-child-li">Digital Forensics Lifecycle</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
               Module 2: Digital Evidence Collection and Preservation
-
               <ul id="child-ul-c">
                 <li id="content-child-li">
-                Collection and Handling of Digital Evidence
-
+                  Collection and Handling of Digital Evidence
                 </li>
                 <li id="content-child-li">Chain of Custody</li>
-                <li id="content-child-li">Preservation Techniques
-
-</li>
+                <li id="content-child-li">Preservation Techniques</li>
               </ul>
             </li>
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
               Module 3: Forensic Tools and Techniques
-
               <ul id="child-ul-c">
-                <li id="content-child-li">
-                Popular Forensic Tools
-
-                </li>
-                <li id="content-child-li">File System Analysis
-</li>
+                <li id="content-child-li">Popular Forensic Tools</li>
+                <li id="content-child-li">File System Analysis</li>
                 <li id="content-child-li">Memory Forensics</li>
               </ul>
             </li>
@@ -281,58 +322,57 @@ const TRC4 = () => {
             <li id="content-main-li">
               Module 4: Mobile Device Forensics
               <ul id="child-ul-c">
-                <li id="content-child-li">Challenges in Mobile Forensics
-</li>
-                <li id="content-child-li">Extraction and Analysis of Mobile Data
-
-
-</li>
-                <li id="content-child-li">Case Studies in Mobile Forensics
-
-
-</li>
-              </ul>
-            </li>
-          </ul>
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 5:  Network Forensics
-              <ul id="child-ul-c">
-                <li id="content-child-li">Investigating Network-Based Attacks
-</li>
+                <li id="content-child-li">Challenges in Mobile Forensics</li>
                 <li id="content-child-li">
-                Packet Analysis
-
+                  Extraction and Analysis of Mobile Data
                 </li>
-                <li id="content-child-li">Network Forensics Tools
-
-
-</li>
-
-          <ul id="main-ul-c">
-            <li id="content-main-li">
-              Module 6:  Legal Aspects of Digital Forensics
-              <ul id="child-ul-c">
-                <li id="content-child-li">Digital Forensics in Legal Proceedings
-</li>
-                <li id="content-child-li">Expert Witness Testimony</li>
-                <li id="content-child-li">Ethical Considerations in Digital Forensics</li>
-              </ul>
-            </li>
-          </ul>      
-                
+                <li id="content-child-li">Case Studies in Mobile Forensics</li>
               </ul>
             </li>
           </ul>
-          
+          <ul id="main-ul-c">
+            <li id="content-main-li">
+              Module 5: Network Forensics
+              <ul id="child-ul-c">
+                <li id="content-child-li">
+                  Investigating Network-Based Attacks
+                </li>
+                <li id="content-child-li">Packet Analysis</li>
+                <li id="content-child-li">Network Forensics Tools</li>
+
+                <ul id="main-ul-c">
+                  <li id="content-main-li">
+                    Module 6: Legal Aspects of Digital Forensics
+                    <ul id="child-ul-c">
+                      <li id="content-child-li">
+                        Digital Forensics in Legal Proceedings
+                      </li>
+                      <li id="content-child-li">Expert Witness Testimony</li>
+                      <li id="content-child-li">
+                        Ethical Considerations in Digital Forensics
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </ul>
+            </li>
+          </ul>
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Digital Forensics Case Studies: Analyze and report on real-world digital forensics cases.</p>
-          <p>Practical Forensic Analysis: Hands-on projects involving the analysis of digital evidence.</p>
-          <p>Final Digital Forensics Project: Develop and present a comprehensive digital forensics <br />
-             investigation.
-</p>
+          <p>
+            Digital Forensics Case Studies: Analyze and report on real-world
+            digital forensics cases.
+          </p>
+          <p>
+            Practical Forensic Analysis: Hands-on projects involving the
+            analysis of digital evidence.
+          </p>
+          <p>
+            Final Digital Forensics Project: Develop and present a comprehensive
+            digital forensics <br />
+            investigation.
+          </p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>

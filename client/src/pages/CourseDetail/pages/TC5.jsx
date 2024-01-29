@@ -2,13 +2,71 @@ import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Footer from "../../../components/Footer/Footer";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useAuth } from "../../../AuthContext";
+import { Link, useNavigate } from "react-router-dom";
 import { fadeAnimationVariants } from "../../../utils/helpers";
 import rev from "../../../assets/rev.png";
+import { auth, db } from "../../../firebase";
+import {
+  collection,
+  doc,
+  updateDoc,
+  getDocs,
+  getDoc,
+} from "firebase/firestore";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
 const TC5 = () => {
+  const navigate = useNavigate();
+  const [userDocId, setUserDocId] = useState(null);
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const usersRef = collection(db, "users");
+        const querySnapshot = await getDocs(usersRef);
+
+        querySnapshot.forEach((doc) => {
+          if (doc.data().uid === auth.currentUser.uid) {
+            setUserDocId(doc.id);
+            console.log(doc.id); // Store the document ID associated with the current user
+          }
+        });
+      } catch (error) {
+        console.error("Error fetching user data:", error.message);
+      }
+    };
+
+    fetchUserData();
+  }, [auth.currentUser.uid]);
+
+  const handleEnroll = async () => {
+    try {
+      const userDocRef = doc(db, "users", userDocId);
+      const userDocSnapshot = await getDoc(userDocRef);
+
+      if (userDocSnapshot.exists()) {
+        const userData = userDocSnapshot.data();
+        const coursesArray = userData.courses || [];
+
+        // Check if "TC5" is already in the courses array
+        if (!coursesArray.includes("TC5")) {
+          coursesArray.push("TC5");
+
+          // Update the user document with the updated courses array
+          await updateDoc(userDocRef, { courses: coursesArray });
+
+          console.log("Enrolled in TC5 successfully!");
+          navigate("/dashboard");
+        } else {
+          console.log("Already enrolled in TC5.");
+        }
+      }
+    } catch (error) {
+      console.error("Error enrolling in TC5:", error.message);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -40,16 +98,18 @@ const TC5 = () => {
             <div id="pfile"></div>
             <p>Instructor Name</p>
           </div>
-          <Link to="/payment" className="unformat-link">
-            <button className="enroll">Enroll</button>
-          </Link>
+
+          <button onClick={handleEnroll} className="enroll">
+            Enroll
+          </button>
         </div>
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
               <p className="course-box-head">Digital Marketing Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts with our Digital Marketing Course
+                Dive into the fundamental concepts with our Digital Marketing
+                Course
               </p>
             </div>
             <div className="cb-2">
@@ -139,9 +199,12 @@ const TC5 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Explore the dynamic field of Digital Marketing with the comprehensive
-          <br />course. Tailored for marketers and business professionals. It covers <br />
-          key digital marketing strategies and tools. 
+            Explore the dynamic field of Digital Marketing with the
+            comprehensive
+            <br />
+            course. Tailored for marketers and business professionals. It covers{" "}
+            <br />
+            key digital marketing strategies and tools.
           </p>
         </div>
         <div id="what-c">
@@ -152,9 +215,7 @@ const TC5 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-              Understand the core principles of Digital Marketing.
-              </p>
+              <p>Understand the core principles of Digital Marketing.</p>
             </li>
             {/* <p className="sub-c">
               Explore the core concepts, history, and ethical considerations
@@ -166,8 +227,9 @@ const TC5 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-              Apply various digital marketing strategies to promote products
-              <br />and services.
+                Apply various digital marketing strategies to promote products
+                <br />
+                and services.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -181,8 +243,9 @@ const TC5 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-               Gain practical experience in creating effective digital 
-               <br />marketing compaigns.
+                Gain practical experience in creating effective digital
+                <br />
+                marketing compaigns.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -233,10 +296,12 @@ const TC5 = () => {
             <li id="content-main-li">
               Module 1: Introduction to Digital Marketing
               <ul id="child-ul-c">
-                <li id="content-child-li">Overview of Digital Marketing channels</li>
+                <li id="content-child-li">
+                  Overview of Digital Marketing channels
+                </li>
                 <li id="content-child-li">Evalution of Digital Marketing</li>
                 <li id="content-child-li">
-                Digital Marketing Strategies and Objectives
+                  Digital Marketing Strategies and Objectives
                 </li>
               </ul>
             </li>
@@ -245,9 +310,7 @@ const TC5 = () => {
             <li id="content-main-li">
               Module 2: Search Engine OptimiZation (SEO)
               <ul id="child-ul-c">
-                <li id="content-child-li">
-                  Basics of SEO
-                </li>
+                <li id="content-child-li">Basics of SEO</li>
                 <li id="content-child-li">On-page and Off-page SEO</li>
                 <li id="content-child-li">SEO Tools and Analytics</li>
               </ul>
@@ -269,7 +332,9 @@ const TC5 = () => {
             <li id="content-main-li">
               Module 4: Email Marketing
               <ul id="child-ul-c">
-                <li id="content-child-li">Designing Effective Email Compaigns</li>
+                <li id="content-child-li">
+                  Designing Effective Email Compaigns
+                </li>
                 <li id="content-child-li">Email Automation and Segmentation</li>
                 <li id="content-child-li">Email Marketing Analytics</li>
               </ul>
@@ -283,23 +348,28 @@ const TC5 = () => {
                 <li id="content-child-li">
                   Craeting and Managing PPC Compaigns
                 </li>
-                <li id="content-child-li">
-                 PPC Analytics and Optimization
-                </li>
-                
+                <li id="content-child-li">PPC Analytics and Optimization</li>
               </ul>
             </li>
           </ul>
-          
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Digital Marketing Comapign Projects: Develop and implement Digital 
-            <br />Marketing Compaigns.</p>
-          <p>SEO Analysis Assignments: Apply SEO techniques to optimize online content.
+          <p>
+            Digital Marketing Comapign Projects: Develop and implement Digital
+            <br />
+            Marketing Compaigns.
           </p>
-          <p>Final Digital Marketing Project: Comprehensive assessment of Digital Marketing
-            <br />skills through a practical compaign.</p>
+          <p>
+            SEO Analysis Assignments: Apply SEO techniques to optimize online
+            content.
+          </p>
+          <p>
+            Final Digital Marketing Project: Comprehensive assessment of Digital
+            Marketing
+            <br />
+            skills through a practical compaign.
+          </p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>

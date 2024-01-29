@@ -2,16 +2,75 @@ import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Footer from "../../../components/Footer/Footer";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useAuth } from "../../../AuthContext";
+import { Link, useNavigate } from "react-router-dom";
 import { fadeAnimationVariants } from "../../../utils/helpers";
 import rev from "../../../assets/rev.png";
+import { auth, db } from "../../../firebase";
+import {
+  collection,
+  doc,
+  updateDoc,
+  getDocs,
+  getDoc,
+} from "firebase/firestore";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
 const FC2 = () => {
+  const navigate = useNavigate();
+  const [userDocId, setUserDocId] = useState(null);
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const usersRef = collection(db, "users");
+        const querySnapshot = await getDocs(usersRef);
+
+        querySnapshot.forEach((doc) => {
+          if (doc.data().uid === auth.currentUser.uid) {
+            setUserDocId(doc.id);
+            console.log(doc.id); // Store the document ID associated with the current user
+          }
+        });
+      } catch (error) {
+        console.error("Error fetching user data:", error.message);
+      }
+    };
+
+    fetchUserData();
+  }, [auth.currentUser.uid]);
+
+  const handleEnroll = async () => {
+    try {
+      const userDocRef = doc(db, "users", userDocId);
+      const userDocSnapshot = await getDoc(userDocRef);
+
+      if (userDocSnapshot.exists()) {
+        const userData = userDocSnapshot.data();
+        const coursesArray = userData.courses || [];
+
+        // Check if "FC2" is already in the courses array
+        if (!coursesArray.includes("FC2")) {
+          coursesArray.push("FC2");
+
+          // Update the user document with the updated courses array
+          await updateDoc(userDocRef, { courses: coursesArray });
+
+          console.log("Enrolled in FC2 successfully!");
+          navigate("/dashboard");
+        } else {
+          console.log("Already enrolled in FC2.");
+        }
+      }
+    } catch (error) {
+      console.error("Error enrolling in FC2:", error.message);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="CourseDetail light">
       <Navbar />
@@ -40,17 +99,17 @@ const FC2 = () => {
             <div id="pfile"></div>
             <p>Instructor Name</p>
           </div>
-          <Link to="/payment" className="unformat-link">
-            <button className="enroll">Enroll</button>
-          </Link>
+          <button className="enroll" onClick={handleEnroll}>
+            Enroll
+          </button>
         </div>
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
               <p className="course-box-head">Networking Basics Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts of computing with our networking 
-              Basics Course.
+                Dive into the fundamental concepts of computing with our
+                networking Basics Course.
               </p>
             </div>
             <div className="cb-2">
@@ -140,8 +199,11 @@ const FC2 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Explore the fundamentals of computer networking with our <br />Networking Basics COurse. This course is designed to provide a <br />
-          foundational understanding of networking concepts, protocols, <br /> and technologies
+            Explore the fundamentals of computer networking with our <br />
+            Networking Basics COurse. This course is designed to provide a{" "}
+            <br />
+            foundational understanding of networking concepts, protocols, <br />{" "}
+            and technologies
           </p>
         </div>
         <div id="what-c">
@@ -152,9 +214,7 @@ const FC2 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-                Grasp the basics of computer networks and their components.
-              </p>
+              <p>Grasp the basics of computer networks and their components.</p>
             </li>
             {/* <p className="sub-c">
               Explore the core concepts, history, and ethical considerations
@@ -165,9 +225,7 @@ const FC2 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-                Understand common networking protocols and their functions.
-              </p>
+              <p>Understand common networking protocols and their functions.</p>
             </li>
             {/* <p className="sub-c">
               Dive into the fundamentals of machine learning, covering
@@ -180,7 +238,7 @@ const FC2 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-                Gain insights into the essentials of network security and 
+                Gain insights into the essentials of network security and
                 troubleshooting.
               </p>
             </li>
@@ -244,11 +302,11 @@ const FC2 = () => {
             <li id="content-main-li">
               Module 2: Networking Protocols
               <ul id="child-ul-c">
-                <li id="content-child-li">
-                  TCP/IP Protocol Suite
-                </li>
+                <li id="content-child-li">TCP/IP Protocol Suite</li>
                 <li id="content-child-li">OSI Model and its Layers</li>
-                <li id="content-child-li">Common Networking Protocols (HTTP, FTP, DNS)</li>
+                <li id="content-child-li">
+                  Common Networking Protocols (HTTP, FTP, DNS)
+                </li>
               </ul>
             </li>
           </ul>
@@ -256,9 +314,7 @@ const FC2 = () => {
             <li id="content-main-li">
               Module 3: Networking Devices and Infrastructure
               <ul id="child-ul-c">
-                <li id="content-child-li">
-                  Routers, Switches, and Hubs
-                </li>
+                <li id="content-child-li">Routers, Switches, and Hubs</li>
                 <li id="content-child-li">Network Topologies</li>
                 <li id="content-child-li">IP Addressing and Subnetting</li>
               </ul>
@@ -279,25 +335,28 @@ const FC2 = () => {
               Module 5: Network Security Basics
               <ul id="child-ul-c">
                 <li id="content-child-li">Overview of Cybersecurity</li>
+                <li id="content-child-li">Introduction to Network Security</li>
                 <li id="content-child-li">
-                  Introduction to Network Security
+                  Common Security Threats and vulnerability
                 </li>
                 <li id="content-child-li">
-                 Common Security Threats and vulnerability
-                </li>
-                <li id="content-child-li">
-                 Best Practices for Security Networks
+                  Best Practices for Security Networks
                 </li>
               </ul>
             </li>
           </ul>
-          
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
           <p>Quizzes: Assess understanding of networking concepts.</p>
-          <p>Nerwork Configuration Exercises: Hands-on tasks to configure basic network settings.</p>
-          <p>Final Networking Project: Design and present a simple network <br /> configuration.</p>
+          <p>
+            Nerwork Configuration Exercises: Hands-on tasks to configure basic
+            network settings.
+          </p>
+          <p>
+            Final Networking Project: Design and present a simple network <br />{" "}
+            configuration.
+          </p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>

@@ -2,13 +2,71 @@ import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Footer from "../../../components/Footer/Footer";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useAuth } from "../../../AuthContext";
+import { Link, useNavigate } from "react-router-dom";
 import { fadeAnimationVariants } from "../../../utils/helpers";
 import rev from "../../../assets/rev.png";
+import { auth, db } from "../../../firebase";
+import {
+  collection,
+  doc,
+  updateDoc,
+  getDocs,
+  getDoc,
+} from "firebase/firestore";
 import CourseCard from "../../../components/Course/CourseCard";
 import "./CourseDetail.css";
 
 const TC4 = () => {
+  const navigate = useNavigate();
+  const [userDocId, setUserDocId] = useState(null);
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const usersRef = collection(db, "users");
+        const querySnapshot = await getDocs(usersRef);
+
+        querySnapshot.forEach((doc) => {
+          if (doc.data().uid === auth.currentUser.uid) {
+            setUserDocId(doc.id);
+            console.log(doc.id); // Store the document ID associated with the current user
+          }
+        });
+      } catch (error) {
+        console.error("Error fetching user data:", error.message);
+      }
+    };
+
+    fetchUserData();
+  }, [auth.currentUser.uid]);
+
+  const handleEnroll = async () => {
+    try {
+      const userDocRef = doc(db, "users", userDocId);
+      const userDocSnapshot = await getDoc(userDocRef);
+
+      if (userDocSnapshot.exists()) {
+        const userData = userDocSnapshot.data();
+        const coursesArray = userData.courses || [];
+
+        // Check if "TC4" is already in the courses array
+        if (!coursesArray.includes("TC4")) {
+          coursesArray.push("TC4");
+
+          // Update the user document with the updated courses array
+          await updateDoc(userDocRef, { courses: coursesArray });
+
+          console.log("Enrolled in TC4 successfully!");
+          navigate("/dashboard");
+        } else {
+          console.log("Already enrolled in TC4.");
+        }
+      }
+    } catch (error) {
+      console.error("Error enrolling in TC4:", error.message);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -40,16 +98,18 @@ const TC4 = () => {
             <div id="pfile"></div>
             <p>Instructor Name</p>
           </div>
-          <Link to="/payment" className="unformat-link">
-            <button className="enroll">Enroll</button>
-          </Link>
+
+          <button onClick={handleEnroll} className="enroll">
+            Enroll
+          </button>
         </div>
         <div className="right-course">
           <div className="course-box">
             <div className="cb-1">
               <p className="course-box-head">Data Analytics Course</p>
               <p className="course-box-desc">
-              Dive into the fundamental concepts with our Data Analytics Course
+                Dive into the fundamental concepts with our Data Analytics
+                Course
               </p>
             </div>
             <div className="cb-2">
@@ -139,9 +199,10 @@ const TC4 = () => {
         <div id="about-c">
           <h1>Overview</h1>
           <p>
-          Embark on journey into the realm of Data Analytics. This course is
-          <br />tailored for individuals seeking to harness the power of data <br />
-          to make informed business decisions. 
+            Embark on journey into the realm of Data Analytics. This course is
+            <br />
+            tailored for individuals seeking to harness the power of data <br />
+            to make informed business decisions.
           </p>
         </div>
         <div id="what-c">
@@ -152,9 +213,7 @@ const TC4 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-              Understand the fundamentals of Data Analytics.
-              </p>
+              <p>Understand the fundamentals of Data Analytics.</p>
             </li>
             {/* <p className="sub-c">
               Explore the core concepts, history, and ethical considerations
@@ -165,9 +224,7 @@ const TC4 = () => {
                 className="fa-solid fa-circle-check rm"
                 style={{ color: "#00c7fc" }}
               />
-              <p>
-              Apply satistical methods and tools for Data Analytics.
-              </p>
+              <p>Apply satistical methods and tools for Data Analytics.</p>
             </li>
             {/* <p className="sub-c">
               Dive into the fundamentals of machine learning, covering
@@ -180,7 +237,8 @@ const TC4 = () => {
                 style={{ color: "#00c7fc" }}
               />
               <p>
-               Gain practical experience in data visualization and interpretation.
+                Gain practical experience in data visualization and
+                interpretation.
               </p>
             </li>
             {/* <p className="sub-c">
@@ -231,7 +289,9 @@ const TC4 = () => {
             <li id="content-main-li">
               Module 1: Introduction to Data Analytics
               <ul id="child-ul-c">
-                <li id="content-child-li">Overview of Data Analytics and its applications</li>
+                <li id="content-child-li">
+                  Overview of Data Analytics and its applications
+                </li>
                 <li id="content-child-li">Data Analytics lifecycle</li>
                 <li id="content-child-li">
                   Ethical considerations in Data Analytics
@@ -241,7 +301,7 @@ const TC4 = () => {
           </ul>
           <ul id="main-ul-c">
             <li id="content-main-li">
-              Module 2: Satistical analysis for Data Analytics 
+              Module 2: Satistical analysis for Data Analytics
               <ul id="child-ul-c">
                 <li id="content-child-li">
                   Descriptive Satistics and Visualization
@@ -255,9 +315,7 @@ const TC4 = () => {
             <li id="content-main-li">
               Module 3: Data Wrangling and Cleaning
               <ul id="child-ul-c">
-                <li id="content-child-li">
-                  Data cleaning techniques
-                </li>
+                <li id="content-child-li">Data cleaning techniques</li>
                 <li id="content-child-li">Handling Missing Data</li>
                 <li id="content-child-li">Transforming and Reshaping Data</li>
               </ul>
@@ -268,7 +326,9 @@ const TC4 = () => {
               Module 4: Data Visualization
               <ul id="child-ul-c">
                 <li id="content-child-li">Principles of Data Visualization</li>
-                <li id="content-child-li">Tools of data Visaualization (e.g., Matplotlib, Seaborn)</li>
+                <li id="content-child-li">
+                  Tools of data Visaualization (e.g., Matplotlib, Seaborn)
+                </li>
                 <li id="content-child-li">Creating Effective Visualization</li>
               </ul>
             </li>
@@ -277,28 +337,38 @@ const TC4 = () => {
             <li id="content-main-li">
               Module 5: Introduction to MAchine Learning for Data Analytics
               <ul id="child-ul-c">
-                <li id="content-child-li">Overview of Machine Learning Concepts</li>
+                <li id="content-child-li">
+                  Overview of Machine Learning Concepts
+                </li>
                 <li id="content-child-li">
                   Supervised and Unsupervised Learning
                 </li>
                 <li id="content-child-li">
-                 Applications of ML in Data Analytics
+                  Applications of ML in Data Analytics
                 </li>
-                
               </ul>
             </li>
           </ul>
-          
         </div>
         <div id="ass-c">
           <h1>Assessment:</h1>
-          <p>Data Analysis Projects: Apply Data Analytics techniques to real-world
-            <br />applications.</p>
-          <p>Satistical Analysis Assignments: Implement Statistical methods for 
-            <br />data interpretation
+          <p>
+            Data Analysis Projects: Apply Data Analytics techniques to
+            real-world
+            <br />
+            applications.
           </p>
-          <p>Final Data Analytics Project: Comprehensive assessment of Data Analytics
-            <br />skills through a practical project.</p>
+          <p>
+            Satistical Analysis Assignments: Implement Statistical methods for
+            <br />
+            data interpretation
+          </p>
+          <p>
+            Final Data Analytics Project: Comprehensive assessment of Data
+            Analytics
+            <br />
+            skills through a practical project.
+          </p>
         </div>
         <div id="inst-c">
           <h1>Instructor</h1>
