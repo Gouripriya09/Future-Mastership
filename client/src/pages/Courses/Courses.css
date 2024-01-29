@@ -1,7 +1,6 @@
 .card-container {
-  width: 80vw;
-  margin-right: auto;
-  margin-left: auto;
+  width: 70vw;
+  margin-inline: auto;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -10,10 +9,10 @@
 .nav2 {
   font-size: 1.2rem;
   color: var(--light);
-  margin-left: 12.7rem;
+  margin-left: 1rem;
 }
 .courses-heading {
-  margin-left: 12.7rem;
+  text-align: center;
   font-size: 2.2rem;
 }
 
