@@ -1,4 +1,18 @@
 .Dark {
+  --light: #f2f8f9;
+  --secondary-dark: #303030;
+  --primary: #2fcdff;
+  --gray: #bbbbbb;
+  --dark: #101011;
+}
+.Light {
+  --secondary-dark: #dfdfdf;
+  --primary: #2fcdff;
+  --gray: #bbbbbb;
+  --light: #101011;
+  --dark: #f2f8f9;
+}
+/* .Dark {
   --light: #ffffff;
   --secondary-dark: #303030;
   --primary: #2fcdff;
@@ -11,7 +25,7 @@
   --gray: #bbbbbb;
   --light: #000000;
   --dark: #ffffff;
-}
+} */
 .icons {
   color: var(--light);
 }
