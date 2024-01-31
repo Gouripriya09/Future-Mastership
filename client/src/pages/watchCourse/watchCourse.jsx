@@ -206,6 +206,10 @@ const WatchCourse = () => {
               </a>
             </div>
           </div>
+          <div className="comments">
+            <h3>Comments</h3>
+            
+          </div>
         </div>
       </div>
       <Footer />

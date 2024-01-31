@@ -29,6 +29,9 @@
 .icons {
   color: var(--light);
 }
+.df {
+  display: flex;
+}
 ul,
 li {
   list-style-type: none;
