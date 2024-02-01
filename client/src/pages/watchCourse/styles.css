@@ -82,7 +82,7 @@
 .videoStream {
   width: 68rem;
   filter: opacity(0.7);
-  background-color: var(--secondary-dark);
+  /* background-color: var(--secondary-dark); */
   height: 40rem;
 }
 .stream {

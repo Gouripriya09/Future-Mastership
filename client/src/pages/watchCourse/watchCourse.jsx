@@ -173,7 +173,18 @@ const WatchCourse = () => {
         </div>
         <div className="main-rs">
           <div className="stream">
-            <div className="videoStream"></div>
+            {/* <div className="videoStream"> */}
+            <iframe
+              width="1191"
+              className="videoStream"
+              height="670"
+              src="https://www.youtube.com/embed/vzKMl706ezE"
+              title=""
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            {/* </div> */}
             <h1>1. Getting Started</h1>
           </div>
           <div className="des">
@@ -208,7 +219,6 @@ const WatchCourse = () => {
           </div>
           <div className="comments">
             <h3>Comments</h3>
-            
           </div>
         </div>
       </div>
