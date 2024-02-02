@@ -89,21 +89,24 @@ const Dash = () => {
                 setss(1);
               }}
             >
-              <i class="fa-solid fa-house"></i>Dashboard
+              <i class="fa-solid fa-house"></i>
+              <span className="dlh">Dashboard</span>
             </li>
             <li
               onClick={() => {
                 setss(2);
               }}
             >
-              <i class="fa-solid fa-list"></i>My Courses
+              <i class="fa-solid fa-list"></i>
+              <span className="dlh">My Courses</span>
             </li>
             <li
               onClick={() => {
                 setss(3);
               }}
             >
-              <i class="fa-solid fa-gear"></i>Update Profile
+              <i class="fa-solid fa-gear"></i>
+              <span className="dlh">Update Profile</span>
             </li>
           </ul>
         </div>

@@ -64,3 +64,33 @@
   color: var(--light);
   min-height: 2vh;
 }
+.dlh {
+  display: block;
+}
+
+@media screen and (max-width: 890px) {
+  .welcome {
+    margin: -1.4rem;
+    padding: 0;
+  }
+  .dlh {
+    display: none;
+  }
+  .df {
+    flex-direction: column;
+  }
+  .welcome img {
+    height: 3.4rem;
+    width: 3.4rem;
+  }
+  .left-bar i {
+    margin: 0;
+    padding: 1rem;
+  }
+  .greet {
+    font-size: 1.6rem;
+  }
+  .dash-in {
+    flex-direction: column;
+  }
+}
