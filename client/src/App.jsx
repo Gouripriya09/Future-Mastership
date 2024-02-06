@@ -33,7 +33,7 @@ import TRC3 from "./pages/CourseDetail/pages/TRC3";
 import TRC4 from "./pages/CourseDetail/pages/TRC4";
 import TRC5 from "./pages/CourseDetail/pages/TRC5";
 import Dashboard from "./pages/dashboard/dashboard";
-import WatchCourse from "./pages/watchCourse/watchCourse";
+// import WatchCourse from "./pages/watchCourse/watchCourse";
 import Dash from "./pages/dashboard/Dash";
 
 const App = () => {
@@ -49,7 +49,7 @@ const App = () => {
           {/* <Route path="/course" element={<CourseDetail />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/faq" element={<Faq />} />
-          <Route path="/watchCourse" element={<WatchCourse />} />
+          {/* <Route path="/watchCourse" element={<WatchCourse />} /> */}
           <Route path="/Certificate" element={<Cert />} />
           <Route path="/dashboard" element={<Dash />} />
           <Route path="/community" element={<Community />} />
