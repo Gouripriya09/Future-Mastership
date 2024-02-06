@@ -2,14 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./dashboard.css";
 import { useAuth } from "../../AuthContext";
 import { auth, db } from "../../firebase";
-import {
-  collection,
-  setDoc,
-  doc,
-  updateDoc,
-  getDocs,
-  getDoc,
-} from "firebase/firestore";
+import { collection, setDoc, doc, getDocs, getDoc } from "firebase/firestore";
 import Navbar from "../../components/Navbar/Navbar";
 import CourseCard from "../../components/Course/CourseCard";
 import Footer from "../../components/Footer/Footer";
@@ -113,7 +106,7 @@ const Dash = () => {
         <div className="right-bar">
           {ss === 1 && (
             <>
-              <h2>Continue Learning</h2>
+              <h2 className="contin">Continue Learning</h2>
               <div className="dash-in">
                 <CourseCard
                   title="Java Course"
@@ -160,6 +153,8 @@ const Dash = () => {
 
           {ss === 2 && (
             <div className="df">
+              <br />
+              {/* <br /> */}
               <CourseCard
                 title="Java Course"
                 name="unknown"

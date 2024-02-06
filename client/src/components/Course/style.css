@@ -23,11 +23,11 @@
 @media screen and (orientation: portrait) {
   .course-card {
     font-size: 0.7rem;
-    width: 72%;
+    width: 70%;
     margin-inline: auto;
     transform: translateX(-0.5rem);
   }
   .top img {
-    width: 18rem;
+    width: 16rem;
   }
 }
