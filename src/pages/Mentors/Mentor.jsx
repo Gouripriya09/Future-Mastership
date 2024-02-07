@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import UD from "../../components/Development/UD";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Mentor.css";
@@ -8,6 +8,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Mentor = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="mentor light">
       <Navbar></Navbar>

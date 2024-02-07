@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const RazorpayPaymentGateway = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const handlePayment = async () => {
     const options = {
       key: "rzp_live_SKPCBesG7JigAa",

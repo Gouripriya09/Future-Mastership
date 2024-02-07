@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import "./faq.css";
 import FoldCard from "../../components/foldCard/foldCard";
 import Footer from "../../components/Footer/Footer";
 
 const Faq = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="faq">
       <Navbar />

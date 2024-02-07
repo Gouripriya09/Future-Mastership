@@ -33,6 +33,7 @@ const Dash = () => {
     };
 
     fetchUserData();
+    window.scrollTo(0, 0);
   }, []);
 
   const handleProfileUpdate = async (e) => {

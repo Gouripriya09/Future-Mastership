@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Certificate.css";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Cert = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="certificate light">
       <Navbar />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import { fadeAnimationVariants } from "../../utils/helpers.js";
 import Navbar from "../../components/Navbar/Navbar";
@@ -13,6 +13,9 @@ import Card from "../../components/Card/Card";
 import FoldCard from "../../components/foldCard/foldCard.jsx";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div class="Home">
       <Navbar />
@@ -135,16 +138,19 @@ const Home = () => {
           desg="Seo, Content Developer"
           body=" Mastervance offers an excellent range of courses, and the community is a fantastic resource for networking. The instructors are knowledgeable and provide valuable insights. "
         />
+        <br />
         <Card
           name="B. Karthik"
           desg="Seo, Content Developer"
           body=" I can't express how much Mastervance has impacted my learning journey positively. The courses are not only up-to-date but also presented in a way that makes complex topics easy to understand. "
         />
+        <br />
         <Card
           name="Poorna Hari"
           desg="Upcoming ,Film Director"
           body=" Mastervance has exceeded my expectations in every way possible. The courses are not just informative but presented with a level of clarity and depth that makes learning truly enjoyable."
         />
+        <br />
       </motion.div>
       <motion.button
         className="view-all"

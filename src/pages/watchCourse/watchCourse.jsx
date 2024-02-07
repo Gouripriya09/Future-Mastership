@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css";
 import Navbar from "../../components/Navbar/Navbar";
 import resource from "../../assets/resource1.pdf";
 import Footer from "../../components/Footer/Footer";
 
 const WatchCourse = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [s1, sets1] = useState(true);
   const [s2, sets2] = useState(false);
   const [s3, sets3] = useState(false);

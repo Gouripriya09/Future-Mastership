@@ -54,14 +54,18 @@ const Navbar = () => {
     document.documentElement.classList.add(mode);
   }, [mode]);
 
+  function toHome() {
+    navigate("/");
+  }
+
   return (
     <>
       <div className={`Navbar `}>
         <span className="set e1">
           {mode === "Dark" ? (
-            <img src={dark_logo} alt="MASTERVANCE" />
+            <img src={dark_logo} alt="MASTERVANCE" onClick={toHome} />
           ) : (
-            <img src={light_logo} alt="MASTERVANCE" />
+            <img src={light_logo} alt="MASTERVANCE" onClick={toHome} />
           )}
         </span>
         <span className="set e2">
@@ -173,9 +177,13 @@ const Navbar = () => {
             </>
           ) : (
             <>
+              <br />
+              <br />
               <Link to="/login" className="unformat-link">
                 <button className="login-btn">LOGIN</button>
               </Link>
+              <br />
+              <br />
             </>
           )}
           {auth.currentUser ? (

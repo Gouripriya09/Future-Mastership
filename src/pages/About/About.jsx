@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import aboutHero from "../../assets/aboutHero.png";
@@ -7,6 +7,9 @@ import { fadeAnimationVariants } from "../../utils/helpers";
 import "./About.css";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="light about">
       <Navbar></Navbar>
@@ -41,7 +44,7 @@ const About = () => {
           </p>
         </div>
         <div className="rs rs-a">
-          <img src={aboutHero} alt="" className="abtHero"/>
+          <img src={aboutHero} alt="" className="abtHero" />
         </div>
       </motion.div>
       <motion.div

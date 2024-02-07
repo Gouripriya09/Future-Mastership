@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import { motion } from "framer-motion";
@@ -8,6 +8,9 @@ import "./Courses.css";
 import { Variant3 } from "../../utils/helpers";
 
 const EmergingCourses = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <motion.div className="light courses">
       <Navbar />

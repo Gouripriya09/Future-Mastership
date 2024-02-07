@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Community.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
@@ -8,6 +8,9 @@ import { fadeAnimationVariants } from "../../utils/helpers";
 import community from "../../assets/community-ls.png";
 
 const Community = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="Community light">
       <Navbar />
