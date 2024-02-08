@@ -55,7 +55,14 @@ html {
 .hover-anim:hover {
   color: var(--primary);
 }
+.loading {
+  display: flex;
 
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
 .f-ss {
   font-family: "Source Serif 4", serif;
 }

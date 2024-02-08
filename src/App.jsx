@@ -32,7 +32,6 @@ import TRC2 from "./pages/CourseDetail/pages/TRC2";
 import TRC3 from "./pages/CourseDetail/pages/TRC3";
 import TRC4 from "./pages/CourseDetail/pages/TRC4";
 import TRC5 from "./pages/CourseDetail/pages/TRC5";
-import Dashboard from "./pages/dashboard/dashboard";
 // import WatchCourse from "./pages/watchCourse/watchCourse";
 import Dash from "./pages/dashboard/Dash";
 

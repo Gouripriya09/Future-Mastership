@@ -35,8 +35,12 @@ const Home = () => {
           </h1>
           <p className="hero-sub">
             Welcome to Mastervance, where we empower students to become masters
-            of tomorrow's world. Our platform is a gateway to the latest
-            advancements in technology.
+            of tomorrow's world.
+            <br />
+            <span className="bd">
+              Our platform is a gateway to the latest advancements in
+              technology.
+            </span>
           </p>
           <button className="ls-btn">Apply Now</button>
         </div>
