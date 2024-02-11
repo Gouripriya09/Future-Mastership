@@ -83,7 +83,7 @@ const Footer = () => {
               <i class="fa-brands fa-facebook"></i>
             </a>
             <a
-              href="https://www.linkedin.com/in/master-vance-4b97242a8/"
+              href="www.linkedin.com/in/mastervance16"
               target="_blank"
               rel="noopener noreferrer"
               className="unformat-link"

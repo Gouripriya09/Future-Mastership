@@ -34,6 +34,7 @@ import TRC4 from "./pages/CourseDetail/pages/TRC4";
 import TRC5 from "./pages/CourseDetail/pages/TRC5";
 // import WatchCourse from "./pages/watchCourse/watchCourse";
 import Dash from "./pages/dashboard/Dash";
+import Generate from "./pages/Certificate/Generate";
 
 const App = () => {
   return (
@@ -52,6 +53,7 @@ const App = () => {
           <Route path="/Certificate" element={<Cert />} />
           <Route path="/dashboard" element={<Dash />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/generate" element={<Generate />} />
           <Route path="/feedbacks" element={<Feedbacks />} />
           <Route path="/mentor" element={<Mentor />} />
           <Route path="/terms_and_conditions" element={<Terms />} />

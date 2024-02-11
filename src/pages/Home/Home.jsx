@@ -33,14 +33,15 @@ const Home = () => {
             Unlock your Potential with
             <span className="col-class"> Mastervance</span>.
           </h1>
-          <p className="hero-sub">
+          <p className="hero-sub bd">
             Welcome to Mastervance, where we empower students to become masters
             of tomorrow's world.
-            <br />
-            <span className="bd">
-              Our platform is a gateway to the latest advancements in
+            {/* <br />
+            <br /> */}
+            {/* <span className="bd"> */}{" "}
+                Our platform is a gateway to the latest advancements in
               technology.
-            </span>
+            {/* </span> */}
           </p>
           <button className="ls-btn">Apply Now</button>
         </div>

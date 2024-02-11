@@ -15,6 +15,13 @@
   flex-direction: column;
   margin-bottom: 14rem;
 }
+.gen {
+  background-color: var(--dark);
+}
+#download-cert {
+  background-color: var(--light);
+  color: var(--dark);
+}
 .input {
   font-size: 12px;
   color: var(--light);
