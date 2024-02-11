@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Footer from "../../../components/Footer/Footer";
 import { motion } from "framer-motion";
-import { useAuth } from "../../../AuthContext";
+// import { useAuth } from "../../../AuthContext";
+import cd_img from "../../../assets/cd.png"
 import { Link, useNavigate } from "react-router-dom";
 import { fadeAnimationVariants } from "../../../utils/helpers";
 import rev from "../../../assets/rev.png";
@@ -82,78 +83,30 @@ const TC2 = () => {
           / Java Course
         </p>
       </div>
-      <motion.div
-        className="container"
-        id="hero-course"
-        variants={fadeAnimationVariants}
-        initial="initial"
-        whileInView="animate"
-        viewport={{
-          once: true,
-        }}
-      >
-        <div className="left-course">
-          <h2>Python Course</h2>
-          <div className="fot">
-            <div id="pfile"></div>
-            <p>Instructor Name</p>
+      <div className="cd-head container">
+        <div className="cd-ls">
+          <h1>Java Course</h1>
+          <p>
+            {" "}
+            Dive into the world of java programming with this comprehensive
+            course. Designed for beginners, <br /> it covers Java fundamentals,
+            object-oriented programming, and application development.
+          </p>
+          <div className="df">
+          <div className="pfile"></div>
+          {" "} INSTRUCTOR: Name
           </div>
-
-          <button className="enroll" onClick={handleEnroll}>
-            Enroll
-          </button>
-        </div>
-        <div className="right-course">
-          <div className="course-box">
-            <div className="cb-1">
-              <p className="course-box-head">Java Course</p>
-              <p className="course-box-desc">
-                Dive into the fundamental concepts of computing with our Java
-                Course
-              </p>
+          <div className="df df2">
+            <div>
+            <i className="fa-solid fa-certificate"></i>{" "}Certification
             </div>
-            <div className="cb-2">
-              <p>4.9 (135 Reviews) | 98%</p>
-              <ul className="course-box-list">
-                <li>
-                  <i
-                    className="fa-solid fa-circle-check"
-                    style={{ color: "#00c7fc" }}
-                  />
-                  <p>Beginner level</p>
-                </li>
-                <p className="sub">Gain Experience</p>
-                <li>
-                  <i
-                    className="fa-solid fa-circle-check"
-                    style={{ color: "#00c7fc" }}
-                  />
-                  <p>10 Hours Aprox</p>
-                </li>
-                <li>
-                  <i
-                    className="fa-solid fa-circle-check"
-                    style={{ color: "#00c7fc" }}
-                  />
-                  <p>Flexible Schedule</p>
-                </li>
-                <p className="sub">Learn at your own pace</p>
-                <li>
-                  <i
-                    className="fa-solid fa-circle-check"
-                    style={{ color: "#00c7fc" }}
-                  />
-                  <p>Earn degree credit</p>
-                </li>
-                <p className="sub">Learn more</p>
-              </ul>
-            </div>
-            <div className="cb-3">
-              <button className="cb-btn">Apply Now</button>
-            </div>
+            <div><i className="fa-solid fa-clock"></i>{" "}11 Hours</div>
           </div>
         </div>
-      </motion.div>
+        <div className="cd-rs">
+          <img src={cd_img} alt="" />
+        </div>
+      </div>
       <motion.div
         variants={fadeAnimationVariants}
         initial="initial"

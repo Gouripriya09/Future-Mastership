@@ -7,6 +7,13 @@
   justify-content: space-around;
   align-items: center;
 }
+.df2 {
+  justify-content: start;
+  width: 24rem;
+  gap: 2rem;
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+}
 .nav3 {
   font-size: 1.2rem;
   display: flex;
