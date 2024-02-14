@@ -32,9 +32,8 @@ import TRC2 from "./pages/CourseDetail/pages/TRC2";
 import TRC3 from "./pages/CourseDetail/pages/TRC3";
 import TRC4 from "./pages/CourseDetail/pages/TRC4";
 import TRC5 from "./pages/CourseDetail/pages/TRC5";
-// import WatchCourse from "./pages/watchCourse/watchCourse";
+import WatchCourse from "./pages/watchCourse/watchCourse";
 import Dash from "./pages/dashboard/Dash";
-import Generate from "./pages/Certificate/Generate";
 
 const App = () => {
   return (
@@ -49,11 +48,10 @@ const App = () => {
           {/* <Route path="/course" element={<CourseDetail />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/faq" element={<Faq />} />
-          {/* <Route path="/watchCourse" element={<WatchCourse />} /> */}
+          <Route path="/watchCourse" element={<WatchCourse />} />
           <Route path="/Certificate" element={<Cert />} />
           <Route path="/dashboard" element={<Dash />} />
           <Route path="/community" element={<Community />} />
-          <Route path="/generate" element={<Generate />} />
           <Route path="/feedbacks" element={<Feedbacks />} />
           <Route path="/mentor" element={<Mentor />} />
           <Route path="/terms_and_conditions" element={<Terms />} />

@@ -83,7 +83,7 @@ const Dash = () => {
                 setss(1);
               }}
             >
-              <i class="fa-solid fa-house"></i>
+              <i classNae="fa-solid fa-house"></i>
               <span className="dlh">Dashboard</span>
             </li>
             <li
@@ -91,7 +91,7 @@ const Dash = () => {
                 setss(2);
               }}
             >
-              <i class="fa-solid fa-list"></i>
+              <i classNae="fa-solid fa-list"></i>
               <span className="dlh">My Courses</span>
             </li>
             <li
@@ -99,7 +99,7 @@ const Dash = () => {
                 setss(3);
               }}
             >
-              <i class="fa-solid fa-gear"></i>
+              <i classNae="fa-solid fa-gear"></i>
               <span className="dlh">Update Profile</span>
             </li>
           </ul>
