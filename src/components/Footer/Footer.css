@@ -54,7 +54,11 @@
 .ul:hover {
   border-bottom: solid 1px var(--primary);
 }
-
+.cc {
+  background: var(--secondary-dark);
+  width: fit-content;
+  transform: translateY(-3.2rem);
+}
 @media (orientation: portrait) {
   .footer {
     font-size: 0.8rem;

@@ -1,16 +1,71 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
+import { collection, setDoc, doc, getDocs, getDoc } from "firebase/firestore";
+import { auth, db } from "../../firebase";
 import Navbar from "../../components/Navbar/Navbar";
 import resource from "../../assets/resource1.pdf";
 import Footer from "../../components/Footer/Footer";
 
 const WatchCourse = () => {
+  const [s1, sets1] = useState(true);
+  const commentsRef = collection(db, "comments");
+  const [s2, sets2] = useState(false);
+  const [comments, setComments] = useState(["", ""]);
+  const [s3, sets3] = useState(false);
+
+  const addComment = async (newComment) => {
+    try {
+      const currentUser = auth.currentUser;
+      if (currentUser) {
+        // Get the current comments data
+        const docSnap = await getDoc(doc(commentsRef, "FC1"));
+        if (docSnap.exists()) {
+          const existingComments = docSnap.data();
+          const updatedComments = {
+            user: [...existingComments.user, currentUser.displayName],
+            comment: [...existingComments.comment, newComment],
+          };
+
+          // Update comments in the database
+          await setDoc(doc(commentsRef, "FC1"), updatedComments);
+
+          // Update local state to reflect the change
+          setComments(updatedComments);
+        }
+      } else {
+        console.error("No current user found");
+      }
+    } catch (error) {
+      console.error("Error adding comment:", error.message);
+    }
+  };
+
+  const handleAddComment = () => {
+    const newComment = document.getElementById("comment").value;
+    if (newComment.trim() !== "") {
+      addComment(newComment);
+    }
+  };
+
+  const getComments = async () => {
+    try {
+      const docSnap = await getDoc(doc(commentsRef, "FC1"));
+
+      if (docSnap.exists()) {
+        const comments = docSnap.data();
+        setComments(comments);
+        console.log(comments);
+      } else {
+        const comments = ["", ""];
+      }
+    } catch (error) {
+      console.error("Errrrror", error.message);
+    }
+  };
   useEffect(() => {
+    getComments();
     window.scrollTo(0, 0);
   }, []);
-  const [s1, sets1] = useState(true);
-  const [s2, sets2] = useState(false);
-  const [s3, sets3] = useState(false);
 
   return (
     <div className="watchCourse light">
@@ -222,6 +277,17 @@ const WatchCourse = () => {
           </div>
           <div className="comments">
             <h3>Comments</h3>
+            <input type="text" id="comment" />
+            <button onClick={handleAddComment}>Add</button>
+            {comments.user && comments.comment ? (
+              comments.user.map((user, index) => (
+                <p key={index}>
+                  {user}: {comments.comment[index]}
+                </p>
+              ))
+            ) : (
+              <p>No comments available</p>
+            )}
           </div>
         </div>
       </div>

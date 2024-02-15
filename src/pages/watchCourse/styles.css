@@ -4,6 +4,17 @@
   align-items: center;
   background-color: var(--dark);
 }
+.comments {
+  margin-top: 4rem;
+  margin-left: 9rem;
+  font-size: 1.4rem;
+}
+#comment {
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
 .back-btn {
   margin-inline: 2.5rem;
   font-size: 2rem;
