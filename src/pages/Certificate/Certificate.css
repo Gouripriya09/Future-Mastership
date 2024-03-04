@@ -1,0 +1,51 @@
+.cert h3 {
+  font-size: 40px;
+  color: var(--light);
+}
+.cert1 p {
+  font-size: 20px;
+  width: 32vw;
+  color: var(--light);
+  justify-content: center;
+}
+.cert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 14rem;
+}
+.gen {
+  background-color: var(--dark);
+}
+#download-cert {
+  background-color: var(--light);
+  color: var(--dark);
+}
+.input {
+  font-size: 12px;
+  color: var(--light);
+  margin: 1rem;
+}
+.verify input {
+  width: 340px;
+  height: 30px;
+}
+.button {
+  height: 10px;
+  width: 35px;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 790px) {
+  .cert h3 {
+    font-size: 2rem;
+  }
+  .cert1 p {
+    width: 88vw;
+    font-size: 1rem;
+  }
+  .cert {
+    margin-bottom: 5rem;
+  }
+}
